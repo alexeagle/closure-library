@@ -135,7 +135,7 @@ goog.graphics.CanvasGraphics.prototype.pushElementTransform = function(
 
   var transform = element.getTransform();
 
-  // TODO(robbyw): Test for unsupported transforms i.e. skews.
+  // TODO(user): Test for unsupported transforms i.e. skews.
   var tx = transform.getTranslateX();
   var ty = transform.getTranslateY();
   if (tx || ty) {
@@ -576,7 +576,7 @@ goog.graphics.CanvasGraphics.prototype.isDrawable = function(group) {
  * @return {boolean} Whether drawing to this group should force a redraw.
  */
 goog.graphics.CanvasGraphics.prototype.isRedrawRequired = function(group) {
-  // TODO(robbyw): Moving up to any parent of lastGroup should not force redraw.
+  // TODO(user): Moving up to any parent of lastGroup should not force redraw.
   return group != this.canvasElement && group != this.lastGroup_;
 };
 
@@ -595,7 +595,7 @@ goog.graphics.CanvasGraphics.prototype.createGroup = function(opt_group) {
 
   opt_group = opt_group || this.canvasElement;
 
-  // TODO(robbyw): Moving up to any parent group should not force redraw.
+  // TODO(user): Moving up to any parent group should not force redraw.
   if (opt_group == this.canvasElement || opt_group == this.lastGroup_) {
     this.lastGroup_ = group;
   }

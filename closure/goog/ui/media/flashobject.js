@@ -36,7 +36,7 @@
  *   flash.render(goog.dom.getElement('parent'));
  * </pre>
  *
- * TODO(user, jessan): create a goog.ui.media.BrowserInterfaceFlashObject that
+ * TODO(goto, jessan): create a goog.ui.media.BrowserInterfaceFlashObject that
  * subclasses goog.ui.media.FlashObject to provide all the goodness of
  * http://go/browserinterface.as
  */
@@ -322,7 +322,7 @@ goog.ui.media.FlashObject.prototype.setFlashVar = function(key, value) {
  * Sets flash variables. You can either pass a Map of key->value pairs or you
  * can pass a key, value pair to set a specific variable.
  *
- * TODO(user, martino): Get rid of this method.
+ * TODO(goto, martino): Get rid of this method.
  *
  * @deprecated Use {@link #addFlashVars} or {@link #setFlashVar} instead.
  * @param {goog.structs.Map|Object|string} flashVar A map of variables (given

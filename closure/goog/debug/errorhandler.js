@@ -239,7 +239,7 @@ goog.debug.ErrorHandler.prototype.handleError_ = function(e) {
 };
 
 
-// TODO(mknichel): Allow these functions to take in the window to protect.
+// TODO(user): Allow these functions to take in the window to protect.
 /**
  * Installs exception protection for window.setTimeout to handle exceptions.
  */

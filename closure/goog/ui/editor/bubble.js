@@ -546,7 +546,7 @@ goog.ui.editor.Bubble.Panel_ = function(
       dom.createDom(
           goog.dom.TagName.DIV,
           {className: goog.getCssName('tr_bubble_panel_title')},
-          title ? title + ':' : ''),  // TODO(robbyw): Does this work in bidi?
+          title ? title + ':' : ''),  // TODO(user): Does this work in bidi?
       dom.createDom(
           goog.dom.TagName.DIV,
           {className: goog.getCssName('tr_bubble_panel_content')}));

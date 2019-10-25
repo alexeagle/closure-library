@@ -335,7 +335,7 @@ goog.ui.HsvPalette.prototype.createDom = function() {
 
   this.setElementInternal(element);
 
-  // TODO(arv): Set tabIndex
+  // TODO(user): Set tabIndex
 };
 
 

@@ -559,7 +559,7 @@ goog.ui.editor.LinkDialog.prototype.buildTextToDisplayDiv_ = function() {
       {id: goog.ui.editor.LinkDialog.Id_.TEXT_TO_DISPLAY});
   var textInput = this.textToDisplayInput_;
   // 98% prevents scroll bars in standards mode.
-  // TODO(robbyw): Is this necessary for quirks mode?
+  // TODO(user): Is this necessary for quirks mode?
   goog.style.setStyle(textInput, 'width', '98%');
   goog.style.setStyle(table.rows[0].cells[1], 'width', '100%');
   goog.dom.appendChild(table.rows[0].cells[1], textInput);

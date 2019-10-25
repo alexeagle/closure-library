@@ -72,7 +72,7 @@ goog.ui.ContainerScroller = function(container) {
   this.eventHandler_.listen(
       container, goog.ui.Component.EventType.HIDE, this.onHide_);
 
-  // TODO(gboyer): Allow a ContainerScroller to be attached with a Container
+  // TODO(user): Allow a ContainerScroller to be attached with a Container
   // before the container is rendered.
 
   this.doScrolling_(true);

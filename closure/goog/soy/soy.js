@@ -84,7 +84,7 @@ goog.soy.renderHtml = function(element, templateResult) {
 };
 
 
-// TODO(b/36644846): remove the second half of the function type union
+// TODO(user): remove the second half of the function type union
 /**
  * Renders a Soy template and then set the output string as
  * the innerHTML of an element. It is recommended to use this helper function
@@ -110,7 +110,7 @@ goog.soy.renderElement = function(
       goog.asserts.assert(element), html);
 };
 
-// TODO(b/36644846): remove the second half of the function type union
+// TODO(user): remove the second half of the function type union
 /**
  * Renders a Soy template into a single node or a document
  * fragment. If the rendered HTML string represents a single node, then that
@@ -144,7 +144,7 @@ goog.soy.renderAsFragment = function(
   return dom.safeHtmlToNode(html);
 };
 
-// TODO(b/36644846): remove the second half of the function type union
+// TODO(user): remove the second half of the function type union
 /**
  * Renders a Soy template into a single node. If the rendered
  * HTML string represents a single node, then that node is returned. Otherwise,
@@ -235,7 +235,7 @@ goog.soy.ensureTemplateOutputHtml_ = function(templateResult) {
   // Note we allow everything that isn't an object, because some non-escaping
   // templates end up returning non-strings if their only print statement is a
   // non-escaped argument, plus some unit tests spoof templates.
-  // TODO(gboyer): Track down and fix these cases.
+  // TODO(user): Track down and fix these cases.
   if (!goog.isObject(templateResult)) {
     return goog.html.SafeHtml.htmlEscape(String(templateResult));
   }

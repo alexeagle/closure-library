@@ -112,7 +112,7 @@
  * we don't have to do any polling to detect fragment changes. Chrome and
  * Firefox have added it on their newer builds, wekbit 532.1 and gecko 1.9.2.
  * http://www.w3.org/TR/html5/history.html
- * NOTE(goto): it is important to note that the document needs to have the
+ * NOTE(user): it is important to note that the document needs to have the
  * <!DOCTYPE html> tag to enable the IE8 HTML5 mode. If the tag is not present,
  * IE8 will enter IE7 compatibility mode (which can also be enabled manually).
  *

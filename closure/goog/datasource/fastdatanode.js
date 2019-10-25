@@ -62,7 +62,7 @@ goog.require('goog.string');
  * @constructor
  * @extends {goog.ds.DataNodeList}
  */
-// TODO(arv): Use interfaces when available.
+// TODO(user): Use interfaces when available.
 goog.ds.AbstractFastDataNode = function(dataName, opt_parent) {
   if (!dataName) {
     throw new Error('Cannot create a fast data node without a data name');
@@ -513,7 +513,7 @@ goog.ds.PrimitiveFastDataNode.prototype.getJsObject = function() {
  * @constructor
  * @final
  */
-// TODO(arv): Use interfaces when available.  This implements DataNodeList
+// TODO(user): Use interfaces when available.  This implements DataNodeList
 // as well.
 goog.ds.FastListNode = function(values, dataName, opt_parent) {
   this.values_ = [];

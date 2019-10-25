@@ -63,7 +63,7 @@ goog.require('goog.ui.MenuSeparator');
 
 
 
-// TODO(robbyw): Reverse constructor argument order for consistency.
+// TODO(user): Reverse constructor argument order for consistency.
 /**
  * A basic menu class.
  * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
@@ -86,7 +86,7 @@ goog.inherits(goog.ui.Menu, goog.ui.Container);
 goog.tagUnsealableClass(goog.ui.Menu);
 
 
-// TODO(robbyw): Remove this and all references to it.
+// TODO(user): Remove this and all references to it.
 // Please ensure that BEFORE_SHOW behavior is not disrupted as a result.
 /**
  * Event types dispatched by the menu.
@@ -108,7 +108,7 @@ goog.ui.Menu.EventType = {
 };
 
 
-// TODO(robbyw): Remove this and all references to it.
+// TODO(user): Remove this and all references to it.
 /**
  * CSS class for menus.
  * @type {string}

@@ -1441,7 +1441,7 @@ goog.testing.asserts.toArray_ = function(obj) {
   return ret;
 };
 
-// TODO(nnaze): Consider moving isIterable_ and getIterator_ functionality
+// TODO(user): Consider moving isIterable_ and getIterator_ functionality
 // into goog.iter.es6. See discussion in cl/217356297.
 
 /**

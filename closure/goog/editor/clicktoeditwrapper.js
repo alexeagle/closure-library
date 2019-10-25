@@ -158,7 +158,7 @@ goog.editor.ClickToEditWrapper.prototype.enterDocument = function() {
   // To do artificial selection preservation, we have to listen to mouseup,
   // get the current selection, and re-select the same text in the iframe.
   //
-  // NOTE(nicksantos): Artificial selection preservation is needed in all cases
+  // NOTE(user): Artificial selection preservation is needed in all cases
   // where we set the field contents by setting innerHTML. There are a few
   // rare cases where we don't need it. But these cases are highly
   // implementation-specific, and computationally hard to detect (bidi
@@ -318,7 +318,7 @@ goog.editor.ClickToEditWrapper.prototype.renderSelection_ = function() {
     this.savedCaretRange_.restore();
     this.fieldObj_.dispatchSelectionChangeEvent();
 
-    // NOTE(nicksantos): Bubbles aren't actually enabled until the end
+    // NOTE(user): Bubbles aren't actually enabled until the end
     // if the load sequence, so if the user clicked on a link, the bubble
     // will not pop up.
   }
@@ -410,7 +410,7 @@ goog.editor.ClickToEditWrapper.prototype.insertCarets_ = function() {
       // link makes the current selection equal to the cursor position
       // directly before that link.
       //
-      // TODO(nicksantos): Is there a way to more accurately place the cursor?
+      // TODO(user): Is there a way to more accurately place the cursor?
       this.savedCaretRange_ = goog.editor.ClickToEditWrapper.createCaretRange_(
           goog.dom.Range.createFromNodes(
               specialNodeClicked, 0, specialNodeClicked, 0));

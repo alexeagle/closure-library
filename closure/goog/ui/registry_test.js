@@ -20,7 +20,7 @@ const registry = goog.require('goog.ui.registry');
 const testSuite = goog.require('goog.testing.testSuite');
 
 
-// TODO(nickreid): THis all breaks when implemented using ES6 classes because of
+// TODO(user): THis all breaks when implemented using ES6 classes because of
 // issue with `goog.getUid` and `ctor.superClass_`.
 
 // Fake component and renderer implementations, for testing only.

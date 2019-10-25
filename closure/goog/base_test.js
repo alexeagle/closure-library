@@ -393,7 +393,7 @@ function testIsArray() {
 function testTypeOfAcrossWindow() {
   if (goog.userAgent.IE && goog.userAgent.isVersionOrHigher('10') &&
       !goog.userAgent.isVersionOrHigher('11')) {
-    // TODO(johnlenz): This test is flaky on IE10 (passing 90+% of the time).
+    // TODO(user): This test is flaky on IE10 (passing 90+% of the time).
     // When it flakes the values are undefined which appears to indicate the
     // script did not run in the opened window and not a failure of the logic
     // we are trying to test.
@@ -451,7 +451,7 @@ function testIsArrayLike() {
       'undefined should not be array-like', goog.isArrayLike(notDefined));
   assertTrue(
       'NodeList should be array-like', goog.isArrayLike(elem.childNodes));
-  // TODO(attila): Fix isArrayLike to return false for text nodes!
+  // TODO(user): Fix isArrayLike to return false for text nodes!
   // assertFalse('TextNode should not be array-like', goog.isArrayLike(text));
   assertTrue(
       'Array of nodes should be array-like',
@@ -1627,8 +1627,6 @@ function testNormalizePath1() {
   assertEquals('http://path.js', goog.normalizePath_('http://foo/../path.js'));
   assertEquals('http://x/path.js', goog.normalizePath_('http://./x/path.js'));
 }
-
-
 
 
 function testGoogModuleNames() {

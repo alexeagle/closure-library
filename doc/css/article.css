@@ -386,7 +386,7 @@ footer>a.edit {
 
 @media(max-width: 720px) {
   nav.side {
-    display: none; /* TODO(sdh): collapse w/ roll-out instead of hide */
+    display: none; /* TODO(user): collapse w/ roll-out instead of hide */
   }
   article {
     margin-left: 0;

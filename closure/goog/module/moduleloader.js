@@ -235,7 +235,7 @@ goog.module.ModuleLoader.prototype.setDebugMode = function(debugMode) {
  * The cost of appending sourceURL information is negligible when compared to
  * the cost of evaling the script. Almost all clients will want this on.
  *
- * TODO(nicksantos): Turn this on by default. We may want to turn this off
+ * TODO(user): Turn this on by default. We may want to turn this off
  * for clients that inject their own sourceURL.
  *
  * @param {boolean} enabled Whether source url injection is enabled.

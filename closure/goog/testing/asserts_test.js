@@ -44,7 +44,7 @@ const implicitlyFalse = [false, 0, '', null, undefined, NaN];
  */
 async function internalTestAssertRejects(swallowUnhandledRejections, factory) {
   try {
-    // TODO(b/136116638): Stop the unhandled rejection handler from firing
+    // TODO(user): Stop the unhandled rejection handler from firing
     // rather than swallowing the errors.
     if (swallowUnhandledRejections) {
       GoogPromise.setUnhandledRejectionHandler(goog.nullFunction);
@@ -1158,7 +1158,7 @@ testSuite({
 
   testAssertNotThrows() {
     if (product.SAFARI) {
-      // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+      // TODO(user): Disabled so we can get the rest of the Closure test
       // suite running in a continuous build. Will investigate later.
       return;
     }
@@ -1562,7 +1562,7 @@ testSuite({
       }
     }
 
-    // TODO(gboyer,user): This test does not terminate with the current
+    // TODO(user): This test does not terminate with the current
     // algorithm. Can be enabled when (if) the algorithm is improved.
     // assertNull(goog.testing.asserts.findDifferences(
     //    createBinTree(5, null), createBinTree(5, null)));

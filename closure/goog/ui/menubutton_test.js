@@ -51,7 +51,7 @@ let expectedFailures;
 // Mock out goog.positioning.positionAtCoordinate to always ignore failure when
 // the window is too small, since we don't care about the viewport size on
 // the selenium farm.
-// TODO(nicksantos): Move this into a common location if we ever have enough
+// TODO(user): Move this into a common location if we ever have enough
 // code for a general goog.testing.ui library.
 const originalPositionAtCoordinate = positioning.positionAtCoordinate;
 positioning.positionAtCoordinate = function(

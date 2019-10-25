@@ -352,7 +352,7 @@ testSuite({
       return;
     }
     if (product.SAFARI) {
-      // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+      // TODO(user): Disabled so we can get the rest of the Closure test
       // suite running in a continuous build. Will investigate later.
       return;
     }
@@ -395,7 +395,7 @@ testSuite({
       return;
     }
     if (product.SAFARI) {
-      // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+      // TODO(user): Disabled so we can get the rest of the Closure test
       // suite running in a continuous build. Will investigate later.
       return;
     }
@@ -409,7 +409,7 @@ testSuite({
     let anchorRect = style.getBounds(anchor);
     let popupRect = style.getBounds(popup);
 
-    // TODO(joeltine): Chrome 47 has issues with RTL scroll positioning. Remove
+    // TODO(user): Chrome 47 has issues with RTL scroll positioning. Remove
     // chrome check when
     // https://code.google.com/p/chromium/issues/detail?id=568706 is resolved.
     if (!browser.isChrome()) {
@@ -431,7 +431,7 @@ testSuite({
     const visibleAnchorRect = positioning.getVisiblePart_(anchor);
     const visibleAnchorBox = visibleAnchorRect.toBox();
 
-    // TODO(joeltine): Chrome 47 has issues with RTL scroll positioning. Remove
+    // TODO(user): Chrome 47 has issues with RTL scroll positioning. Remove
     // chrome check when
     // https://code.google.com/p/chromium/issues/detail?id=568706 is resolved.
     if (!browser.isChrome()) {

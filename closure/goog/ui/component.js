@@ -78,7 +78,7 @@ goog.ui.Component = function(opt_domHelper) {
    */
   this.inDocument_ = false;
 
-  // TODO(attila): Stop referring to this private field in subclasses.
+  // TODO(user): Stop referring to this private field in subclasses.
   /**
    * The DOM element for the component.
    * @private {?Element}
@@ -171,7 +171,7 @@ goog.ui.Component.ALLOW_DETACHED_DECORATION =
 goog.ui.Component.prototype.idGenerator_ = goog.ui.IdGenerator.getInstance();
 
 
-// TODO(gboyer): See if we can remove this and just check goog.i18n.bidi.IS_RTL.
+// TODO(user): See if we can remove this and just check goog.i18n.bidi.IS_RTL.
 /**
  * @define {number} Defines the default BIDI directionality.
  *     0: Unknown.
@@ -960,7 +960,7 @@ goog.ui.Component.prototype.getElementByFragment = function(idFragment) {
  *    into the parent.
  */
 goog.ui.Component.prototype.addChild = function(child, opt_render) {
-  // TODO(gboyer): addChildAt(child, this.getChildCount(), false) will
+  // TODO(user): addChildAt(child, this.getChildCount(), false) will
   // reposition any already-rendered child to the end.  Instead, perhaps
   // addChild(child, false) should never reposition the child; instead, clients
   // that need the repositioning will use addChildAt explicitly.  Right now,
@@ -1068,7 +1068,7 @@ goog.ui.Component.prototype.addChildAt = function(child, index, opt_render) {
     }
     // Render the child into the parent at the appropriate location.  Note that
     // getChildAt(index + 1) returns undefined if inserting at the end.
-    // TODO(attila): We should have a renderer with a renderChildAt API.
+    // TODO(user): We should have a renderer with a renderChildAt API.
     var sibling = this.getChildAt(index + 1);
     // render_() calls enterDocument() if the parent is already in the document.
     child.render_(this.getContentElement(), sibling ? sibling.element_ : null);
@@ -1081,7 +1081,7 @@ goog.ui.Component.prototype.addChildAt = function(child, index, opt_render) {
     // We don't touch the DOM, but if the parent is in the document, and the
     // child element is in the document but not marked as such, then we call
     // enterDocument on the child.
-    // TODO(gboyer): It would be nice to move this condition entirely, but
+    // TODO(user): It would be nice to move this condition entirely, but
     // there's a large risk of breaking existing applications that manually
     // append the child to the DOM and then call addChild.
     child.enterDocument();

@@ -41,7 +41,7 @@ goog.require('goog.ui.registry');
  *     state.
  * @constructor
  * @extends {goog.ui.MenuItem}
- * TODO(attila): Figure out how to better integrate this into the
+ * TODO(user): Figure out how to better integrate this into the
  * goog.ui.Control state management framework.
  * @final
  */

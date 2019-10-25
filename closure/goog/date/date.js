@@ -1147,7 +1147,7 @@ goog.date.Date.prototype.setYear = function(year) {
 /**
  * Sets the month part of the date.
  *
- * TODO(nnaze): Update type to goog.date.month.
+ * TODO(user): Update type to goog.date.month.
  *
  * @param {number} month The month, where 0 = Jan, 11 = Dec.
  */

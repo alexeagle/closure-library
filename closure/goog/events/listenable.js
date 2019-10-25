@@ -194,7 +194,7 @@ goog.events.Listenable.prototype.removeAllListeners;
  * Returns the parent of this event target to use for capture/bubble
  * mechanism.
  *
- * NOTE(chrishenry): The name reflects the original implementation of
+ * NOTE(user): The name reflects the original implementation of
  * custom event target (`goog.events.EventTarget`). We decided
  * that changing the name is not worth it.
  *

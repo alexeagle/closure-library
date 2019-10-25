@@ -86,7 +86,7 @@ exports.difference = function(a, b) {
  * @return {!Set<T>}
  * @template T
  */
-// TODO(nnaze): Consider widening the type of b per discussion in
+// TODO(user): Consider widening the type of b per discussion in
 // https://github.com/tc39/proposal-set-methods/issues/56
 exports.symmetricDifference = function(a, b) {
   const newSet = new Set(a);
@@ -100,5 +100,5 @@ exports.symmetricDifference = function(a, b) {
   return newSet;
 };
 
-// TODO(nnaze): Add additional methods from
+// TODO(user): Add additional methods from
 // https://github.com/tc39/proposal-set-methods as needed.

@@ -18,7 +18,7 @@
 
 
 
-// TODO(b/130421259): We're trying to migrate all ES5 subclasses of Closure
+// TODO(user): We're trying to migrate all ES5 subclasses of Closure
 // Library to ES6. In ES6 this cannot be referenced before super is called. This
 // file has at least one this before a super call (in ES5) and cannot be
 // automatically upgraded to ES6 as a result. Please fix this if you have a
@@ -159,7 +159,7 @@ goog.dom.MultiRange.prototype.getType = function() {
 
 /** @override */
 goog.dom.MultiRange.prototype.getBrowserRangeObject = function() {
-  // NOTE(robbyw): This method does not make sense for multi-ranges.
+  // NOTE(user): This method does not make sense for multi-ranges.
   if (this.browserRanges_.length > 1) {
     goog.log.warning(
         this.logger_,
@@ -171,7 +171,7 @@ goog.dom.MultiRange.prototype.getBrowserRangeObject = function() {
 
 /** @override */
 goog.dom.MultiRange.prototype.setBrowserRangeObject = function(nativeRange) {
-  // TODO(robbyw): Look in to adding setBrowserSelectionObject.
+  // TODO(user): Look in to adding setBrowserSelectionObject.
   return false;
 };
 
@@ -250,14 +250,14 @@ goog.dom.MultiRange.prototype.getStartOffset = function() {
 
 /** @override */
 goog.dom.MultiRange.prototype.getEndNode = function() {
-  // NOTE(robbyw): This may return the wrong node if any subranges overlap.
+  // NOTE(user): This may return the wrong node if any subranges overlap.
   return goog.array.peek(this.getSortedRanges()).getEndNode();
 };
 
 
 /** @override */
 goog.dom.MultiRange.prototype.getEndOffset = function() {
-  // NOTE(robbyw): This may return the wrong value if any subranges overlap.
+  // NOTE(user): This may return the wrong value if any subranges overlap.
   return goog.array.peek(this.getSortedRanges()).getEndOffset();
 };
 
@@ -293,7 +293,7 @@ goog.dom.MultiRange.prototype.getHtmlFragment = function() {
 
 /** @override */
 goog.dom.MultiRange.prototype.getValidHtml = function() {
-  // NOTE(robbyw): This does not behave well if the sub-ranges overlap.
+  // NOTE(user): This does not behave well if the sub-ranges overlap.
   return goog.array
       .map(
           this.getTextRanges(),
@@ -304,7 +304,7 @@ goog.dom.MultiRange.prototype.getValidHtml = function() {
 
 /** @override */
 goog.dom.MultiRange.prototype.getPastableHtml = function() {
-  // TODO(robbyw): This should probably do something smart like group TR and TD
+  // TODO(user): This should probably do something smart like group TR and TD
   // selections in to the same table.
   return this.getValidHtml();
 };

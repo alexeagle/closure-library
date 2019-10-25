@@ -102,7 +102,7 @@ goog.fx.DragDropGroup.prototype.removeItem = function(element) {
  * @param {Array<goog.fx.DragDropItem>} list List of items to select or null to
  *     clear selection.
  *
- * TODO(eae): Not yet implemented.
+ * TODO(user): Not yet implemented.
  */
 goog.fx.DragDropGroup.prototype.setSelection = function(list) {
 

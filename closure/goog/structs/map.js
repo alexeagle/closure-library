@@ -301,7 +301,7 @@ goog.structs.Map.prototype.get = function(key, opt_val) {
 goog.structs.Map.prototype.set = function(key, value) {
   if (!(goog.structs.Map.hasKey_(this.map_, key))) {
     this.count_++;
-    // TODO(johnlenz): This class lies, it claims to return an array of string
+    // TODO(user): This class lies, it claims to return an array of string
     // keys, but instead returns the original object used.
     this.keys_.push(/** @type {?} */ (key));
     // Only change the version if we add a new key.

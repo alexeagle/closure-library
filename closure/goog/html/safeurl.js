@@ -15,7 +15,7 @@
 /**
  * @fileoverview The SafeUrl type and its builders.
  *
- * TODO(xtof): Link to document stating type contract.
+ * TODO(user): Link to document stating type contract.
  */
 
 goog.provide('goog.html.SafeUrl');
@@ -258,7 +258,7 @@ goog.html.SAFE_MIME_TYPE_PATTERN_ = new RegExp(
     // media formats.
     '^(?:audio/(?:3gpp2|3gpp|aac|L16|midi|mp3|mp4|mpeg|oga|ogg|opus|x-m4a|x-wav|wav|webm)|' +
         'image/(?:bmp|gif|jpeg|jpg|png|tiff|webp|x-icon)|' +
-        // TODO(b/68188949): Due to content-sniffing concerns, text/csv should
+        // TODO(user): Due to content-sniffing concerns, text/csv should
         // be removed from the whitelist.
         'text/csv|' +
         'video/(?:mpeg|mp4|ogg|webm|quicktime))' +
@@ -614,7 +614,7 @@ goog.html.SAFE_URL_PATTERN_ =
  * Namespace is also changed to goog.html.SafeUrl so it can be imported using
  * goog.require('goog.dom.SafeUrl').
  *
- * TODO(bangert): Remove SAFE_URL_PATTERN_
+ * TODO(user): Remove SAFE_URL_PATTERN_
  * @const {!RegExp}
  */
 goog.html.SafeUrl.SAFE_URL_PATTERN = goog.html.SAFE_URL_PATTERN_;

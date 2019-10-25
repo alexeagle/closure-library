@@ -153,7 +153,7 @@ goog.json.parse = goog.json.USE_NATIVE_JSON ?
  * JSON replacer, as defined in Section 15.12.3 of the ES5 spec.
  * @see http://ecma-international.org/ecma-262/5.1/#sec-15.12.3
  *
- * TODO(nicksantos): Array should also be a valid replacer.
+ * TODO(user): Array should also be a valid replacer.
  *
  * @typedef {function(this:Object, string, *): *}
  */
@@ -184,7 +184,7 @@ goog.json.serialize = goog.json.USE_NATIVE_JSON ?
     /** @type {function(*, ?goog.json.Replacer=):string} */
     (goog.global['JSON']['stringify']) :
     function(object, opt_replacer) {
-      // NOTE(nicksantos): Currently, we never use JSON.stringify.
+      // NOTE(user): Currently, we never use JSON.stringify.
       //
       // The last time I evaluated this, JSON.stringify had subtle bugs and
       // behavior differences on all browsers, and the performance win was not

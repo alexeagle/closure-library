@@ -747,7 +747,7 @@ goog.fx.AbstractDragDrop.prototype.removeAllScrollableContainers = function() {
 /**
  * Event handler for containers scrolling.
  * @param {goog.events.BrowserEvent} e The event.
- * @suppress {visibility} TODO(martone): update dependent projects.
+ * @suppress {visibility} TODO(user): update dependent projects.
  * @private
  */
 goog.fx.AbstractDragDrop.prototype.containerScrollHandler_ = function(e) {
@@ -1203,7 +1203,7 @@ goog.fx.AbstractDragDrop.prototype.disposeInternal = function() {
 goog.fx.DragDropEvent = function(
     type, source, sourceItem, opt_target, opt_targetItem, opt_targetElement,
     opt_clientX, opt_clientY, opt_x, opt_y, opt_subtarget, opt_browserEvent) {
-  // TODO(eae): Get rid of all the optional parameters and have the caller set
+  // TODO(user): Get rid of all the optional parameters and have the caller set
   // the fields directly instead.
   goog.fx.DragDropEvent.base(this, 'constructor', type);
 

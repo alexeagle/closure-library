@@ -341,7 +341,7 @@ goog.testing.stacktrace.parseStackFrame_ = function(frameStr) {
         m[1] || '', m[2] || '', m[3] || '', m[4] || m[5] || m[6] || '');
   }
 
-  // TODO(johnlenz): remove this.  It seems like if this was useful it would
+  // TODO(user): remove this.  It seems like if this was useful it would
   // need to be before the V8 check.
   if (frameStr.length >
       goog.testing.stacktrace.MAX_FIREFOX_FRAMESTRING_LENGTH_) {

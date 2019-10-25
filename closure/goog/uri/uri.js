@@ -1020,7 +1020,7 @@ goog.Uri.reDisallowedInFragment_ = /#/g;
  */
 goog.Uri.haveSameDomain = function(uri1String, uri2String) {
   // Differs from goog.uri.utils.haveSameDomain, since this ignores scheme.
-  // TODO(gboyer): Have this just call goog.uri.util.haveSameDomain.
+  // TODO(user): Have this just call goog.uri.util.haveSameDomain.
   var pieces1 = goog.uri.utils.split(uri1String);
   var pieces2 = goog.uri.utils.split(uri2String);
   return pieces1[goog.uri.utils.ComponentIndex.DOMAIN] ==
@@ -1247,7 +1247,7 @@ goog.Uri.QueryData.prototype.containsKey = function(key) {
  * @return {boolean} Whether there is a parameter with the given value.
  */
 goog.Uri.QueryData.prototype.containsValue = function(value) {
-  // NOTE(arv): This solution goes through all the params even if it was the
+  // NOTE(user): This solution goes through all the params even if it was the
   // first param. We can get around this by not reusing code or by switching to
   // iterators.
   var vals = this.getValues();
@@ -1330,7 +1330,7 @@ goog.Uri.QueryData.prototype.set = function(key, value) {
   this.ensureKeyMapInitialized_();
   this.invalidateCache_();
 
-  // TODO(chrishenry): This could be better written as
+  // TODO(user): This could be better written as
   // this.remove(key), this.add(key, value), but that would reorder
   // the key (since the key is first removed and then added at the
   // end) and we would have to fix unit tests that depend on key

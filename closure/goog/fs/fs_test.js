@@ -311,7 +311,7 @@ testSuite({
   },
 
   testAbortWrite() {
-    // TODO(nicksantos): This test is broken in newer versions of chrome.
+    // TODO(user): This test is broken in newer versions of chrome.
     // We don't know why yet.
     if (true) return;
 
@@ -526,7 +526,7 @@ testSuite({
   },
 
   testListBigDirectory() {
-    // TODO(nicksantos): This test is broken in newer versions of chrome.
+    // TODO(user): This test is broken in newer versions of chrome.
     // We don't know why yet.
     if (true) return;
 

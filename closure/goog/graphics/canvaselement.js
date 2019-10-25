@@ -795,7 +795,7 @@ goog.graphics.CanvasImageElement.prototype.setSize = function(width, height) {
 goog.graphics.CanvasImageElement.prototype.setSource = function(src) {
   this.src_ = src;
   if (this.drawn_) {
-    // TODO(robbyw): Probably need to reload the image here.
+    // TODO(user): Probably need to reload the image here.
     this.getGraphics().redraw();
   }
 };
@@ -817,7 +817,7 @@ goog.graphics.CanvasImageElement.prototype.draw = function(ctx) {
     // Otherwise, load it.
     var img = new Image();
     img.onload = goog.bind(this.handleImageLoad_, this, img);
-    // TODO(robbyw): Handle image load errors.
+    // TODO(user): Handle image load errors.
     img.src = this.src_;
   }
 };
@@ -831,6 +831,6 @@ goog.graphics.CanvasImageElement.prototype.draw = function(ctx) {
 goog.graphics.CanvasImageElement.prototype.handleImageLoad_ = function(img) {
   this.img_ = img;
 
-  // TODO(robbyw): Add a small delay to catch batched images
+  // TODO(user): Add a small delay to catch batched images
   this.getGraphics().redraw();
 };

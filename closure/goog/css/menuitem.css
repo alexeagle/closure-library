@@ -15,7 +15,7 @@
 /**
  * State: resting.
  *
- * NOTE(mleibman,chrishenry):
+ * NOTE(user):
  * The RTL support in Closure is provided via two mechanisms -- "rtl" CSS
  * classes and BiDi flipping done by the CSS compiler.  Closure supports RTL
  * with or without the use of the CSS compiler.  In order for them not

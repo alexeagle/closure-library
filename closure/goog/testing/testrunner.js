@@ -370,7 +370,7 @@ goog.testing.TestRunner.prototype.onComplete_ = function() {
   // Highlight the page to indicate the overall outcome.
   this.writeLog(log);
 
-  // TODO(chrishenry): Make this work with multiple test cases (b/8603638).
+  // TODO(user): Make this work with multiple test cases (b/8603638).
   var runAgainLink = goog.dom.createElement(goog.dom.TagName.A);
   runAgainLink.style.display = 'inline-block';
   runAgainLink.style.fontSize = 'small';
@@ -478,7 +478,7 @@ goog.testing.TestRunner.prototype.writeLog = function(log) {
     try {
       div.style.whiteSpace = 'pre-wrap';
     } catch (e) {
-      // NOTE(brenneman): IE raises an exception when assigning to pre-wrap.
+      // NOTE(user): IE raises an exception when assigning to pre-wrap.
       // Thankfully, it doesn't collapse whitespace when using monospace fonts,
       // so it will display correctly if we ignore the exception.
     }
@@ -502,7 +502,7 @@ goog.testing.TestRunner.prototype.log = function(s) {
 };
 
 
-// TODO(nnaze): Properly handle serving test results when multiple test cases
+// TODO(user): Properly handle serving test results when multiple test cases
 // are run.
 /**
  * @return {Object<string, !Array<!goog.testing.TestCase.IResult>>} A map of

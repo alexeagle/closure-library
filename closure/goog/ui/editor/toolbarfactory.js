@@ -202,7 +202,7 @@ goog.ui.editor.ToolbarFactory.addFormatOptions = function(button, formats) {
  */
 goog.ui.editor.ToolbarFactory.addFormatOption = function(button, caption, tag) {
   // Construct the option, and add it to the button.
-  // TODO(attila): Create boring but functional menu item for now...
+  // TODO(user): Create boring but functional menu item for now...
   var buttonDom = button.getDomHelper();
   var option = new goog.ui.Option(
       buttonDom.createDom(goog.dom.TagName.DIV, null, caption), tag, buttonDom);

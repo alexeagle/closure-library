@@ -488,7 +488,7 @@ testSuite({
     assertEquals(
         'http://www.google.com:443/path?q=query#fragmento', uri.toString());
 
-    // TODO(chrishenry): This is undocumented, but exist in previous unit
+    // TODO(user): This is undocumented, but exist in previous unit
     // test. We should clarify whether this is intended (alternatively,
     // setPort(0) also works).
     uri.setPort(null);

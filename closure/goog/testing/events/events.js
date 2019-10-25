@@ -29,7 +29,7 @@
  * please, please email closure-tech first to explain your use case before you
  * sink time into this.
  *
- * TODO(b/8933952): Migrate to explicitly non-nullable types. At present, many
+ * TODO(user): Migrate to explicitly non-nullable types. At present, many
  *     functions in this file expect non-null inputs but do not explicitly
  *     indicate this.
  */
@@ -113,7 +113,7 @@ goog.testing.events.Event.prototype.preventDefault = function() {
 /**
  * Asserts an event target exists.  This will fail if target is not defined.
  *
- * TODO(nnaze): Gradually add this to the methods in this file, and eventually
+ * TODO(user): Gradually add this to the methods in this file, and eventually
  *     update the method signatures to not take nullables.  See
  * http://b/8961907
  *

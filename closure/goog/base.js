@@ -828,9 +828,7 @@ goog.addDependency = function(relPath, provides, requires, opt_loadFlags) {
 };
 
 
-
-
-// NOTE(nnaze): The debug DOM loader was included in base.js as an original way
+// NOTE(user): The debug DOM loader was included in base.js as an original way
 // to do "debug-mode" development.  The dependency system can sometimes be
 // confusing, as can the debug DOM loader's asynchronous nature.
 //
@@ -1076,7 +1074,7 @@ goog.DEPENDENCIES_ENABLED = !COMPILED && goog.ENABLE_DEBUG_LOADER;
  * use feature detection to determine which language levels need
  * transpilation.
  */
-// NOTE(sdh): we could expand this to accept a language level to bypass
+// NOTE(user): we could expand this to accept a language level to bypass
 // detection: e.g. goog.TRANSPILE == 'es5' would transpile ES6 files but
 // would leave ES3 and ES5 files alone.
 goog.TRANSPILE = goog.define('goog.TRANSPILE', 'detect');
@@ -1339,7 +1337,7 @@ goog.transpile_ = function(code, path, target) {
     // replace it with a pass-through function that simply logs.
     var suffix = ' requires transpilation but no transpiler was found.';
     transpile = jscomp.transpile = function(code, path) {
-      // TODO(sdh): figure out some way to get this error to show up
+      // TODO(user): figure out some way to get this error to show up
       // in test results, noting that the failure may occur in many
       // different ways, including in loadModule() before the test
       // runner even comes up.
@@ -1551,12 +1549,12 @@ goog.isObject = function(val) {
  * @return {number} The unique ID for the object.
  */
 goog.getUid = function(obj) {
-  // TODO(arv): Make the type stricter, do not accept null.
+  // TODO(user): Make the type stricter, do not accept null.
 
   // In Opera window.hasOwnProperty exists but always returns false so we avoid
   // using it. As a consequence the unique ID generated for BaseClass.prototype
   // and SubClass.prototype will be the same.
-  // TODO(b/141512323): UUIDs are broken for ctors with class-side inheritance.
+  // TODO(user): UUIDs are broken for ctors with class-side inheritance.
   return obj[goog.UID_PROPERTY_] ||
       (obj[goog.UID_PROPERTY_] = ++goog.uidCounter_);
 };
@@ -1582,7 +1580,7 @@ goog.hasUid = function(obj) {
  * @param {Object} obj The object to remove the unique ID field from.
  */
 goog.removeUid = function(obj) {
-  // TODO(arv): Make the type stricter, do not accept null.
+  // TODO(user): Make the type stricter, do not accept null.
 
   // In IE, DOM nodes are not instances of Object and throw an exception if we
   // try to delete.  Instead we try to use removeAttribute.
@@ -1740,9 +1738,9 @@ goog.bindJs_ = function(fn, selfObj, var_args) {
  * @suppress {deprecated} See above.
  */
 goog.bind = function(fn, selfObj, var_args) {
-  // TODO(nicksantos): narrow the type signature.
+  // TODO(user): narrow the type signature.
   if (Function.prototype.bind &&
-      // NOTE(nicksantos): Somebody pulled base.js into the default Chrome
+      // NOTE(user): Somebody pulled base.js into the default Chrome
       // extension environment. This means that for Chrome extensions, they get
       // the implementation of Function.prototype.bind that calls goog.bind
       // instead of the native one. Even worse, we don't want to introduce a
@@ -2348,7 +2346,7 @@ if (!COMPILED) {
  * @deprecated Use ES6 class syntax instead.
  */
 goog.defineClass = function(superClass, def) {
-  // TODO(johnlenz): consider making the superClass an optional parameter.
+  // TODO(user): consider making the superClass an optional parameter.
   var constructor = def.constructor;
   var statics = def.statics;
   // Wrap the constructor prior to setting up the prototype and static methods.
@@ -2455,7 +2453,7 @@ goog.defineClass.isUnsealable_ = function(ctr) {
 };
 
 
-// TODO(johnlenz): share these values with the goog.object
+// TODO(user): share these values with the goog.object
 /**
  * The names of the fields that are defined on Object.prototype.
  * @type {!Array<string>}
@@ -2468,14 +2466,14 @@ goog.defineClass.OBJECT_PROTOTYPE_FIELDS_ = [
 ];
 
 
-// TODO(johnlenz): share this function with the goog.object
+// TODO(user): share this function with the goog.object
 /**
  * @param {!Object} target The object to add properties to.
  * @param {!Object} source The object to copy properties from.
  * @private
  */
 goog.defineClass.applyProperties_ = function(target, source) {
-  // TODO(johnlenz): update this to support ES5 getters/setters
+  // TODO(user): update this to support ES5 getters/setters
 
   var key;
   for (key in source) {
@@ -2599,8 +2597,6 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
     /** @private {string} */
     this.transpilationTarget_ = goog.TRANSPILE_TO_LANGUAGE;
   };
-
-
   /**
    * Returns a newly created map from language mode string to a boolean
    * indicating whether transpilation should be done for that mode as well as
@@ -2748,7 +2744,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
    * @return {string} The transpiled code.
    */
   goog.Transpiler.prototype.transpile = function(code, path) {
-    // TODO(johnplaisted): We should delete goog.transpile_ and just have this
+    // TODO(user): We should delete goog.transpile_ and just have this
     // function. But there's some compile error atm where goog.global is being
     // stripped incorrectly without this.
     return goog.transpile_(code, path, this.transpilationTarget_);
@@ -3517,7 +3513,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
    * @param {string} path Absolute path of this script.
    * @param {string} relativePath Path of this script relative to goog.basePath.
    * @param {!Array<string>} provides Should be an empty array.
-   *     TODO(johnplaisted) add support for adding closure namespaces to ES6
+   *     TODO(user) add support for adding closure namespaces to ES6
    *     modules for interop purposes.
    * @param {!Array<string>} requires goog symbols or relative paths to Closure
    *     this depends on.
@@ -3556,7 +3552,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
 
     var dep = this;
 
-    // TODO(johnplaisted): Does document.writing really speed up anything? Any
+    // TODO(user): Does document.writing really speed up anything? Any
     // difference between this and just waiting for interactive mode and then
     // appending?
     function write(src, contents) {
@@ -3631,7 +3627,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
     });
     create(undefined, 'goog.Dependency.callback_("' + beforeKey + '")');
 
-    // TODO(johnplaisted): Does this really speed up anything?
+    // TODO(user): Does this really speed up anything?
     create(this.path, undefined);
 
     var registerKey = goog.Dependency.registerCallback_(function(exports) {
@@ -3823,7 +3819,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
       });
       return;
     }
-    // TODO(johnplaisted): Externs are missing onreadystatechange for
+    // TODO(user): Externs are missing onreadystatechange for
     // HTMLDocument.
     /** @type {?} */
     var doc = goog.global.document;
@@ -4164,7 +4160,7 @@ goog.identity_ = function(s) {
  */
 goog.createTrustedTypesPolicy = function(name) {
   var policy = null;
-  // TODO(koto): Remove window.TrustedTypes variant when the newer API ships.
+  // TODO(user): Remove window.TrustedTypes variant when the newer API ships.
   var policyFactory = goog.global.trustedTypes || goog.global.TrustedTypes;
   if (!policyFactory || !policyFactory.createPolicy) {
     return policy;
@@ -4173,7 +4169,7 @@ goog.createTrustedTypesPolicy = function(name) {
   // registered, even in report-only mode. Until the API changes, catch the
   // error not to break the applications functionally. In such case, the code
   // will fall back to using regular Safe Types.
-  // TODO(koto): Remove catching once createPolicy API stops throwing.
+  // TODO(user): Remove catching once createPolicy API stops throwing.
   try {
     policy = policyFactory.createPolicy(name, {
       createHTML: goog.identity_,

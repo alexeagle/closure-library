@@ -339,7 +339,7 @@ goog.ui.Dialog.prototype.setPreferredAriaRole = function(role) {
  */
 goog.ui.Dialog.prototype.renderIfNoDom_ = function() {
   if (!this.getElement()) {
-    // TODO(gboyer): Ideally we'd only create the DOM, but many applications
+    // TODO(user): Ideally we'd only create the DOM, but many applications
     // are requiring this behavior.  Eventually, it would be best if the
     // element getters could return null if the elements have not been
     // created.
@@ -1134,7 +1134,7 @@ goog.inherits(goog.ui.Dialog.Event, goog.events.Event);
 
 /**
  * Event type constant for dialog events.
- * TODO(attila): Change this to goog.ui.Dialog.EventType.SELECT.
+ * TODO(user): Change this to goog.ui.Dialog.EventType.SELECT.
  * @type {string}
  * @deprecated Use goog.ui.Dialog.EventType.SELECT.
  */
@@ -1179,7 +1179,7 @@ goog.ui.Dialog.EventType = {
  *    this class is not. Suppress warnings until refactored.
  */
 goog.ui.Dialog.ButtonSet = function(opt_domHelper) {
-  // TODO(attila):  Refactor ButtonSet to extend goog.ui.Component?
+  // TODO(user):  Refactor ButtonSet to extend goog.ui.Component?
   this.dom_ = opt_domHelper || goog.dom.getDomHelper();
   goog.structs.Map.call(this);
 };
@@ -1310,7 +1310,7 @@ goog.ui.Dialog.ButtonSet.prototype.render = function() {
  * to be the default and will receive focus when the button set is rendered.
  * If a button with a name of {@link goog.ui.Dialog.DefaultButtonKeys.CANCEL}
  * is found, it is assumed to have "Cancel" semantics.
- * TODO(attila):  ButtonSet should be a goog.ui.Component.  Really.
+ * TODO(user):  ButtonSet should be a goog.ui.Component.  Really.
  * @param {Element} element The element to decorate; should contain buttons.
  */
 goog.ui.Dialog.ButtonSet.prototype.decorate = function(element) {

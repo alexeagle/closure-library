@@ -43,7 +43,7 @@ goog.editor.BrowserFeature = {
 
   // Has the contentEditable attribute, which makes nodes editable.
   //
-  // NOTE(nicksantos): FF3 has contentEditable, but there are 3 major reasons
+  // NOTE(user): FF3 has contentEditable, but there are 3 major reasons
   // why we don't use it:
   // 1) In FF3, we listen for key events on the document, and we'd have to
   //    filter them properly. See TR_Browser.USE_DOCUMENT_FOR_KEY_EVENTS.
@@ -107,12 +107,12 @@ goog.editor.BrowserFeature = {
 
   // Whether hitting the tab key will fire a keypress event.
   // see http://www.quirksmode.org/js/keys.html
-  // TODO(sdh): This is fixed in IE8 and higher.
+  // TODO(user): This is fixed in IE8 and higher.
   TAB_FIRES_KEYPRESS: !goog.userAgent.IE,
 
   // Has a standards mode quirk where width=100% doesn't do the right thing,
   // but width=99% does.
-  // TODO(user|user): This should be fixable by less hacky means
+  // TODO(user): This should be fixable by less hacky means
   NEEDS_99_WIDTH_IN_STANDARDS_MODE: goog.userAgent.IE,
 
   // Whether keyboard events only reliably fire on the document.
@@ -169,7 +169,7 @@ goog.editor.BrowserFeature = {
 
   // Whether this browser supports the "focusin" or "DOMFocusIn" event
   // consistently.
-  // NOTE(nicksantos): FF supports DOMFocusIn, but doesn't seem to do so
+  // NOTE(user): FF supports DOMFocusIn, but doesn't seem to do so
   // consistently.
   SUPPORTS_FOCUSIN: goog.userAgent.IE || goog.userAgent.OPERA,
 

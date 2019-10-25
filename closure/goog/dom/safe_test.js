@@ -251,7 +251,7 @@ testSuite({
   },
 
   testReplaceLocationSafeString() {
-    // TODO(bangert): the mocks don't work on IE 8
+    // TODO(user): the mocks don't work on IE 8
     if (!userAgent.IE || userAgent.isVersionOrHigher(10)) {
       /** @type {?} */
       const mockLoc = new googTesting.StrictMock(window.location);
@@ -264,7 +264,7 @@ testSuite({
   },
 
   testReplaceLocationEvilString() {
-    // TODO(bangert): the mocks don't work on IE 8
+    // TODO(user): the mocks don't work on IE 8
     if (!userAgent.IE || userAgent.isVersionOrHigher(10)) {
       /** @type {?} */
       const mockLoc = new googTesting.StrictMock(window.location);
@@ -279,7 +279,7 @@ testSuite({
   },
 
   testReplaceLocationSafeUrl() {
-    // TODO(bangert): the mocks don't work on IE 8
+    // TODO(user): the mocks don't work on IE 8
     if (!userAgent.IE || userAgent.isVersionOrHigher(10)) {
       const safeUrl = SafeUrl.fromConstant(Const.from('javascript:trusted();'));
       /** @type {?} */

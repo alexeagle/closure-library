@@ -49,7 +49,7 @@ class MockTransition extends GoogEventTarget {
   stop() {}
 }
 
-// TODO(gboyer): Write better unit tests for click and cross-iframe dismissal.
+// TODO(user): Write better unit tests for click and cross-iframe dismissal.
 testSuite({
   setUpPage() {
     targetDiv = dom.getElement('targetDiv');

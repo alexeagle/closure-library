@@ -65,7 +65,7 @@ goog.editor.Command = {
   // DIV should be considered the default if no plugin responds.
   DEFAULT_TAG: '+defaultTag',
 
-  // TODO(nicksantos): Try to give clients an API so that they don't need
+  // TODO(user): Try to give clients an API so that they don't need
   // these execCommands.
   CLEAR_LOREM: 'clearlorem',
   UPDATE_LOREM: 'updatelorem',

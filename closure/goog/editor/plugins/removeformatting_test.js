@@ -101,7 +101,7 @@ testSuite({
     // after the image that we insert. We use this command to paste HTML
     // in-place, because it has better paragraph-preserving semantics.
     //
-    // TODO(nicksantos): Figure out if there are better chrome APIs that we
+    // TODO(user): Figure out if there are better chrome APIs that we
     // should be using, or if insertImage should just be fixed.
     if (WEBKIT_AFTER_CHROME_21) {
       insertImageBoldGarbage = '<br>';
@@ -378,7 +378,7 @@ testSuite({
     // <br> to the end of the html.
     let html = '<div>l </div><br class="GECKO WEBKIT">afoo bar' +
         (BrowserFeature.ADDS_NBSPS_IN_REMOVE_FORMAT ? '<br>' : '');
-    if (userAgent.EDGE) {  // TODO(sdh): I have no idea where this comes from
+    if (userAgent.EDGE) {  // TODO(user): I have no idea where this comes from
       html = html.replace(' class="GECKO WEBKIT"', '');
     }
 
@@ -761,7 +761,7 @@ testSuite({
       let expectedHtml = '<br>foo<br>' +
           '<table><tr><td id="td2">ba<b>r</b></td></tr></table>';
       if (userAgent.EDGE) {
-        // TODO(sdh): Edge inserts an extra empty <b> tag but is otherwise
+        // TODO(user): Edge inserts an extra empty <b> tag but is otherwise
         // correct
         expectedHtml = expectedHtml.replace('</b>', '<b></b></b>');
       }

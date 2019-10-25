@@ -310,7 +310,7 @@ goog.editor.Field.LoadState_ = {
 
 /**
  * The amount of time that a debounce blocks an event.
- * TODO(nicksantos): As of 9/30/07, this is only used for blocking
+ * TODO(user): As of 9/30/07, this is only used for blocking
  * a keyup event after a keydown. We might need to tweak this for other
  * types of events. Maybe have a per-event debounce time?
  * @type {number}
@@ -1127,13 +1127,13 @@ goog.editor.Field.prototype.handleBeforeChangeKeyEvent_ = function(e) {
     // readable characters like a, b and c. However pressing ctrl+c and so on
     // also causes charCode to be set.
 
-    // TODO(arv): Del at end of field or backspace at beginning should be
+    // TODO(user): Del at end of field or backspace at beginning should be
     // ignored.
     this.gotGeneratingKey_ = e.charCode ||
         goog.editor.Field.isGeneratingKey_(e, goog.userAgent.GECKO);
     if (this.gotGeneratingKey_) {
       this.dispatchBeforeChange();
-      // TODO(robbyw): Should we return the value of the above?
+      // TODO(user): Should we return the value of the above?
     }
   }
 
@@ -2272,7 +2272,7 @@ goog.editor.Field.prototype.setInnerHtml_ = function(html) {
 goog.editor.Field.prototype.turnOnDesignModeGecko = function() {
   var doc = this.getEditableDomHelper().getDocument();
 
-  // NOTE(nicksantos): This will fail under certain conditions, like
+  // NOTE(user): This will fail under certain conditions, like
   // when the node has display: none. It's up to clients to ensure that
   // their fields are valid when they try to make them editable.
   doc.designMode = 'on';
@@ -2572,7 +2572,7 @@ goog.editor.Field.prototype.restoreDom = function() {
   // TODO(user): Consider only removing the iframe if we are
   // restoring the original node, aka, if opt_html.
   var field = this.getOriginalElement();
-  // TODO(robbyw): Consider throwing an error if !field.
+  // TODO(user): Consider throwing an error if !field.
   if (field) {
     // If the field is in the process of loading when it starts getting torn
     // up, the iframe will not exist.
@@ -2629,7 +2629,7 @@ goog.editor.Field.prototype.shouldLoadAsynchronously = function() {
  */
 goog.editor.Field.prototype.makeIframeField_ = function(opt_iframeSrc) {
   var field = this.getOriginalElement();
-  // TODO(robbyw): Consider throwing an error if !field.
+  // TODO(user): Consider throwing an error if !field.
   if (field) {
     var html = field.innerHTML;
 
@@ -2644,7 +2644,7 @@ goog.editor.Field.prototype.makeIframeField_ = function(opt_iframeSrc) {
     var iframe = this.originalDomHelper.createDom(
         goog.dom.TagName.IFRAME, this.getIframeAttributes());
 
-    // TODO(nicksantos): Figure out if this is ever needed in SAFARI?
+    // TODO(user): Figure out if this is ever needed in SAFARI?
     // In IE over HTTPS we need to wait for a load event before we set up the
     // iframe, this is to prevent a security prompt or access is denied
     // errors.

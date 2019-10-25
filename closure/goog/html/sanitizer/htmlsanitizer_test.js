@@ -104,7 +104,7 @@ function assertAfterInsertionEquals(expected, input) {
   div.parentNode.removeChild(div);
 }
 
-// TODO(pelizzi): name of test does not make sense
+// TODO(user): name of test does not make sense
 
 // the tests below investigate how <span> behaves when it is unknowingly put
 // as child or parent of other elements due to sanitization. <div> had even more
@@ -802,7 +802,7 @@ testSuite({
     // the double quote and causing the Cross Site Scripting vector to fire.
     // The XSS locator uses this method.:
     // Browser support: [IE7.0|IE6.0|NS8.1-IE] [NS8.1-G|FF2.0]
-    // NOTE(danesh): We expect this to fail. More of a JS sanitizer check or a
+    // NOTE(user): We expect this to fail. More of a JS sanitizer check or a
     // server-side template vulnerability test.
     // safeHtml = '';
     // xssHtml = '\";alert(window);//';
@@ -1406,7 +1406,7 @@ testSuite({
       if (googArray.contains(['COL', 'COLGROUP'], tag)) {
         return;  // potential problems
       }
-      // TODO(pelizzi): Skip testing for FORM tags on Chrome until b/32550695
+      // TODO(user): Skip testing for FORM tags on Chrome until b/32550695
       // is fixed.
       if (tag == 'FORM' && userAgent.WEBKIT) {
         return;

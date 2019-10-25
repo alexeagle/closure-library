@@ -34,7 +34,7 @@ function normalizeHtml(str) {
       .replace(/<\/li>/g, '');  // " for emacs
 }
 
-// TODO(robbyw): Test iteration over a strange document fragment.
+// TODO(user): Test iteration over a strange document fragment.
 
 function removeHelper(
     testNumber, range, outer, expectedChildCount, expectedContent) {
@@ -121,7 +121,7 @@ testSuite({
         'Selection should have correct html fragment', '1</td><td>2',
         normalizeHtml(range.getHtmlFragment()));
 
-    // TODO(robbyw): On IE the TR is included, on FF it is not.
+    // TODO(user): On IE the TR is included, on FF it is not.
     // assertEquals('Selection should have correct valid html',
     //    '<tr id=row><td>1</td><td>2</td></tr>',
     //    normalizeHtml(range.getValidHtml()));
@@ -139,7 +139,7 @@ testSuite({
         'Selection should have correct html fragment', '1<li>2',
         normalizeHtml(range.getHtmlFragment()));
 
-    // TODO(robbyw): On IE the UL is included, on FF it is not.
+    // TODO(user): On IE the UL is included, on FF it is not.
     // assertEquals('Selection should have correct valid html',
     //    '<li>1</li><li>2</li>', normalizeHtml(range.getValidHtml()));
 
@@ -155,7 +155,7 @@ testSuite({
         'Selection should have correct html fragment', '1<li>2',
         normalizeHtml(range.getHtmlFragment()));
 
-    // TODO(robbyw): On IE the OL is included, on FF it is not.
+    // TODO(user): On IE the OL is included, on FF it is not.
     // assertEquals('Selection should have correct valid html',
     //    '<li>1</li><li>2</li>', normalizeHtml(range.getValidHtml()));
 
@@ -391,7 +391,7 @@ testSuite({
       dom.setTextContent(outer, originalText);
     }
 
-    // TODO(robbyw): Fix the following edge cases:
+    // TODO(user): Fix the following edge cases:
     //    * Selecting contents of a node containing multiply empty divs
     //    * Selecting via createFromNodes(x, 0, x, x.childNodes.length)
     //    * Consistent handling of nodeContents(<div><div></div></div>).remove
@@ -416,7 +416,7 @@ testSuite({
     assertEquals(
         'New element should have three children', 3, output.childNodes.length);
 
-    // TODO(robbyw): Ensure the range stays in a reasonable state.
+    // TODO(user): Ensure the range stays in a reasonable state.
   },
 
   testSurroundWithNodesDoesntChangeSelection1() {

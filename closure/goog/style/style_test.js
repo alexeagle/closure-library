@@ -1227,7 +1227,7 @@ testSuite({
 
     // Setting the border box smaller than the borders will just give you
     // a content box of size 0.
-    // NOTE(nicksantos): I'm not really sure why IE7 is special here.
+    // NOTE(user): I'm not really sure why IE7 is special here.
     const isIeLt8Quirks = userAgent.IE &&
         !userAgent.isDocumentModeOrHigher(8) && !googDom.isCss1CompatMode();
     assertEquals(20, el.offsetWidth);
@@ -1282,7 +1282,7 @@ testSuite({
     // Try a negative width/height.
     setContentBoxSize(el, new Size(-10, -10));
 
-    // NOTE(nicksantos): I'm not really sure why IE7 is special here.
+    // NOTE(user): I'm not really sure why IE7 is special here.
     const isIeLt8Quirks = userAgent.IE &&
         !userAgent.isDocumentModeOrHigher('8') && !googDom.isCss1CompatMode();
     assertEquals(20, el.offsetWidth);
@@ -1883,7 +1883,7 @@ testSuite({
     visible = googStyle.getVisibleRectForElement(el);
 
     const iframeViewportSize = googDom.getDomHelper(el).getViewportSize();
-    // NOTE(chrishenry): For iframe, the clipping viewport is always the iframe
+    // NOTE(user): For iframe, the clipping viewport is always the iframe
     // viewport, and not the actual browser viewport.
     assertNotNull(visible);
     assertEquals(0, visible.top);

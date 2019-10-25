@@ -574,7 +574,7 @@ goog.ui.editor.DefaultToolbar.colorUpdateFromValue_ = function(button, color) {
       button.setValue(/** @type {string} */ (value));
     }
   } catch (ex) {
-    // TODO(attila): Find out when/why this happens.
+    // TODO(user): Find out when/why this happens.
   }
 };
 

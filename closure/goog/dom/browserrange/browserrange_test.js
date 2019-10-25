@@ -40,7 +40,7 @@ function normalizeHtml(str) {
   return str.toLowerCase().replace(/[\n\r\f"]/g, '');
 }
 
-// TODO(robbyw): We really need tests for (and code fixes for)
+// TODO(user): We really need tests for (and code fixes for)
 // createRangeFromNodes in the following cases:
 // * BR boundary (before + after)
 

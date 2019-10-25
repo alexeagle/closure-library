@@ -263,7 +263,7 @@ testSuite({
     // Position cursor at end of a textarea which ends with \r\n in IE or \n in
     // GECKO.
     if (!userAgent.IE || !userAgent.isVersionOrHigher('11')) {
-      // TODO(johnlenz): investigate why this fails in IE 11.
+      // TODO(user): investigate why this fails in IE 11.
       clearField(textarea);
       message = `Hello${newline}${newline}`;
       selection.setText(textarea, message);

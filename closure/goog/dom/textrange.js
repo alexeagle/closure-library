@@ -416,7 +416,7 @@ goog.dom.TextRange.prototype.getText = function() {
 
 /** @override */
 goog.dom.TextRange.prototype.getHtmlFragment = function() {
-  // TODO(robbyw): Generalize the code in browserrange so it is static and
+  // TODO(user): Generalize the code in browserrange so it is static and
   // just takes an iterator.  This would mean we don't always have to create a
   // browser range.
   return this.getBrowserRangeWrapper_().getHtmlFragment();
@@ -431,7 +431,7 @@ goog.dom.TextRange.prototype.getValidHtml = function() {
 
 /** @override */
 goog.dom.TextRange.prototype.getPastableHtml = function() {
-  // TODO(robbyw): Get any attributes the table or tr has.
+  // TODO(user): Get any attributes the table or tr has.
 
   var html = this.getValidHtml();
 

@@ -153,7 +153,7 @@ goog.ui.ac.Renderer = function(
    */
   this.rowClassName = goog.getCssName('ac-row');
 
-  // TODO(gboyer): Remove this as soon as we remove references and ensure that
+  // TODO(user): Remove this as soon as we remove references and ensure that
   // no groups are pushing javascript using this.
   /**
    * The old class name for active row.  This name is deprecated because its

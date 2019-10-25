@@ -19,7 +19,7 @@ goog.require('goog.asserts');
 goog.require('goog.async.FreeList');
 
 
-// TODO(johnlenz): generalize the WorkQueue if this is used by more
+// TODO(user): generalize the WorkQueue if this is used by more
 // than goog.async.run.
 
 

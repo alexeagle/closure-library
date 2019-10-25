@@ -137,7 +137,7 @@ function tearDown() {
 
 function testSyncSend() {
   if (goog.userAgent.product.SAFARI) {
-    // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+    // TODO(user): Disabled so we can get the rest of the Closure test
     // suite running in a continuous build. Will investigate later.
     return;
   }
@@ -164,7 +164,7 @@ function testSyncSend() {
 
 function testSyncSendFailure() {
   if (goog.userAgent.product.SAFARI) {
-    // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+    // TODO(user): Disabled so we can get the rest of the Closure test
     // suite running in a continuous build. Will investigate later.
     return;
   }
@@ -192,7 +192,7 @@ function testSyncSendFailure() {
 
 function testSendRelativeZeroStatus() {
   if (goog.userAgent.product.SAFARI) {
-    // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+    // TODO(user): Disabled so we can get the rest of the Closure test
     // suite running in a continuous build. Will investigate later.
     return;
   }
@@ -222,7 +222,7 @@ function testSendRelativeZeroStatus() {
 
 function testSendRelativeUriZeroStatus() {
   if (goog.userAgent.product.SAFARI) {
-    // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+    // TODO(user): Disabled so we can get the rest of the Closure test
     // suite running in a continuous build. Will investigate later.
     return;
   }
@@ -252,7 +252,7 @@ function testSendRelativeUriZeroStatus() {
 
 function testSendHttpZeroStatusFailure() {
   if (goog.userAgent.product.SAFARI) {
-    // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+    // TODO(user): Disabled so we can get the rest of the Closure test
     // suite running in a continuous build. Will investigate later.
     return;
   }
@@ -368,7 +368,7 @@ function testSendHttpUriZeroStatusFailure() {
 
 function testSendHttpsZeroStatusFailure() {
   if (goog.userAgent.product.SAFARI) {
-    // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+    // TODO(user): Disabled so we can get the rest of the Closure test
     // suite running in a continuous build. Will investigate later.
     return;
   }
@@ -509,7 +509,7 @@ function testSendFromListener() {
 
 function testStatesDuringEvents() {
   if (goog.userAgent.product.SAFARI) {
-    // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+    // TODO(user): Disabled so we can get the rest of the Closure test
     // suite running in a continuous build. Will investigate later.
     return;
   }

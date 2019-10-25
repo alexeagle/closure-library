@@ -122,7 +122,7 @@ goog.iter.toIterator = function(iterable) {
   }
 
 
-  // TODO(arv): Should we fall back on goog.structs.getValues()?
+  // TODO(user): Should we fall back on goog.structs.getValues()?
   throw new Error('Not implemented');
 };
 

@@ -23,7 +23,7 @@ const testingDom = goog.require('goog.testing.dom');
 const userAgent = goog.require('goog.userAgent');
 
 /*
-   TODO(user): Look into why removeCarets test doesn't pass.
+   TODO(ajp): Look into why removeCarets test doesn't pass.
    function testRemoveCarets() {
    var def = goog.dom.getElement('def');
    var jkl = goog.dom.getElement('jkl');
@@ -72,7 +72,7 @@ testSuite({
 
   /** @bug 1480638 */
   testSavedCaretRangeDoesntChangeSelection() {
-    // NOTE(nicksantos): We cannot detect this bug programatically. The only
+    // NOTE(user): We cannot detect this bug programatically. The only
     // way to detect it is to run this test manually and look at the selection
     // when it ends.
     const div = dom.getElement('bug1480638');

@@ -111,7 +111,7 @@ goog.fx.anim.unregisterAnimation = function(animation) {
 /**
  * Tears down this module. Useful for testing.
  */
-// TODO(nicksantos): Wow, this api is pretty broken. This should be fixed.
+// TODO(user): Wow, this api is pretty broken. This should be fixed.
 goog.fx.anim.tearDown = function() {
   goog.fx.anim.animationWindow_ = null;
   goog.dispose(goog.fx.anim.animationDelay_);

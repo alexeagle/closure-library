@@ -103,7 +103,7 @@ testSuite({
     assertValidFormat(Const.from('path#a'));
     assertValidFormat(Const.from('path/#a'));
 
-    // TODO(jakubvrana): Disallow, allows crafting '//' prefix.
+    // TODO(user): Disallow, allows crafting '//' prefix.
     const url =
         TrustedResourceUrl.format(Const.from('/%{path}/'), {'path': ''});
     assertEquals('//', TrustedResourceUrl.unwrap(url));

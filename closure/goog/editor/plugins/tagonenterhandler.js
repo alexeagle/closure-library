@@ -315,7 +315,7 @@ goog.editor.plugins.TagOnEnterHandler.prototype.breakOutOfEmptyListItemGecko_ =
   var inSubList = grandparent.tagName == goog.dom.TagName.OL ||
       grandparent.tagName == goog.dom.TagName.UL;
 
-  // TODO(robbyw): Should we apply the list or list item styles to the new node?
+  // TODO(user): Should we apply the list or list item styles to the new node?
   var newNode = goog.dom.getDomHelper(li).createElement(
       inSubList ? goog.dom.TagName.LI : this.tag);
 

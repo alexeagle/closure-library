@@ -58,7 +58,7 @@ goog.editor.node.BLOCK_TAG_NAMES_ = goog.object.createSet(
 
 /**
  * Names of tags that have intrinsic content.
- * TODO(robbyw): What about object, br, input, textarea, button, isindex,
+ * TODO(user): What about object, br, input, textarea, button, isindex,
  * hr, keygen, select, table, tr, td?
  * @type {Object}
  * @private

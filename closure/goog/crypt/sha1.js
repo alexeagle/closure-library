@@ -199,7 +199,7 @@ goog.crypt.Sha1.prototype.compress_ = function(buf, opt_offset) {
 
 /** @override */
 goog.crypt.Sha1.prototype.update = function(bytes, opt_length) {
-  // TODO(johnlenz): tighten the function signature and remove this check
+  // TODO(user): tighten the function signature and remove this check
   if (bytes == null) {
     return;
   }

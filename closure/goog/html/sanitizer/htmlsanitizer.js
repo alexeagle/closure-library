@@ -1074,7 +1074,7 @@ goog.html.sanitizer.HtmlSanitizer.prototype.preProcessHtml = function(
   // Inline style rules on the unsanitized input, so that we don't have to
   // worry about customTokenPolicy and customNamePolicy interferring with
   // selectors.
-  // TODO(pelizzi): To generate an inert document tree to walk on, we are going
+  // TODO(user): To generate an inert document tree to walk on, we are going
   // to parse the document into a DOM tree twice --
   // first with DOMParser here, and then by setting innerHTML on a new TEMPLATE
   // element in the main sanitization loop (see getDomTreeWalker in

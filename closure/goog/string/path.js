@@ -77,7 +77,7 @@ goog.string.path.extension = function(path) {
 };
 
 
-// TODO(johnlenz): goog.string.path.join should not accept undefined
+// TODO(user): goog.string.path.join should not accept undefined
 /**
  * Joins one or more path components (e.g. 'foo/' and 'bar' make 'foo/bar').
  * An absolute component will discard all previous component.
@@ -165,4 +165,4 @@ goog.string.path.split = function(path) {
   return [head, tail];
 };
 
-// TODO(nnaze): Implement other useful functions from os.path
+// TODO(user): Implement other useful functions from os.path

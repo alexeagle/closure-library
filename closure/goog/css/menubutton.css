@@ -146,7 +146,7 @@
 }
 
 /* Pill (collapsed border) styles. */
-/* TODO(gboyer): Remove specific menu button styles and have any button support being a menu button. */
+/* TODO(user): Remove specific menu button styles and have any button support being a menu button. */
 .goog-menu-button-collapse-right,
 .goog-menu-button-collapse-right .goog-menu-button-outer-box,
 .goog-menu-button-collapse-right .goog-menu-button-inner-box {

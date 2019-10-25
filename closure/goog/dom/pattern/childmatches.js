@@ -18,7 +18,7 @@
  */
 
 
-// TODO(b/130421259): We're trying to migrate all ES5 subclasses of Closure
+// TODO(user): We're trying to migrate all ES5 subclasses of Closure
 // Library to ES6. In ES6 this cannot be referenced before super is called. This
 // file has at least one this before a super call (in ES5) and cannot be
 // automatically upgraded to ES6 as a result. Please fix this if you have a
@@ -126,7 +126,7 @@ goog.dom.pattern.ChildMatches.prototype.matchToken = function(token, type) {
       return goog.dom.pattern.MatchType.MATCHING;
 
     case goog.dom.pattern.MatchType.BACKTRACK_MATCH:
-      // TODO(robbyw): this should return something like BACKTRACK_NO_MATCH
+      // TODO(user): this should return something like BACKTRACK_NO_MATCH
       // when we don't meet our minimum.
       this.needsReset_ = true;
       return (this.matches.length >= this.minimumMatches_) ?

@@ -320,7 +320,7 @@ goog.module.ModuleInfo.prototype.onError = function(cause) {
  * @private
  */
 goog.module.ModuleInfo.prototype.callCallbacks_ = function(callbacks, context) {
-  // NOTE(nicksantos):
+  // NOTE(user):
   // In practice, there are two error-handling scenarios:
   // 1) The callback does some mandatory initialization of the module.
   // 2) The callback is for completion of some optional UI event.

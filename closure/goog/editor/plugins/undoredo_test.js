@@ -108,7 +108,7 @@ testSuite({
     clock.dispose();
     undoPlugin.dispose();
 
-    // NOTE(nicksantos): I think IE is blowing up on this call because
+    // NOTE(user): I think IE is blowing up on this call because
     // it is lame. It manifests its lameness by throwing an exception.
     // Kudos to XT for helping me to figure this out.
     try {

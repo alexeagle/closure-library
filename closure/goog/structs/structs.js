@@ -147,7 +147,7 @@ goog.structs.isEmpty = function(col) {
  * @param {Object} col The collection-like object.
  */
 goog.structs.clear = function(col) {
-  // NOTE(arv): This should not contain strings because strings are immutable
+  // NOTE(user): This should not contain strings because strings are immutable
   if (col.clear && typeof col.clear == 'function') {
     col.clear();
   } else if (goog.isArrayLike(col)) {

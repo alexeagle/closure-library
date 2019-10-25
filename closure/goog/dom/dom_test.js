@@ -319,7 +319,7 @@ testSuite({
       'booleanWithTypedStringProp': true,
     };
 
-    // TODO(johnlenz): Attempting to set an property on a primitive throws in
+    // TODO(user): Attempting to set an property on a primitive throws in
     // strict mode
     /*
     // Primitives with properties that wrongly indicate that the text is of a

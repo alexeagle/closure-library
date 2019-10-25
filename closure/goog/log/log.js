@@ -88,7 +88,7 @@ goog.log.getLogger = function(name, opt_level) {
 };
 
 
-// TODO(johnlenz): try to tighten the types to these functions.
+// TODO(user): try to tighten the types to these functions.
 /**
  * Adds a handler to the logger. This doesn't use the event system because
  * we want to be able to add logging to the event system.

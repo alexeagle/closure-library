@@ -35,7 +35,7 @@ goog.require('goog.dom.classlist');
  *     no default renderer was found.
  */
 goog.ui.registry.getDefaultRenderer = function(componentCtor) {
-  // TODO(b/141512323): This should probably be implemented with a `WeakMap`.
+  // TODO(user): This should probably be implemented with a `WeakMap`.
   // Locate the default renderer based on the constructor's unique ID.  If no
   // renderer is registered for this class, walk up the superClass_ chain.
   var key;
@@ -128,7 +128,7 @@ goog.ui.registry.setDecoratorByClassName = function(className, decoratorFn) {
  * Returns an instance of {@link goog.ui.Component} or a subclass suitable to
  * decorate the given element, based on its CSS class.
  *
- * TODO(nnaze): Type of element should be {!Element}.
+ * TODO(user): Type of element should be {!Element}.
  *
  * @param {Element} element Element to decorate.
  * @return {goog.ui.Component?} Component to decorate the element (null if

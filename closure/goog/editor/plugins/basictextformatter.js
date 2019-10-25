@@ -397,7 +397,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.queryCommandValue = function(
       return this.isJustification_(command);
 
     case goog.editor.plugins.BasicTextFormatter.COMMAND.FORMAT_BLOCK:
-      // TODO(nicksantos): See if we can use queryCommandValue here.
+      // TODO(user): See if we can use queryCommandValue here.
       return goog.editor.plugins.BasicTextFormatter.getSelectionBlockState_(
           this.getFieldObject().getRange());
 
@@ -865,7 +865,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.execCommandHelper_ = function(
 /**
  * Applies a background color to a selection when the browser can't do the job.
  *
- * NOTE(nicksantos): If you think this is hacky, you should try applying
+ * NOTE(user): If you think this is hacky, you should try applying
  * background color in Opera. It made me cry.
  *
  * @param {string} bgColor backgroundColor from .formatText to .execCommand.
@@ -1199,7 +1199,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.applyExecCommandIEFixes_ =
       // For now, we're just going to punt on this and try to
       // adjust the selection so that IE does something reasonable.
       //
-      // TODO(nicksantos): Find a better fix for this.
+      // TODO(user): Find a better fix for this.
       var bq;
       for (var i = 0; i < blockquotes.length; i++) {
         if (range.containsNode(blockquotes[i])) {

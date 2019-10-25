@@ -267,7 +267,7 @@ testSuite({
 
     const flash = new FlashObject(FLASH_URL, domHelper);
     flash.render();
-    // TODO(goto): find out a way to test the loadness of flash movies on
+    // TODO(user): find out a way to test the loadness of flash movies on
     // asynchronous tests. if debugger; is left here, the test pass. if removed
     // the test fails. that happens because flash needs some time to be
     // considered loaded, after flash.render() is called (like img.src i guess).

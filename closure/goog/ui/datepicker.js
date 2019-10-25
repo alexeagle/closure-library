@@ -149,7 +149,7 @@ goog.ui.DatePicker = function(
   this.elTable_;
 
   /**
-   * TODO(tbreisacher): Remove external references to this field,
+   * TODO(user): Remove external references to this field,
    * and make it private.
    * @type {Element}
    */
@@ -817,7 +817,7 @@ goog.ui.DatePicker.prototype.setDate_ = function(date, fireSelection) {
   this.updateCalendarGrid_();
 
   if (fireSelection) {
-    // TODO(eae): Standardize selection and change events with other components.
+    // TODO(user): Standardize selection and change events with other components.
     // Fire select event.
     var selectEvent = new goog.ui.DatePickerEvent(
         goog.ui.DatePicker.Events.SELECT, this, this.date_);

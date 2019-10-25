@@ -71,7 +71,7 @@ goog.array.peek = function(array) {
  */
 goog.array.last = goog.array.peek;
 
-// NOTE(arv): Since most of the array functions are generic it allows you to
+// NOTE(user): Since most of the array functions are generic it allows you to
 // pass an array-like object. Strings have a length and are considered array-
 // like. However, the 'in' operator does not work on strings so we cannot just
 // use the array path even if the browser supports indexing into strings. We
@@ -1077,7 +1077,7 @@ goog.array.binarySearch_ = function(
     if (isEvaluator) {
       compareResult = compareFn.call(opt_selfObj, arr[middle], middle, arr);
     } else {
-      // NOTE(dimvar): To avoid this cast, we'd have to use function overloading
+      // NOTE(user): To avoid this cast, we'd have to use function overloading
       // for the type of binarySearch_, which the type system can't express yet.
       compareResult = /** @type {function(?, ?): number} */ (compareFn)(
           opt_target, arr[middle]);
@@ -1120,7 +1120,7 @@ goog.array.binarySearch_ = function(
  * @template T
  */
 goog.array.sort = function(arr, opt_compareFn) {
-  // TODO(arv): Update type annotation since null is not accepted.
+  // TODO(user): Update type annotation since null is not accepted.
   arr.sort(opt_compareFn || goog.array.defaultCompare);
 };
 

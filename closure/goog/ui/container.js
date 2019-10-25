@@ -20,8 +20,8 @@
  *
  * @see ../demos/container.html
  */
-// TODO(attila):  Fix code/logic duplication between this and goog.ui.Control.
-// TODO(attila):  Maybe pull common stuff all the way up into Component...?
+// TODO(user):  Fix code/logic duplication between this and goog.ui.Control.
+// TODO(user):  Maybe pull common stuff all the way up into Component...?
 
 goog.provide('goog.ui.Container');
 goog.provide('goog.ui.Container.EventType');
@@ -1041,7 +1041,7 @@ goog.ui.Container.prototype.getOrientation = function() {
  * Sets the container's orientation.
  * @param {goog.ui.Container.Orientation} orientation Container orientation.
  */
-// TODO(attila): Do we need to support containers with dynamic orientation?
+// TODO(user): Do we need to support containers with dynamic orientation?
 goog.ui.Container.prototype.setOrientation = function(orientation) {
   if (this.getElement()) {
     // Too late.
