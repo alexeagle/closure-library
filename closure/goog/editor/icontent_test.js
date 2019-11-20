@@ -160,7 +160,7 @@ testSuite({
     icontent.writeNormalInitialBlendedIframe(info, html, styleInfo, realIframe);
     assertBodyCorrect(doc.body, 'id', html, true);
 
-    // TODO(nicksantos): on Safari, there's a bug where all written iframes
+    // TODO: on Safari, there's a bug where all written iframes
     // are CSS1Compat. It's fixed in the nightlies as of 3/31/08, so remove
     // this guard when the latest version of Safari is on the farm.
     if (!userAgent.WEBKIT) {
@@ -201,7 +201,7 @@ testSuite({
   },
 
   testBlendedStandardsGrowingMatchesComparisonDiv() {
-    // TODO(nicksantos): If we ever move
+    // TODO: If we ever move
     // TR_EditableUtil.prototype.makeIframeField_
     // into goog.editor.icontent (and I think we should), we could actually run
     // functional tests to ensure that the iframed field matches the dimensions

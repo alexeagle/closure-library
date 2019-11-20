@@ -43,7 +43,7 @@ goog.require('goog.ds.LoadState');
  * @constructor
  * @extends {goog.ds.DataNode}
  */
-// TODO(arv): Use interfaces when available.
+// TODO: Use interfaces when available.
 goog.ds.JsDataSource = function(root, dataName, opt_parent) {
   this.parent_ = opt_parent;
   this.dataName_ = dataName;
@@ -112,7 +112,7 @@ goog.ds.JsDataSource.prototype.set = function(value) {
 
 
 /**
- * TODO(user) revisit lazy creation.
+ * TODO revisit lazy creation.
  * @override
  */
 goog.ds.JsDataSource.prototype.getChildNodes = function(opt_selector) {
@@ -160,7 +160,7 @@ goog.ds.JsDataSource.prototype.createChildNodes_ = function(opt_force) {
     var len = this.root_.length;
     for (var i = 0; i < len; i++) {
       // "id" is reserved node name that will map to a named child node
-      // TODO(user) Configurable logic for choosing id node
+      // TODO Configurable logic for choosing id node
       var node = this.root_[i];
       var id = node.id;
       var name = id != null ? String(id) : '[' + i + ']';
@@ -266,7 +266,7 @@ goog.ds.JsDataSource.prototype.setChildNode = function(name, value) {
   // This logic will get cleaner once we can remove the backing array / object
   // and just rely on the childNodeList_. This is needed until dependent code
   // is cleaned up.
-  // TODO(user) Remove backing array / object and just use childNodeList_
+  // TODO Remove backing array / object and just use childNodeList_
 
   if (goog.isArray(this.root_)) {
     // To remove by name, need to create a map of the child nodes by ID
@@ -378,7 +378,7 @@ goog.ds.JsDataSource.prototype.load = function() {
 
 /**
  * Gets the state of the backing data for this node
- * TODO(user) Discuss null value handling
+ * TODO Discuss null value handling
  * @return {goog.ds.LoadState} The state.
  * @override
  */

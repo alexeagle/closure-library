@@ -96,7 +96,7 @@ goog.dom.asserts.assertIsLocation = function(o) {
  * @return {!Element} The object.
  * @private
  */
-// TODO(bangert): Make an analog of goog.dom.TagName to correctly handle casts?
+// TODO: Make an analog of goog.dom.TagName to correctly handle casts?
 goog.dom.asserts.assertIsElementType_ = function(o, typename) {
   if (goog.asserts.ENABLE_ASSERTS) {
     var win = goog.dom.asserts.getWindow_(o);

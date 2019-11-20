@@ -144,7 +144,7 @@ goog.ui.style.app.MenuButtonRenderer.prototype.getContentElement = function(
 goog.ui.style.app.MenuButtonRenderer.prototype.decorate = function(
     control, element) {
   var button = /** @type {goog.ui.MenuButton} */ (control);
-  // TODO(attila):  Add more robust support for subclasses of goog.ui.Menu.
+  // TODO:  Add more robust support for subclasses of goog.ui.Menu.
   var menuElem = goog.dom.getElementsByTagNameAndClass(
       '*', goog.ui.MenuRenderer.CSS_CLASS, element)[0];
   if (menuElem) {

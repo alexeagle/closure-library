@@ -373,7 +373,7 @@ testSuite({
    * on Mac/Firefox.
    */
   testImeMacFirefox() {
-    // TODO(user): Currently our code cannot distinguish preedit characters
+    // TODO: Currently our code cannot distinguish preedit characters
     // from normal ones for Mac/Firefox.
     // Enable this test after we fix it.
 
@@ -449,7 +449,7 @@ testSuite({
    * on Linux/Firefox.
    */
   testImeLinuxFirefox() {
-    // TODO(user): Currently our code cannot distinguish preedit characters
+    // TODO: Currently our code cannot distinguish preedit characters
     // from normal ones for Linux/Firefox.
     // Enable this test after we fix it.
 

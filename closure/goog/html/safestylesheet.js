@@ -15,7 +15,7 @@
 /**
  * @fileoverview The SafeStyleSheet type and its builders.
  *
- * TODO(xtof): Link to document stating type contract.
+ * TODO: Link to document stating type contract.
  */
 
 goog.provide('goog.html.SafeStyleSheet');

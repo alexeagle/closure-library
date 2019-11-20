@@ -780,7 +780,7 @@ goog.i18n.DateTimeParse.prototype.subparseTimeZoneInGMT_ = function(
     return this.parseTimeZoneOffset_(text, pos, cal);
   }
 
-  // TODO(user): check for named time zones by looking through the locale
+  // TODO: check for named time zones by looking through the locale
   // data from the DateFormatZoneData strings. Should parse both short and long
   // forms.
   // subParseZoneString(text, start, cal);

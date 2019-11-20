@@ -263,6 +263,7 @@ goog.events.listen_ = function(
     src.addEventListener(type.toString(), proxy, opt_options);
   } else if (src.attachEvent) {
     // The else if above used to be an unconditional else. It would call
+    // attachEvent come gws or high water. This would sometimes throw an
     // exception on IE11, spoiling the day of some callers. The previous
     // incarnation of this code, from 2007, indicates that it replaced an
     // earlier still version that caused excess allocations on IE6.
@@ -295,7 +296,7 @@ goog.events.getProxy = function() {
         return proxyCallbackFunction.call(f.src, f.listener, eventObject);
       } : function(eventObject) {
         var v = proxyCallbackFunction.call(f.src, f.listener, eventObject);
-        // NOTE(chrishenry): In IE, we hack in a capture phase. However, if
+        // NOTE: In IE, we hack in a capture phase. However, if
         // there is inline event handler which tries to prevent default (for
         // example <a href="..." onclick="return false">...</a>) in a
         // descendant element, the prevent default will be overridden
@@ -412,7 +413,7 @@ goog.events.unlisten = function(src, type, listener, opt_options, opt_handler) {
   }
 
   if (!src) {
-    // TODO(chrishenry): We should tighten the API to only accept
+    // TODO: We should tighten the API to only accept
     // non-null objects, or add an assertion here.
     return false;
   }
@@ -441,7 +442,7 @@ goog.events.unlisten = function(src, type, listener, opt_options, opt_handler) {
  * @return {boolean} indicating whether the listener was there to remove.
  */
 goog.events.unlistenByKey = function(key) {
-  // TODO(chrishenry): Remove this check when tests that rely on this
+  // TODO: Remove this check when tests that rely on this
   // are fixed.
   if (typeof key === 'number') {
     return false;
@@ -470,7 +471,7 @@ goog.events.unlistenByKey = function(key) {
 
   var listenerMap = goog.events.getListenerMap_(
       /** @type {!EventTarget} */ (src));
-  // TODO(chrishenry): Try to remove this conditional and execute the
+  // TODO: Try to remove this conditional and execute the
   // first branch always. This should be safe.
   if (listenerMap) {
     listenerMap.removeByKey(listener);
@@ -520,7 +521,7 @@ goog.events.unlistenWithWrapper = function(
  * @return {number} Number of listeners removed.
  */
 goog.events.removeAll = function(obj, opt_type) {
-  // TODO(chrishenry): Change the type of obj to
+  // TODO: Change the type of obj to
   // (!EventTarget|!goog.events.Listenable).
 
   if (!obj) {
@@ -569,7 +570,7 @@ goog.events.getListeners = function(obj, type, capture) {
         type, capture);
   } else {
     if (!obj) {
-      // TODO(chrishenry): We should tighten the API to accept
+      // TODO: We should tighten the API to accept
       // !EventTarget|goog.events.Listenable, and add an assertion here.
       return [];
     }
@@ -598,7 +599,7 @@ goog.events.getListeners = function(obj, type, capture) {
  * @template EVENTOBJ
  */
 goog.events.getListener = function(src, type, listener, opt_capt, opt_handler) {
-  // TODO(chrishenry): Change type from ?string to string, or add assertion.
+  // TODO: Change type from ?string to string, or add assertion.
   type = /** @type {string} */ (type);
   listener = goog.events.wrapListener(listener);
   var capture = !!opt_capt;
@@ -607,7 +608,7 @@ goog.events.getListener = function(src, type, listener, opt_capt, opt_handler) {
   }
 
   if (!src) {
-    // TODO(chrishenry): We should tighten the API to only accept
+    // TODO: We should tighten the API to only accept
     // non-null objects, or add an assertion here.
     return null;
   }
@@ -714,7 +715,7 @@ goog.events.fireListeners_ = function(obj, type, capture, eventObject) {
   var listenerMap = goog.events.getListenerMap_(
       /** @type {EventTarget} */ (obj));
   if (listenerMap) {
-    // TODO(chrishenry): Original code avoids array creation when there
+    // TODO: Original code avoids array creation when there
     // is no listener, so we do the same. If this optimization turns
     // out to be not required, we can replace this with
     // listenerMap.getListeners(type, capture) instead, which is simpler.

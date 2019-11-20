@@ -280,7 +280,7 @@ goog.ds.DataManager.prototype.getEventCount = function() {
  * Adds a listener
  * Listeners should fire when any data with path that has dataPath as substring
  * is changed.
- * TODO(user) Look into better listener handling
+ * TODO Look into better listener handling
  *
  * @param {Function} fn Callback function, signature function(dataPath, id).
  * @param {string} dataPath Fully qualified data path.

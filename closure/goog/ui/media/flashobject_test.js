@@ -36,7 +36,7 @@ const FLASH_URL = testing.newTrustedResourceUrlForTest(
     'http://www.youtube.com/v/RbI7cCp0v6w&hl=en&fs=1');
 const control = new MockControl();
 const domHelper = control.createLooseMock(DomHelper);
-// TODO(user): mocking window.document throws exceptions in FF2. find out how
+// TODO: mocking window.document throws exceptions in FF2. find out how
 // to mock it.
 const documentHelper = {
   body: control.createLooseMock(DomHelper)
@@ -267,7 +267,7 @@ testSuite({
 
     const flash = new FlashObject(FLASH_URL, domHelper);
     flash.render();
-    // TODO(goto): find out a way to test the loadness of flash movies on
+    // TODO: find out a way to test the loadness of flash movies on
     // asynchronous tests. if debugger; is left here, the test pass. if removed
     // the test fails. that happens because flash needs some time to be
     // considered loaded, after flash.render() is called (like img.src i guess).

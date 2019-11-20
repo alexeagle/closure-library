@@ -122,7 +122,7 @@ goog.iter.toIterator = function(iterable) {
   }
 
 
-  // TODO(arv): Should we fall back on goog.structs.getValues()?
+  // TODO: Should we fall back on goog.structs.getValues()?
   throw new Error('Not implemented');
 };
 
@@ -1172,7 +1172,7 @@ goog.iter.slice = function(iterable, start, opt_end) {
  * @private
  * @template VALUE
  */
-// TODO(user): Consider moving this into goog.array as a public function.
+// TODO: Consider moving this into goog.array as a public function.
 goog.iter.hasDuplicates_ = function(arr) {
   var deduped = [];
   goog.array.removeDuplicates(arr, deduped);

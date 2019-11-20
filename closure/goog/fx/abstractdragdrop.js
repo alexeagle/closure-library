@@ -442,7 +442,7 @@ goog.fx.AbstractDragDrop.prototype.startDrag = function(event, item) {
  * if the position or visibility of a drag target has changed during
  * a drag, or if targets are added or removed.
  *
- * TODO(user): this is an expensive operation;  more efficient APIs
+ * TODO: this is an expensive operation;  more efficient APIs
  * may be necessary.
  */
 goog.fx.AbstractDragDrop.prototype.recalculateDragTargets = function() {
@@ -747,7 +747,7 @@ goog.fx.AbstractDragDrop.prototype.removeAllScrollableContainers = function() {
 /**
  * Event handler for containers scrolling.
  * @param {goog.events.BrowserEvent} e The event.
- * @suppress {visibility} TODO(martone): update dependent projects.
+ * @suppress {visibility} TODO: update dependent projects.
  * @private
  */
 goog.fx.AbstractDragDrop.prototype.containerScrollHandler_ = function(e) {
@@ -1203,7 +1203,7 @@ goog.fx.AbstractDragDrop.prototype.disposeInternal = function() {
 goog.fx.DragDropEvent = function(
     type, source, sourceItem, opt_target, opt_targetItem, opt_targetElement,
     opt_clientX, opt_clientY, opt_x, opt_y, opt_subtarget, opt_browserEvent) {
-  // TODO(eae): Get rid of all the optional parameters and have the caller set
+  // TODO: Get rid of all the optional parameters and have the caller set
   // the fields directly instead.
   goog.fx.DragDropEvent.base(this, 'constructor', type);
 
@@ -1447,7 +1447,7 @@ goog.fx.DragDropItem.prototype.mouseMove_ = function(event) {
       Math.abs(event.clientY - this.startPosition_.y);
   // Fire dragStart event if the drag distance exceeds the threshold or if the
   // mouse leave the dragged element.
-  // TODO(user): Consider using the goog.fx.Dragger to track the distance
+  // TODO: Consider using the goog.fx.Dragger to track the distance
   // even after the mouse leaves the dragged element.
   var currentDragElement = this.currentDragElement_;
   var distanceAboveThreshold =

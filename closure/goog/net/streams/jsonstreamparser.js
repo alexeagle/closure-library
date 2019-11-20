@@ -218,7 +218,7 @@ Parser.prototype.getErrorMessage = function() {
 /**
  * @return {boolean} Whether the parser has reached the end of the stream
  *
- * TODO(updogliu): move this API to the base type.
+ * TODO: move this API to the base type.
  */
 Parser.prototype.done = function() {
   return this.streamState_ === Parser.StreamState_.ARRAY_END;
@@ -231,7 +231,7 @@ Parser.prototype.done = function() {
  *
  * @return {string} The extra input
  *
- * TODO(updogliu): move this API to the base type.
+ * TODO: move this API to the base type.
  */
 Parser.prototype.getExtraInput = function() {
   return this.buffer_;

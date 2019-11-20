@@ -20,7 +20,7 @@ const testSuite = goog.require('goog.testing.testSuite');
 
 // For now, just test that the variables exist, the test runner will
 // pick up any runtime errors.
-// TODO(chrisn): Mock out each browser implementation and test the code path
+// TODO: Mock out each browser implementation and test the code path
 // correctly detects the version for each case.
 
 testSuite({

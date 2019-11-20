@@ -149,7 +149,7 @@ goog.net.BulkLoader.prototype.handleSuccess_ = function(id, xhrIo) {
  * @private
  */
 goog.net.BulkLoader.prototype.handleError_ = function(id, xhrIo) {
-  // TODO(user): Abort all pending requests.
+  // TODO: Abort all pending requests.
 
   // Dispatch the ERROR event.
   this.dispatchEvent(new goog.net.BulkLoader.LoadErrorEvent(xhrIo.getStatus()));

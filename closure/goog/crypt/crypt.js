@@ -115,7 +115,7 @@ goog.crypt.hexToByteArray = function(hexString) {
  * @return {!Array<number>} UTF-8 byte array.
  */
 goog.crypt.stringToUtf8ByteArray = function(str) {
-  // TODO(user): Use native implementations if/when available
+  // TODO: Use native implementations if/when available
   var out = [], p = 0;
   for (var i = 0; i < str.length; i++) {
     var c = str.charCodeAt(i);
@@ -149,7 +149,7 @@ goog.crypt.stringToUtf8ByteArray = function(str) {
  * @return {string} 16-bit Unicode string.
  */
 goog.crypt.utf8ByteArrayToString = function(bytes) {
-  // TODO(user): Use native implementations if/when available
+  // TODO: Use native implementations if/when available
   var out = [], pos = 0, c = 0;
   while (pos < bytes.length) {
     var c1 = bytes[pos++];

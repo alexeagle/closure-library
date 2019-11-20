@@ -126,7 +126,7 @@ goog.crypt.Sha1.prototype.compress_ = function(buf, opt_offset) {
   // get 16 big endian words
   if (typeof buf === 'string') {
     for (var i = 0; i < 16; i++) {
-      // TODO(user): [bug 8140122] Recent versions of Safari for Mac OS and iOS
+      // TODO: [bug 8140122] Recent versions of Safari for Mac OS and iOS
       // have a bug that turns the post-increment ++ operator into pre-increment
       // during JIT compilation.  We have code that depends heavily on SHA-1 for
       // correctness and which is affected by this bug, so I've removed all uses
@@ -161,7 +161,7 @@ goog.crypt.Sha1.prototype.compress_ = function(buf, opt_offset) {
   var e = this.chain_[4];
   var f, k;
 
-  // TODO(user): Try to unroll this loop to speed up the computation.
+  // TODO: Try to unroll this loop to speed up the computation.
   for (var i = 0; i < 80; i++) {
     if (i < 40) {
       if (i < 20) {
@@ -199,7 +199,7 @@ goog.crypt.Sha1.prototype.compress_ = function(buf, opt_offset) {
 
 /** @override */
 goog.crypt.Sha1.prototype.update = function(bytes, opt_length) {
-  // TODO(johnlenz): tighten the function signature and remove this check
+  // TODO: tighten the function signature and remove this check
   if (bytes == null) {
     return;
   }

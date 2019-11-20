@@ -109,7 +109,7 @@ goog.fs.getPersistent = function(size) {
  * Creates a blob URL for a blob object.
  * Throws an error if the browser does not support Object Urls.
  *
- * TODO(user): Update references to this method to use
+ * TODO: Update references to this method to use
  * goog.fs.url.createObjectUrl instead.
  *
  * @param {!Blob} blob The object for which to create the URL.
@@ -124,7 +124,7 @@ goog.fs.createObjectUrl = function(blob) {
  * Revokes a URL created by {@link goog.fs.createObjectUrl}.
  * Throws an error if the browser does not support Object Urls.
  *
- * TODO(user): Update references to this method to use
+ * TODO: Update references to this method to use
  * goog.fs.url.revokeObjectUrl instead.
  *
  * @param {string} url The URL to revoke.
@@ -138,7 +138,7 @@ goog.fs.revokeObjectUrl = function(url) {
  * Checks whether this browser supports Object Urls. If not, calls to
  * createObjectUrl and revokeObjectUrl will result in an error.
  *
- * TODO(user): Update references to this method to use
+ * TODO: Update references to this method to use
  * goog.fs.url.browserSupportsObjectUrls instead.
  *
  * @return {boolean} True if this browser supports Object Urls.

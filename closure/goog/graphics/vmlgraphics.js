@@ -293,7 +293,7 @@ goog.graphics.VmlGraphics.prototype.setElementFill = function(element, fill) {
   var vmlElement = element.getElement();
   goog.graphics.VmlGraphics.removeFill_(vmlElement);
   if (fill instanceof goog.graphics.SolidFill) {
-    // NOTE(arv): VML does not understand 'transparent' so hard code support
+    // NOTE: VML does not understand 'transparent' so hard code support
     // for it.
     if (fill.getColor() == 'transparent') {
       vmlElement.filled = false;
@@ -940,7 +940,7 @@ goog.graphics.VmlGraphics.prototype.createGroup = function(opt_group) {
  * @override
  */
 goog.graphics.VmlGraphics.prototype.getTextWidth = function(text, font) {
-  // TODO(arv): Implement
+  // TODO: Implement
   return 0;
 };
 

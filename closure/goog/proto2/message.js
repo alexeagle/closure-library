@@ -68,7 +68,7 @@ goog.proto2.Message = function() {
  * An enumeration defining the possible field types.
  * Should be a mirror of that defined in descriptor.h.
  *
- * TODO(user): Remove this alias.  The code generator generates code that
+ * TODO: Remove this alias.  The code generator generates code that
  * references this enum, so it needs to exist until the code generator is
  * changed.  The enum was moved to from Message to FieldDescriptor to avoid a
  * dependency cycle.

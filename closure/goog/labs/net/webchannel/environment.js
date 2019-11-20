@@ -15,6 +15,7 @@
 /**
  * @fileoverview A single module to define user-agent specific environment
  * details.
+ *
  */
 
 goog.module('goog.labs.net.webChannel.environment');
@@ -47,7 +48,7 @@ var EDGE_POLLING_INTERVAL_ = 125;
  * only fires readyState == INTERACTIVE once. Opera switched to WebKit in 2013,
  * and then to Blink (chrome).
  *
- * TODO(user): check the raw UA string to keep polling for old, mobile operas
+ * TODO: check the raw UA string to keep polling for old, mobile operas
  * that may still be affected. For old Opera, double the polling interval
  * to 250ms.
  *

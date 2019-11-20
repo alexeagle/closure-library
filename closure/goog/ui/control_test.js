@@ -2334,7 +2334,7 @@ testSuite({
     assertFalse('Control must not be focused', control.isFocused());
   },
 
-  // TODO(attila): Find out why this is flaky on FF2/Linux and FF1.5/Win.
+  // TODO: Find out why this is flaky on FF2/Linux and FF1.5/Win.
   // function testHandleMouseDownForSelectableControl() {
   //  control.setAllowTextSelection(true);
   //  control.render(sandbox);

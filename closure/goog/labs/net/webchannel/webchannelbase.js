@@ -651,7 +651,7 @@ WebChannelBase.prototype.connect = function(
     this.connState_.handshakeResult = [];
     this.connState_.bufferingProxyResult = false;
 
-    // TODO(user): merge states with background channel test
+    // TODO: merge states with background channel test
     // requestStats.setTimeout(goog.bind(this.connectTest_, this, testPath), 0);
     //     this.connectChannel_();
   }

@@ -40,7 +40,7 @@ goog.inherits(goog.dom.AbstractMultiRange, goog.dom.AbstractRange);
 /** @override */
 goog.dom.AbstractMultiRange.prototype.containsRange = function(
     otherRange, opt_allowPartial) {
-  // TODO(user): This will incorrectly return false if two (or more) adjacent
+  // TODO: This will incorrectly return false if two (or more) adjacent
   // elements are both in the control range, and are also in the text range
   // being compared to.
   var /** !Array<?goog.dom.TextRange> */ ranges = this.getTextRanges();

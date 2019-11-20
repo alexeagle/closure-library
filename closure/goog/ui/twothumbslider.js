@@ -32,7 +32,7 @@
  * var slider = new goog.ui.TwoThumbSlider;
  * slider.decorate(document.getElementById('twothumbslider'));
  *
- * TODO(user): add a11y once we know what this element is
+ * TODO: add a11y once we know what this element is
  *
  * @see ../demos/twothumbslider.html
  */

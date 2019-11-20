@@ -81,7 +81,7 @@ goog.style.setStyle_ = function(element, value, style) {
   var propertyName = goog.style.getVendorJsStyleName_(element, style);
 
   if (propertyName) {
-    // TODO(johnlenz): coerce to string?
+    // TODO: coerce to string?
     element.style[propertyName] = /** @type {?} */ (value);
   }
 };
@@ -215,7 +215,7 @@ goog.style.getComputedStyle = function(element, property) {
  * @return {string} Style value.
  */
 goog.style.getCascadedStyle = function(element, style) {
-  // TODO(nicksantos): This should be documented to return null. #fixTypes
+  // TODO: This should be documented to return null. #fixTypes
   return /** @type {string} */ (
       element.currentStyle ? element.currentStyle[style] : null);
 };
@@ -690,14 +690,14 @@ goog.style.getClientLeftTop = function(el) {
  */
 goog.style.getPageOffset = function(el) {
   var doc = goog.dom.getOwnerDocument(el);
-  // TODO(gboyer): Update the jsdoc in a way that doesn't break the universe.
+  // TODO: Update the jsdoc in a way that doesn't break the universe.
   goog.asserts.assertObject(el, 'Parameter is required');
 
-  // NOTE(arv): If element is hidden (display none or disconnected or any the
+  // NOTE: If element is hidden (display none or disconnected or any the
   // ancestors are hidden) we get (0,0) by default but we still do the
   // accumulation of scroll position.
 
-  // TODO(arv): Should we check if the node is disconnected and in that case
+  // TODO: Should we check if the node is disconnected and in that case
   //            return (0,0)?
 
   var pos = new goog.math.Coordinate(0, 0);
@@ -880,7 +880,7 @@ goog.style.setPageOffset = function(el, x, opt_y) {
     x = x.x;
   }
 
-  // NOTE(arv): We cannot allow strings for x and y. We could but that would
+  // NOTE: We cannot allow strings for x and y. We could but that would
   // require us to manually transform between different units
 
   // Work out deltas
@@ -1146,7 +1146,7 @@ goog.style.setOpacity = function(el, alpha) {
   } else if ('MozOpacity' in style) {
     style.MozOpacity = alpha;
   } else if ('filter' in style) {
-    // TODO(arv): Overwriting the filter might have undesired side effects.
+    // TODO: Overwriting the filter might have undesired side effects.
     if (alpha === '') {
       style.filter = '';
     } else {
@@ -1307,7 +1307,7 @@ goog.style.installSafeStyleSheet = function(safeStyleSheet, opt_node) {
       body.parentNode.insertBefore(head, body);
     }
     var el = dh.createDom(goog.dom.TagName.STYLE);
-    // NOTE(user): Setting styles after the style element has been appended
+    // NOTE: Setting styles after the style element has been appended
     // to the head results in a nasty Webkit bug in certain scenarios. Please
     // refer to https://bugs.webkit.org/show_bug.cgi?id=26307 for additional
     // details.
@@ -1458,7 +1458,7 @@ goog.style.isUnselectable = function(el) {
  *     selectable state, and leave its descendants alone; defaults to false.
  */
 goog.style.setUnselectable = function(el, unselectable, opt_noRecurse) {
-  // TODO(attila): Do we need all of TR_DomUtil.makeUnselectable() in Closure?
+  // TODO: Do we need all of TR_DomUtil.makeUnselectable() in Closure?
   var descendants = !opt_noRecurse ? el.getElementsByTagName('*') : null;
   var name = goog.style.unselectableStyle_;
   if (name) {
@@ -1689,7 +1689,7 @@ goog.style.getBox_ = function(element, stylePrefix) {
     var top = goog.style.getComputedStyle(element, stylePrefix + 'Top');
     var bottom = goog.style.getComputedStyle(element, stylePrefix + 'Bottom');
 
-    // NOTE(arv): Gecko can return floating point numbers for the computed
+    // NOTE: Gecko can return floating point numbers for the computed
     // style values.
     return new goog.math.Box(
         parseFloat(top), parseFloat(right), parseFloat(bottom),
@@ -1876,7 +1876,7 @@ goog.style.getFontSize = function(el) {
   var fontSize = goog.style.getStyle_(el, 'fontSize');
   var sizeUnits = goog.style.getLengthUnits(fontSize);
   if (fontSize && 'px' == sizeUnits) {
-    // NOTE(user): This could be parseFloat instead, but IE doesn't return
+    // NOTE: This could be parseFloat instead, but IE doesn't return
     // decimal fractions in getStyle_ and Firefox reports the fractions, but
     // ignores them when rendering. Interestingly enough, when we force the
     // issue and size something to e.g., 50% of 25px, the browsers round in

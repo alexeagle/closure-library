@@ -497,7 +497,7 @@ testSuite({
         BrowserFeature.GETS_STUCK_IN_LINKS ? Unicode.NBSP : '5', '',
         fieldObj.getRange());
 
-    // NOTE(user): The functionality to avoid getting stuck in links is
+    // NOTE: The functionality to avoid getting stuck in links is
     // tested in editablelink_test.html::testPlaceCursorRightOf().
   },
 
@@ -673,7 +673,7 @@ testSuite({
    */
   testBug7279077ScrollOnFocus() {
     if (userAgent.IE) {
-      return;  // TODO(user): take this out once b/7279077 fixed for IE too.
+      return;  // TODO: take this out once b/7279077 fixed for IE too.
     }
     setUpAnchor('12345', '/');
     setUpRealEditableField();

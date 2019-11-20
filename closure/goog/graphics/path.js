@@ -464,7 +464,7 @@ goog.graphics.Path.createSimplifiedPath = function(src) {
 };
 
 
-// TODO(chrisn): Delete this method
+// TODO: Delete this method
 /**
  * Creates a transformed copy of this path. The path is simplified
  * {@see #createSimplifiedPath} prior to transformation.

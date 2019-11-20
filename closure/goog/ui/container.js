@@ -20,8 +20,8 @@
  *
  * @see ../demos/container.html
  */
-// TODO(attila):  Fix code/logic duplication between this and goog.ui.Control.
-// TODO(attila):  Maybe pull common stuff all the way up into Component...?
+// TODO:  Fix code/logic duplication between this and goog.ui.Control.
+// TODO:  Maybe pull common stuff all the way up into Component...?
 
 goog.provide('goog.ui.Container');
 goog.provide('goog.ui.Container.EventType');
@@ -78,7 +78,7 @@ goog.tagUnsealableClass(goog.ui.Container);
 goog.ui.Container.EventType = {
   /**
    * Dispatched after a goog.ui.Container becomes visible. Non-cancellable.
-   * NOTE(user): This event really shouldn't exist, because the
+   * NOTE: This event really shouldn't exist, because the
    * goog.ui.Component.EventType.SHOW event should behave like this one. But the
    * SHOW event for containers has been behaving as other components'
    * BEFORE_SHOW event for a long time, and too much code relies on that old
@@ -700,7 +700,7 @@ goog.ui.Container.prototype.getOwnerControl = function(node) {
     var elem = this.getElement();
     // See http://b/2964418 . IE9 appears to evaluate '!=' incorrectly, so
     // using '!==' instead.
-    // TODO(user): Possibly revert this change if/when IE9 fixes the issue.
+    // TODO: Possibly revert this change if/when IE9 fixes the issue.
     while (node && node !== elem) {
       var id = node.id;
       if (id in this.childElementIdMap_) {
@@ -1041,7 +1041,7 @@ goog.ui.Container.prototype.getOrientation = function() {
  * Sets the container's orientation.
  * @param {goog.ui.Container.Orientation} orientation Container orientation.
  */
-// TODO(attila): Do we need to support containers with dynamic orientation?
+// TODO: Do we need to support containers with dynamic orientation?
 goog.ui.Container.prototype.setOrientation = function(orientation) {
   if (this.getElement()) {
     // Too late.

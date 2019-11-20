@@ -135,7 +135,7 @@ goog.module.ModuleLoader.supportsSourceUrlDebugger = function() {
  * https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers#31250734
  * If the URL constructed by the loader exceeds this limit, we will try to split
  * it into multiple requests.
- * TODO(user): Make this configurable since not all users care about IE.
+ * TODO: Make this configurable since not all users care about IE.
  * @const {number}
  * @private
  */
@@ -144,7 +144,7 @@ goog.module.ModuleLoader.URL_MAX_LENGTH_ = 4043;
 
 /**
  * Error code for javascript syntax and network errors.
- * TODO(user): Detect more accurate error info.
+ * TODO: Detect more accurate error info.
  * @const {number}
  * @private
  */
@@ -235,7 +235,7 @@ goog.module.ModuleLoader.prototype.setDebugMode = function(debugMode) {
  * The cost of appending sourceURL information is negligible when compared to
  * the cost of evaling the script. Almost all clients will want this on.
  *
- * TODO(nicksantos): Turn this on by default. We may want to turn this off
+ * TODO: Turn this on by default. We may want to turn this off
  * for clients that inject their own sourceURL.
  *
  * @param {boolean} enabled Whether source url injection is enabled.
@@ -277,7 +277,7 @@ goog.module.ModuleLoader.prototype.loadModules = function(
     // Modules were not prefetched.
     this.loadingModulesStatus_[ids] = loadStatus;
     this.downloadModules_(ids);
-    // TODO(user): Need to handle timeouts in the module loading code.
+    // TODO: Need to handle timeouts in the module loading code.
   } else if (this.getUseScriptTags()) {
     // We started prefetching but we used <link rel="preload".../> tags, so we
     // rely on the browser to reconcile the (existing) prefetch request and the
@@ -317,7 +317,7 @@ goog.module.ModuleLoader.prototype.evaluateCode_ = function(moduleIds) {
     }
   } catch (e) {
     error = e;
-    // TODO(user): Consider throwing an exception here.
+    // TODO: Consider throwing an exception here.
     goog.log.warning(
         this.logger, 'Loaded incomplete code for module(s): ' + moduleIds, e);
   }

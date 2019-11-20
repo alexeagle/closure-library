@@ -48,7 +48,7 @@ goog.labs.testing.Environment = goog.defineClass(null, {
     /**
      * Mocks are not type-checkable. To reduce burden on tests that are type
      * checked, this is typed as "?" to turn off JSCompiler checking.
-     * TODO(b/69851971): Enable a type-checked mocking library.
+     * TODO: Enable a type-checked mocking library.
      * @type {?}
      */
     this.mockControl = null;
@@ -196,7 +196,7 @@ goog.labs.testing.Environment = goog.defineClass(null, {
     var mock = this.mockControl.createStrictMock(toMock);
     // Mocks are not type-checkable. To reduce burden on tests that are type
     // checked, this is typed as "?" to turn off JSCompiler checking.
-    // TODO(b/69851971): Enable a type-checked mocking library.
+    // TODO: Enable a type-checked mocking library.
     return /** @type {?} */ (mock);
   },
 
@@ -217,7 +217,7 @@ goog.labs.testing.Environment = goog.defineClass(null, {
     var mock = this.mockControl.createLooseMock(toMock, ignoreUnexpectedCalls);
     // Mocks are not type-checkable. To reduce burden on tests that are type
     // checked, this is typed as "?" to turn off JSCompiler checking.
-    // TODO(b/69851971): Enable a type-checked mocking library.
+    // TODO: Enable a type-checked mocking library.
     return /** @type {?} */ (mock);
   },
 });
@@ -229,7 +229,7 @@ goog.labs.testing.Environment = goog.defineClass(null, {
 goog.labs.testing.Environment.activeTestCase_ = null;
 
 
-// TODO(johnlenz): make this package private when it moves out of labs.
+// TODO: make this package private when it moves out of labs.
 /**
  * @return {?goog.testing.TestCase}
  */

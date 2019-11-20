@@ -188,7 +188,7 @@ goog.editor.plugins.AbstractDialogPlugin.prototype.execCommandInternal =
   // one.
   if (!this.dialog_) {
     this.dialog_ = this.createDialog(
-        // TODO(user): Add Field.getAppDomHelper. (Note dom helper will
+        // TODO: Add Field.getAppDomHelper. (Note dom helper will
         // need to be updated if setAppWindow is called by clients.)
         goog.dom.getDomHelper(this.getFieldObject().getAppWindow()), opt_arg);
   }

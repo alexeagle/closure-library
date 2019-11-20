@@ -21,8 +21,8 @@ const PropertyReplacer = goog.require('goog.testing.PropertyReplacer');
 const googObject = goog.require('goog.object');
 const testSuite = goog.require('goog.testing.testSuite');
 
-// TODO(arv): Add tests for the event dispatches.
-// TODO(arv): Add tests for the calculation of the coordinates.
+// TODO: Add tests for the event dispatches.
+// TODO: Add tests for the calculation of the coordinates.
 
 let anim2;
 let anim;

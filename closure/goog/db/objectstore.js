@@ -42,7 +42,7 @@ goog.require('goog.debug');
  * @constructor
  * @final
  *
- * TODO(arthurhsu): revisit msg in exception and errors in this class. In newer
+ * TODO: revisit msg in exception and errors in this class. In newer
  *     Chrome (v22+) the error/request come with a DOM error string that is
  *     already very descriptive.
  */
@@ -76,7 +76,7 @@ goog.db.ObjectStore.prototype.getName = function() {
  * @private
  */
 goog.db.ObjectStore.prototype.insert_ = function(fn, msg, value, opt_key) {
-  // TODO(user): refactor wrapping an IndexedDB request in a Deferred by
+  // TODO: refactor wrapping an IndexedDB request in a Deferred by
   // creating a higher-level abstraction for it (mostly affects here and
   // goog.db.Index)
   var d = new goog.async.Deferred();

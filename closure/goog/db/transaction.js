@@ -68,7 +68,7 @@ goog.db.Transaction = function(tx, db) {
    */
   this.eventHandler_ = new goog.events.EventHandler(this);
 
-  // TODO(user): remove these casts once the externs file is updated to
+  // TODO: remove these casts once the externs file is updated to
   // correctly reflect that IDBTransaction extends EventTarget
   this.eventHandler_.listen(
       /** @type {!EventTarget} */ (this.tx_), 'complete',

@@ -720,7 +720,7 @@ goog.testing.net.XhrIo.prototype.getLastError = function() {
 goog.testing.net.XhrIo.prototype.getLastUri = function() {
   // A few tests depend on this returning a goog.Uri object, even though
   // goog.net.XhrIo only ever returns a string from getLastUri.
-  // TODO(closure-team): Update the tests that are using getLastUri for
+  // TODO: Update the tests that are using getLastUri for
   // null or goog.Uri return values.
   return /** @type {string} */ (this.lastUri_);
 };
@@ -833,7 +833,7 @@ goog.testing.net.XhrIo.prototype.getResponseXml = function() {
   if (!this.checkXhr_()) {
     return null;
   }
-  // NOTE(user): I haven't found out how to check in Internet Explorer
+  // NOTE: I haven't found out how to check in Internet Explorer
   // whether the response is XML document, so I do it the other way around.
   return typeof this.response_ === 'string' ||
           (goog.global['ArrayBuffer'] &&

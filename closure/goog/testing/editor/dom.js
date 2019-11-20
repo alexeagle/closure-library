@@ -103,7 +103,7 @@ goog.testing.editor.dom.getPreviousNextNonEmptyTextNodeHelper_ = function(
   // that starting node's subtree in the process.
   var iter = new goog.dom.TagIterator(opt_stopAt, opt_isPrevious);
 
-  // TODO(user): Move this logic to a new method in TagIterator such as
+  // TODO: Move this logic to a new method in TagIterator such as
   // skipToNode().
   // Then we set the iterator to start at the given start node, not opt_stopAt.
   var walkType;  // Let TagIterator set the initial walk type by default.

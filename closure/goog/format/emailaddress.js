@@ -335,7 +335,7 @@ goog.format.EmailAddress.isValidDomainPartSpec = function(str) {
  * @protected
  */
 goog.format.EmailAddress.parseInternal = function(addr, ctor) {
-  // TODO(ecattell): Strip bidi markers.
+  // TODO: Strip bidi markers.
   var name = '';
   var address = '';
   for (var i = 0; i < addr.length;) {

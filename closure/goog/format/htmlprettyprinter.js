@@ -27,7 +27,7 @@ goog.require('goog.string.StringBuffer');
 
 /**
  * This class formats HTML to be more human-readable.
- * TODO(user): Add hierarchical indentation.
+ * TODO: Add hierarchical indentation.
  * @param {number=} opt_timeOutMillis Max # milliseconds to spend on #format. If
  *     this time is exceeded, return partially formatted. 0 or negative number
  *     indicates no timeout.

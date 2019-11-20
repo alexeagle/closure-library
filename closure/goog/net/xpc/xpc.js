@@ -67,7 +67,7 @@ goog.net.xpc.TransportNames = {
 };
 
 
-// TODO(user): Add auth token support to other methods.
+// TODO: Add auth token support to other methods.
 
 
 /**

@@ -132,7 +132,7 @@ goog.proto2.PbLiteSerializer.prototype.deserializeField = function(
   if (value == null) {
     // Since value double-equals null, it may be either null or undefined.
     // Ensure we return the same one, since they have different meanings.
-    // TODO(user): If the field is repeated, this method should probably
+    // TODO: If the field is repeated, this method should probably
     // return [] instead of null.
     return value;
   }

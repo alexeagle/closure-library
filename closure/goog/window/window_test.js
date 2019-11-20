@@ -88,7 +88,7 @@ function doTestOpenWindow(noreferrer, urlParam, encodeUrlParam_opt) {
   if (encodeUrlParam_opt) {
     urlParam = encodeURIComponent(urlParam);
   }
-  // TODO(mlourenco): target is set because goog.window.open() will currently
+  // TODO: target is set because goog.window.open() will currently
   // allow it to be undefined, which in IE seems to result in the same window
   // being reused, instead of a new one being created. If goog.window.open()
   // is fixed to use "_blank" by default then target can be removed here.
@@ -123,7 +123,7 @@ function verifyWindow(win, noreferrer, urlParam) {
 
 testSuite({
   shouldRunTests() {
-    // TODO(b/25455129): Edge has a flaky test failures around window.open.
+    // TODO: Edge has a flaky test failures around window.open.
     return !browser.isEdge();
   },
 

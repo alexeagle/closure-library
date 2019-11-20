@@ -44,7 +44,7 @@ goog.require('goog.string');
  * @extends {goog.ds.DataNode}
  * @constructor
  */
-// TODO(arv): Use interfaces when available.
+// TODO: Use interfaces when available.
 goog.ds.XmlDataSource = function(node, parent, opt_name) {
   this.parent_ = parent;
   this.dataName_ = opt_name || (node ? node.nodeName : '');

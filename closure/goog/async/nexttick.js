@@ -242,7 +242,7 @@ goog.async.nextTick.getSetImmediateEmulator_ = function() {
   }
   // Fall back to setTimeout with 0. In browsers this creates a delay of 5ms
   // or more.
-  // NOTE(user): This fallback is used for IE11.
+  // NOTE: This fallback is used for IE11.
   return function(cb) {
     goog.global.setTimeout(/** @type {function()} */ (cb), 0);
   };

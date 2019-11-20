@@ -159,7 +159,7 @@ goog.math.Box.prototype.expand = function(
 
 /**
  * Expand this box to include another box.
- * NOTE(user): This is used in code that needs to be very fast, please don't
+ * NOTE: This is used in code that needs to be very fast, please don't
  * add functionality to this function at the expense of speed (variable
  * arguments, accepting multiple argument types, etc).
  * @param {goog.math.Box} box The box to include in this one.

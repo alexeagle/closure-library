@@ -121,7 +121,7 @@ testSuite({
 
     util.setUserAgent(null);
     userAgentTestUtil.reinitializeUserAgent();
-    // TODO(johnlenz): Chrome/Blink is miscategorized as Webkit
+    // TODO: Chrome/Blink is miscategorized as Webkit
     assertTrue(userAgent.WEBKIT);
     assertEquals('537.36', userAgent.VERSION);
   },

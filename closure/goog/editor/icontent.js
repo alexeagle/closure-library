@@ -105,7 +105,7 @@ goog.editor.icontent.getInitialIframeContent_ = function(
   }
 
   // <HTML>
-  // NOTE(user): Override min-widths that may be set for all
+  // NOTE: Override min-widths that may be set for all
   // HTML/BODY nodes. A similar workaround is below for the <body> tag. This
   // can happen if the host page includes a rule like this in its CSS:
   //
@@ -144,7 +144,7 @@ goog.editor.icontent.getInitialIframeContent_ = function(
     // can never be removed from the field.  This style forces the images
     // to render as a broken image icon, sized based on the width and height
     // of the image.
-    // TODO(user): Make sure we move this into a contentEditable code
+    // TODO: Make sure we move this into a contentEditable code
     // path if there ever is one for FF.
     html.push(' img {-moz-force-broken-image-icon: 1;}');
   }

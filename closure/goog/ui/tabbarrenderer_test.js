@@ -76,7 +76,7 @@ testSuite({
         'Decorated element must be as expected', dom.getElement('start'),
         element);
     // Due to a bug in ContainerRenderer, the "-vertical" class isn't applied.
-    // TODO(attila): Fix this!
+    // TODO: Fix this!
     assertSameElements(
         'Decorated element must have expected class names',
         ['goog-tab-bar', 'goog-tab-bar-start'], classlist.get(element));

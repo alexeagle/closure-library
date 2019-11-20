@@ -105,7 +105,7 @@ testSuite({
     const dom = FIELD.getEditableDomHelper();
     const selection = Range.createFromWindow(dom.getWindow());
 
-    // TODO(brndn): the location of the cursor is not yet specified by the W3C
+    // TODO: the location of the cursor is not yet specified by the W3C
     // Editing APIs (https://dvcs.w3.org/hg/editing/raw-file/tip/editing.html).
     // See b/15678403.  IE and some webkit (all Safari, and up to Chrome 57)
     // return the end of the previous text node, while other browsers return

@@ -27,7 +27,7 @@ code.highlighter-rouge {
   color: #383;
 }
 
-/* TODO(sdh): .highlight code, .highlight .hll ??? */
+/* TODO: .highlight code, .highlight .hll ??? */
 pre.highlight {
   background-color: #f8f8f8;
   border: 1px solid #ccc;

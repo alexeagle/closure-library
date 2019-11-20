@@ -44,7 +44,7 @@ const implicitlyFalse = [false, 0, '', null, undefined, NaN];
  */
 async function internalTestAssertRejects(swallowUnhandledRejections, factory) {
   try {
-    // TODO(b/136116638): Stop the unhandled rejection handler from firing
+    // TODO: Stop the unhandled rejection handler from firing
     // rather than swallowing the errors.
     if (swallowUnhandledRejections) {
       GoogPromise.setUnhandledRejectionHandler(goog.nullFunction);
@@ -332,7 +332,7 @@ testSuite({
       assertNaN('');
     }, 'Expected NaN but was <> (String)');
 
-    // TODO(user): These assertions fail. We should decide on the
+    // TODO: These assertions fail. We should decide on the
     // semantics of assertNaN
     // assertThrowsJsUnitException(function() { assertNaN(undefined); },
     //    'Expected NaN');
@@ -348,7 +348,7 @@ testSuite({
     assertNotNaN('');
     assertNotNaN(null);
 
-    // TODO(user): These assertions fail. We should decide on the
+    // TODO: These assertions fail. We should decide on the
     // semantics of assertNotNaN
     // assertNotNaN(undefined);
     // assertNotNaN('a');
@@ -1158,7 +1158,7 @@ testSuite({
 
   testAssertNotThrows() {
     if (product.SAFARI) {
-      // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+      // TODO: Disabled so we can get the rest of the Closure test
       // suite running in a continuous build. Will investigate later.
       return;
     }
@@ -1562,7 +1562,7 @@ testSuite({
       }
     }
 
-    // TODO(gboyer,user): This test does not terminate with the current
+    // TODO: This test does not terminate with the current
     // algorithm. Can be enabled when (if) the algorithm is improved.
     // assertNull(goog.testing.asserts.findDifferences(
     //    createBinTree(5, null), createBinTree(5, null)));
@@ -1572,7 +1572,7 @@ testSuite({
 
   testStringForWindowIE() {
     if (userAgent.IE && !userAgent.isVersionOrHigher('8')) {
-      // NOTE(user): This test sees of we are being affected by a JScript bug
+      // NOTE: This test sees of we are being affected by a JScript bug
       // in try/finally handling. This bug only affects the lowest try/finally
       // block in the stack. Calling this function via VBScript allows
       // us to run the test synchronously in an empty JS stack.

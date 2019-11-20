@@ -307,7 +307,7 @@ goog.ui.PopupColorPicker.prototype.getSelectedColor = function() {
 goog.ui.PopupColorPicker.prototype.setFocusable = function(focusable) {
   this.focusable_ = focusable;
   if (this.colorPicker_) {
-    // TODO(user): In next revision sort the behavior of passing state to
+    // TODO: In next revision sort the behavior of passing state to
     // children correctly
     this.colorPicker_.setFocusable(focusable);
   }
@@ -465,7 +465,7 @@ goog.ui.PopupColorPicker.prototype.show_ = function(e) {
 goog.ui.PopupColorPicker.prototype.onColorPicked_ = function(e) {
   // When we show the color picker we reset the color, which triggers an event.
   // Here we block that event so that it doesn't dismiss the popup
-  // TODO(user): Update the colorpicker to allow selection to be cleared
+  // TODO: Update the colorpicker to allow selection to be cleared
   if (this.colorPicker_.getSelectedIndex() == -1) {
     e.stopPropagation();
     return;

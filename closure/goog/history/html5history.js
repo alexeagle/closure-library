@@ -16,7 +16,7 @@
  * @fileoverview HTML5 based history implementation, compatible with
  * goog.History.
  *
- * TODO(user): There should really be a history interface and multiple
+ * TODO: There should really be a history interface and multiple
  * implementations.
  */
 

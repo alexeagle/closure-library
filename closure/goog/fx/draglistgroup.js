@@ -840,7 +840,7 @@ goog.fx.DragListGroup.prototype.handleDragEnd_ = function(dragEvent) {
 
   // The DRAGEND handler may need the new order of the list items. Clean up the
   // garbage.
-  // TODO(user): Regression test.
+  // TODO: Regression test.
   this.cleanupDragDom_();
 
   this.dispatchEvent(

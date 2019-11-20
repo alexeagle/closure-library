@@ -62,7 +62,7 @@ goog.ui.ac.AutoComplete = function(matcher, renderer, selectionHandler) {
   /**
    * A data-source which provides autocomplete suggestions.
    *
-   * TODO(chrishenry): Tighten the type to !goog.ui.ac.AutoComplete.Matcher.
+   * TODO: Tighten the type to !goog.ui.ac.AutoComplete.Matcher.
    *
    * @type {Object}
    * @protected
@@ -74,7 +74,7 @@ goog.ui.ac.AutoComplete = function(matcher, renderer, selectionHandler) {
    * A handler which interacts with the input DOM element (textfield, textarea,
    * or richedit).
    *
-   * TODO(chrishenry): Tighten the type to !Object.
+   * TODO: Tighten the type to !Object.
    *
    * @type {Object}
    * @protected
@@ -127,7 +127,7 @@ goog.ui.ac.AutoComplete = function(matcher, renderer, selectionHandler) {
    * Id of the first row in autocomplete menu. Note that new ids are assigned
    * every time new suggestions are fetched.
    *
-   * TODO(chrishenry): Figure out what subclass does with this value
+   * TODO: Figure out what subclass does with this value
    * and whether we should expose a more proper API.
    *
    * @type {number}
@@ -325,7 +325,7 @@ goog.ui.ac.AutoComplete.prototype.getToken = function() {
 /**
  * Sets the current token (without changing the rendered autocompletion).
  *
- * NOTE(chrishenry): This method will likely go away when we figure
+ * NOTE: This method will likely go away when we figure
  * out a better API.
  *
  * @param {?string} token The new token.

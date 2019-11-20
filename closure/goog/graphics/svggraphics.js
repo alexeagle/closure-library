@@ -733,7 +733,7 @@ goog.graphics.SvgGraphics.prototype.createGroup = function(opt_group) {
  * @override
  */
 goog.graphics.SvgGraphics.prototype.getTextWidth = function(text, font) {
-  // TODO(user) Implement
+  // TODO Implement
   throw new Error("unimplemented method");
 };
 

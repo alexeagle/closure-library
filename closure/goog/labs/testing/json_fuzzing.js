@@ -86,7 +86,7 @@ goog.labs.testing.JsonFuzzing.Options;
 /**
  * Gets a fuzzily-generated JSON object (an array).
  *
- * TODO(user): whitespaces
+ * TODO: whitespaces
  *
  * @return {!Array} A new JSON compliant array object.
  */
@@ -237,7 +237,7 @@ goog.labs.testing.JsonFuzzing.prototype.nextMessage_ = function(depth) {
   var random_num = this.nextInt(0, numFields);
   var result = {};
 
-  // TODO(user): unicode and random keys
+  // TODO: unicode and random keys
   for (var i = 0; i < random_num; i++) {
     switch (this.nextFieldType_()) {
       case 0:
@@ -351,7 +351,7 @@ goog.labs.testing.JsonFuzzing.prototype.nextNumber_ = function() {
     result *= -1;
   }
 
-  // TODO(user); more random numbers
+  // TODO; more random numbers
 
   return result;
 };

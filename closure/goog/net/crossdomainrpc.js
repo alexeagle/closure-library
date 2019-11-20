@@ -736,7 +736,7 @@ goog.net.CrossDomainRpc.sendResponse = function(
   }
 
   // usable chunk size is max less dummy URI less chunk prefix length
-  // TODO(user): Figure out why we need to do "- 1" below
+  // TODO: Figure out why we need to do "- 1" below
   var chunkSize = goog.net.CrossDomainRpc.MAX_CHUNK_SIZE_ - dummyUri.length -
       1 -  // payload delimiter ('#' or '?')
       goog.net.CrossDomainRpc.CHUNK_PREFIX_.length - 1;

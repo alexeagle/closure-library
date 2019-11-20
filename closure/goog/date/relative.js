@@ -489,7 +489,7 @@ goog.date.relative.getDateString_ = function(
 
   var delta = Math.floor((goog.now() - dateMs) / goog.date.relative.MINUTE_MS_);
   if (delta < 60 * 24) {
-    // TODO(user): this call raises an exception if date is a goog.date.Date.
+    // TODO: this call raises an exception if date is a goog.date.Date.
     return (opt_shortTimeMsg || goog.date.relative.formatShortTime_(date)) +
         relativeDate;
   } else {

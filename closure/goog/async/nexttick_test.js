@@ -210,7 +210,7 @@ testSuite({
    * polyfill should not try to invoke a callback (which would result in an
    * error because there would be no callbacks in the linked list).
    *
-   * TODO(nickreid): Delete this test? It's testing for a an adversarial input
+   * TODO: Delete this test? It's testing for a an adversarial input
    * case and depend on deep implementation details.
    */
   testPostMessagePolyfillDoesNotPumpCallbackQueueIfMessageIsIncorrect() {

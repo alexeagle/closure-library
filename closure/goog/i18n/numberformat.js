@@ -1520,7 +1520,7 @@ goog.i18n.NumberFormat.prototype.intLog10_ = function(number) {
     return number > 0 ? number : 0;
   }
   // Turns out Math.log(1000000)/Math.LN10 is strictly less than 6.
-  // TODO(nickreid): Make this use `decimalShift_` or use another more effecient
+  // TODO: Make this use `decimalShift_` or use another more effecient
   // string-based method.
   var i = 0;
   while ((number /= 10) >= 1) i++;

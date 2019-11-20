@@ -450,7 +450,7 @@ goog.dom.forms.setValue = function(el, opt_value) {
 
 /**
  * Sets a checkable input element's checked property.
- * #TODO(user): This seems potentially unintuitive since it doesn't set
+ * #TODO: This seems potentially unintuitive since it doesn't set
  * the value property but my hunch is that the primary use case is to check a
  * checkbox, not to reset its value property.
  * @param {Element} el The element.

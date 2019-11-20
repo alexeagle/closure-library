@@ -136,10 +136,10 @@ goog.dom.pattern.Repeat.prototype.matchToken = function(token, type) {
 
     case goog.dom.pattern.MatchType.BACKTRACK_MATCH:
       // This happens if our child pattern is repetitive too.
-      // TODO(robbyw): Backtrack further if necessary.
+      // TODO: Backtrack further if necessary.
       this.count++;
 
-      // NOTE(nicksantos): This line of code is broken. this.patterns_ doesn't
+      // NOTE: This line of code is broken. this.patterns_ doesn't
       // exist, and this.currentPosition_ doesn't exist. When this is fixed,
       // remove the missingProperties suppression above.
       if (this.currentPosition_ == this.patterns_.length) {

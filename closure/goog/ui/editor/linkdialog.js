@@ -559,7 +559,7 @@ goog.ui.editor.LinkDialog.prototype.buildTextToDisplayDiv_ = function() {
       {id: goog.ui.editor.LinkDialog.Id_.TEXT_TO_DISPLAY});
   var textInput = this.textToDisplayInput_;
   // 98% prevents scroll bars in standards mode.
-  // TODO(robbyw): Is this necessary for quirks mode?
+  // TODO: Is this necessary for quirks mode?
   goog.style.setStyle(textInput, 'width', '98%');
   goog.style.setStyle(table.rows[0].cells[1], 'width', '100%');
   goog.dom.appendChild(table.rows[0].cells[1], textInput);
@@ -802,7 +802,7 @@ goog.ui.editor.LinkDialog.prototype.guessUrlAndSelectTab_ = function(text) {
     this.dom.getElement(goog.ui.editor.LinkDialog.Id_.EMAIL_ADDRESS_INPUT)
         .value = text;
     this.setAutogenFlag_(true);
-    // TODO(user): Why disable right after enabling? What bug are we
+    // TODO: Why disable right after enabling? What bug are we
     // working around?
     this.disableAutogenFlag_(true);
   } else if (goog.editor.Link.isLikelyUrl(text)) {
@@ -1014,7 +1014,7 @@ goog.ui.editor.LinkDialog.prototype.setTextToDisplayFromAuto_ = function() {
  * @private
  */
 goog.ui.editor.LinkDialog.prototype.setAutogenFlag_ = function(val) {
-  // TODO(user): This whole autogen thing is very confusing. It needs
+  // TODO: This whole autogen thing is very confusing. It needs
   // to be refactored and/or explained.
   this.autogenerateTextToDisplay_ = val;
 };

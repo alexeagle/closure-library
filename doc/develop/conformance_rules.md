@@ -3,8 +3,6 @@ title: JavaScript Conformance Rules for Closure Library
 section: develop
 layout: article
 ---
-
-
 <!-- Documentation licensed under CC BY 4.0 -->
 <!-- License available at https://creativecommons.org/licenses/by/4.0/ -->
 
@@ -12,6 +10,7 @@ layout: article
 
 The config file:
 [closure/goog/conformance\_proto.txt](https://github.com/google/closure-library/tree/master/closure/goog/conformance_proto.txt)
+
 
 ## Introduction
 
@@ -115,14 +114,12 @@ MyClass.prototype.method = function(arg) {
 }
 ```
 
-
-{: #logger}
-### goog.debug.Logger 
+### goog.debug.Logger {#logger}
 
 goog.debug.Logger should not be used directly. Instead use the goog.log static
 wrappers. goog.log is safely strippable from production code. However,
 goog.debug.Logger is only stripped from code if the logger\_ suffix is used in
-the name.
+the name. 
 
 Note:  You may see "possible violations" for code that is not a logger if the
 code is badly typed. Verify that you have a dependency on the type you are
@@ -140,25 +137,19 @@ IE's `execScript` is also banned.
 `Function`, `setTimeout`, `setInterval` and `requestAnimationFrame` with string
 argument are also banned.
 
-
-{: #throwOfNonErrorTypes}
-### throw 'message' 
+### throw 'message' {#throwOfNonErrorTypes}
 
 `throw` with a string literal can not have a stack trace attached to it, making
 debugging significantly more difficult.  Use `throw new Error('message')`
 instead.
 
-
-{: #callee}
-### Arguments.prototype.callee 
+### Arguments.prototype.callee {#callee}
 
 `Arguments.prototype.callee` is not allowed in EcmaScript
 "[strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)"
 code.
 
-
-{: #documentWrite}
-### Calls to Document.prototype.write 
+### Calls to Document.prototype.write {#documentWrite}
 
 Calling `Document.prototype.write` is a security risk and is banned. Any content
 passed to `write()` will be automatically evaluated in the DOM and therefore the
@@ -175,9 +166,7 @@ If you need to use it, use the type-safe [`goog.dom.safe.documentWrite`]
 wrapper, or directly render a Strict Soy template using
 [`goog.soy.Renderer.prototype.renderElement`] \(or similar\).
 
-
-{: #innerHtml}
-### Assignment to Element.prototype.innerHTML/outerHTML 
+### Assignment to Element.prototype.innerHTML/outerHTML {#innerHtml}
 
 Direct assignment of a non-constant value to `innerHTML` and `outerHTML` is a
 security risk and is banned. Any content passed to `innerHTML` or `outerHTML`
@@ -191,9 +180,7 @@ render a Strict Soy template using [`goog.soy.Renderer.prototype.renderElement`]
 
 Note: Reads of these properties are permitted.
 
-
-{: #untypedElements}
-### Creating untyped elements is forbidden 
+### Creating untyped elements is forbidden {#untypedElements}
 
 We have several conformance rules banning assignment to dangerous properties
 such as `script.src`. These rules work only if we know the type of the
@@ -210,9 +197,7 @@ For this reason, we ban creating untyped `'script'`, `'iframe'`, `'frame'`,
 `'embed'`, and `'object'` elements and require using `goog.dom` methods with
 `goog.dom.TagName` with them.
 
-
-{: #location}
-### Assignment to Location.prototype.href and Window.prototype.location 
+### Assignment to Location.prototype.href and Window.prototype.location {#location}
 
 Direct assignment of a non-constant value to `Location.prototype.href` and
 `Window.prototype.location` is a security risk and is banned. Externally
@@ -228,9 +213,7 @@ without further sanitization.
 
 Note: Reads of this property are permitted.
 
-
-{: #href}
-### Assignment to .href property of Anchor, Link, etc elements 
+### Assignment to .href property of Anchor, Link, etc elements {#href}
 
 Direct assignment of a non-constant value to the href property of Anchor, Link,
 and similar elements is a security risk and is banned. Externally controlled
@@ -245,9 +228,7 @@ without further sanitization.
 
 Note: Reads of this property are permitted.
 
-
-{: #trustedResourceUrl}
-### Assignment to property requires a TrustedResourceUrl via goog.dom.safe 
+### Assignment to property requires a TrustedResourceUrl via goog.dom.safe {#trustedResourceUrl}
 
 Assignment of a non-constant value to certain URL-valued properties, like
 Base.href and Script.src, via a string that is not fully application controlled
@@ -265,9 +246,7 @@ which take TrustedResourceUrl, such as goog.dom.safe.setScriptSrc.
 
 Note: Reads of this property are permitted.
 
-
-{: #createDom}
-### Assigning a variable to a dangerous property via createDom is forbidden. 
+### Assigning a variable to a dangerous property via createDom is forbidden. {#createDom}
 
 `goog.dom.createDom` and its version in `DomHelper` support assigning attributes
 to the newly created elements. This conformance rule bans assigning attributes
@@ -299,44 +278,34 @@ goog.dom.createDom('img', {'src': ''});
 Note that string literal values assigned to banned attributes are allowed as
 they couldn't be attacker controlled.
 
-
-{: #scriptContent}
-### Setting content of Script element is not allowed 
+### Setting content of Script element is not allowed {#scriptContent}
 
 Setting content of `<script>` and then appending it to the document has the same
 effect as calling eval(). This coding pattern is prone to XSS vulnerabilities,
 and therefore disallowed.
 
-
-{: #postMessage}
-### Window.prototype.postMessage 
+### Window.prototype.postMessage {#postMessage}
 
 Raw "postMessage" can create security vulnerabilities. Use gapi.rpc instead.
 gapi.rpc conceptually augments window.postmessage with more security and other
-features.
+features. 
 
 Valid reasons for using raw "postMessage" include when it is used for
 communication to/from an iframe hosted on the same domain as the page containing
 the iframe. However, be sure to get a security review to allow usage of this.
 
 
-
-{: #expose}
-### @expose 
+### @expose {#expose}
 
 @expose has non-obvious global side-effects that can cause errors.
 
-
-{: #globalVars}
-### Global declarations 
+### Global declarations {#globalVars}
 
 Global functions and var declarations are not allowed, these pollute global
 scope.  Top level namespaces are allowed if declared with "goog.provide" or
 "goog.module".
 
-
-{: #unknownThis}
-### Unknown types 
+### Unknown types {#unknownThis}
 
 Loose types "?" (unknown), "\*" (all), "Object" and "Function" should be used
 sparingly as they degrade available type information. "?" as a "this" type is
@@ -344,18 +313,14 @@ forbidden so that accidental unknowns (which are far more common) can be
 caught.
 
 
-
-{: #storage}
-### Client Side Storage (Closure library specific) 
+### Client Side Storage (Closure library specific) {#storage}
 
 Client side storage mechanisms are dangerous because of PII and security
 implications. TODO(johnlenz): Document what someone submitting code to Closure
 should in the case they see this warning.
 
 
-
-{: #legacyApis}
-### Unsafe legacy APIs 
+### Unsafe legacy APIs {#legacyApis}
 
 Closure (as well as some libraries built on top of
 Closure)

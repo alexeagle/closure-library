@@ -271,7 +271,7 @@ goog.ui.SelectionMenuButton.prototype.setSelectionState = function(state) {
       goog.style.setOpacity(checkbox, 1);
     } else if (state == goog.ui.SelectionMenuButton.SelectionState.SOME) {
       checkbox.checked = true;
-      // TODO(user): Get UX help to style this
+      // TODO: Get UX help to style this
       goog.style.setOpacity(checkbox, 0.5);
     } else {  // NONE
       checkbox.checked = false;

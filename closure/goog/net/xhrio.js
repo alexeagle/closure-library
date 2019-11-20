@@ -830,14 +830,14 @@ goog.net.XhrIo.prototype.onReadyStateChangeHelper_ = function() {
   }
 
   if (typeof goog == 'undefined') {
-    // NOTE(user): If goog is undefined then the callback has occurred as the
+    // NOTE: If goog is undefined then the callback has occurred as the
     // application is unloading and will error.  Thus we let it silently fail.
 
   } else if (
       this.xhrOptions_[goog.net.XmlHttp.OptionType.LOCAL_REQUEST_ERROR] &&
       this.getReadyState() == goog.net.XmlHttp.ReadyState.COMPLETE &&
       this.getStatus() == 2) {
-    // NOTE(user): In IE if send() errors on a *local* request the readystate
+    // NOTE: In IE if send() errors on a *local* request the readystate
     // is still changed to COMPLETE.  We need to ignore it and allow the
     // try/catch around send() to pick up the error.
     goog.log.fine(
@@ -952,7 +952,7 @@ goog.net.XhrIo.prototype.cleanUpXhr_ = function(opt_fromDispose) {
     }
 
     try {
-      // NOTE(user): Not nullifying in FireFox can still leak if the callbacks
+      // NOTE: Not nullifying in FireFox can still leak if the callbacks
       // are defined in the same scope as the instance of XhrIo. But, IE doesn't
       // allow you to set the onreadystatechange to NULL so nullFunction is
       // used.
@@ -1279,7 +1279,7 @@ goog.net.XhrIo.prototype.getAllResponseHeaders = function() {
  *     and header values as values.
  */
 goog.net.XhrIo.prototype.getResponseHeaders = function() {
-  // TODO(b/120371595): Make this function parse headers as per the spec
+  // TODO: Make this function parse headers as per the spec
   // (https://tools.ietf.org/html/rfc2616#section-4.2).
 
   var headersObject = {};

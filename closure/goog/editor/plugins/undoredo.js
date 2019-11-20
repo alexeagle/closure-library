@@ -177,7 +177,7 @@ goog.editor.plugins.UndoRedo.prototype.isSupportedCommand = function(command) {
 /**
  * Unregisters and disables the fieldObject with this plugin. Thie does *not*
  * clobber the undo stack for the fieldObject though.
- * TODO(user): For the multifield version, we really should add a way to
+ * TODO: For the multifield version, we really should add a way to
  * ignore undo actions on field's that have been made uneditable.
  * This is probably as simple as skipping over entries in the undo stack
  * that have a hashcode of an uneditable field.
@@ -236,7 +236,7 @@ goog.editor.plugins.UndoRedo.prototype.enable = function(fieldObject) {
 
   var eventHandler = new goog.events.EventHandler(this);
 
-  // TODO(user): From ojan during a code review:
+  // TODO: From ojan during a code review:
   // The beforechange handler is meant to be there so you can grab the cursor
   // position *before* the change is made as that's where you want the cursor to
   // be after an undo.
@@ -806,7 +806,7 @@ goog.editor.plugins.UndoRedo.UndoState_.prototype.equals = function(rhs) {
  * that don't modify the user-interactable content (e.g. making something bold
  * vs. typing a character).
  *
- * TODO(user): Completely get rid of this and use goog.dom.SavedCaretRange.
+ * TODO: Completely get rid of this and use goog.dom.SavedCaretRange.
  *
  * @param {goog.editor.Field} field The field the selection is in.
  * @private

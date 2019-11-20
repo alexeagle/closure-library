@@ -113,7 +113,7 @@ goog.userAgent.getNavigatorTyped = function() {
 
 
 /**
- * TODO(nnaze): Change type to "Navigator" and update compilation targets.
+ * TODO: Change type to "Navigator" and update compilation targets.
  * @return {?Object} The native navigator object.
  */
 goog.userAgent.getNavigator = function() {
@@ -180,7 +180,7 @@ goog.userAgent.WEBKIT = goog.userAgent.BROWSER_KNOWN_ ?
  *
  * This is a separate function so that the logic can be tested.
  *
- * TODO(nnaze): Investigate swapping in goog.labs.userAgent.device.isMobile().
+ * TODO: Investigate swapping in goog.labs.userAgent.device.isMobile().
  *
  * @return {boolean} Whether the user agent is running on a mobile device.
  * @private
@@ -194,7 +194,7 @@ goog.userAgent.isMobile_ = function() {
 /**
  * Whether the user agent is running on a mobile device.
  *
- * TODO(nnaze): Consider deprecating MOBILE when labs.userAgent
+ * TODO: Consider deprecating MOBILE when labs.userAgent
  *   is promoted as the gecko/webkit logic is likely inaccurate.
  *
  * @type {boolean}
@@ -207,7 +207,7 @@ goog.userAgent.MOBILE =
  * Used while transitioning code to use WEBKIT instead.
  * @type {boolean}
  * @deprecated Use {@link goog.userAgent.product.SAFARI} instead.
- * TODO(nicksantos): Delete this from goog.userAgent.
+ * TODO: Delete this from goog.userAgent.
  */
 goog.userAgent.SAFARI = goog.userAgent.WEBKIT;
 
@@ -507,7 +507,7 @@ goog.userAgent.getVersionRegexResult_ = function() {
  * @private
  */
 goog.userAgent.getDocumentMode_ = function() {
-  // NOTE(user): goog.userAgent may be used in context where there is no DOM.
+  // NOTE: goog.userAgent may be used in context where there is no DOM.
   var doc = goog.global['document'];
   return doc ? doc['documentMode'] : undefined;
 };

@@ -5,7 +5,6 @@
 # your project and extend the rules to disable them or to add their whitelists.
 
 
-
 ### Platform restrictions ###
 
 requirement: {
@@ -17,7 +16,7 @@ requirement: {
 
   whitelist_regexp: '.+/closure/goog/base.js'  # goog.base uses arguments.callee
   whitelist_regexp: '.+/closure/goog/debug/'  # legacy stack trace support, etc
-  # TODO(mlourenco): Fix this? Not sure if possible or not.
+  # TODO: Fix this? Not sure if possible or not.
   whitelist_regexp: '.+/closure/goog/testing/stacktrace.js'
 }
 
@@ -43,7 +42,6 @@ requirement: {
   type: CUSTOM
   java_class: 'com.google.javascript.jscomp.ConformanceRules$BanGlobalVars'
   error_message: 'Global declarations are not allowed. See https://google.github.io/closure-library/develop/conformance_rules.html#globalVars'
-
   whitelist_regexp: '.+/closure/goog/base.js' # global 'goog'
   whitelist_regexp: '.+/closure/goog/labs/testing/' # global matchers, etc
   whitelist_regexp: '.+/closure/goog/locale/locale.js' # dumb api
@@ -86,7 +84,7 @@ requirement: {
   # Known-safe common infrastructure.
   whitelist_regexp: '.+/closure/goog/async/nexttick.js'
   whitelist_regexp: '.+/closure/goog/net/xpc/nativemessagingtransport.js'
-  # TODO(user): make sure this gets security reviewed (b/29333525).
+  # TODO: make sure this gets security reviewed (b/29333525).
   whitelist_regexp: '.+/closure/goog/messaging/portchannel.js'
 }
 
@@ -100,7 +98,7 @@ requirement: {
 
 requirement: {
   rule_id: 'closure:eval'
-  # TODO(jakubvrana): Change to BANNED_NAME_CALL after cl/154708486 lands.
+  # TODO: Change to BANNED_NAME_CALL after cl/154708486 lands.
   type: BANNED_NAME
   error_message: 'eval is not allowed. See https://google.github.io/closure-library/develop/conformance_rules.html#eval'
 
@@ -114,7 +112,6 @@ requirement: {
   whitelist_regexp: '.+/closure/goog/json/json.js' # used in goog.json.parse
   whitelist_regexp: '.+/closure/goog/module/loader.js'
   whitelist_regexp: '.+/closure/goog/module/moduleloader.js'
-
 }
 
 requirement: {
@@ -126,7 +123,7 @@ requirement: {
   value: 'Window.prototype.execScript'
 
   whitelist_regexp: '.+/closure/goog/base.js'
-  # TODO(jakubvrana): To be investigated.
+  # TODO: To be investigated.
   whitelist_regexp: '.+/closure/goog/net/xpc/nixtransport.js'
 }
 
@@ -201,7 +198,7 @@ requirement: {
   whitelist_regexp: '.+/closure/goog/async/nexttick.js'
   whitelist_regexp: '.+/closure/goog/base.js'
   whitelist_regexp: '.+/closure/goog/dom/safe.js'
-  # TODO(jakubvrana): These need to be refactored.
+  # TODO: These need to be refactored.
   whitelist_regexp: '.+/closure/goog/editor/icontent.js'
   whitelist_regexp: '.+/closure/goog/testing/'
 }
@@ -299,10 +296,10 @@ requirement: {
 # returns Element; matching on its subtypes only would miss many writes to the
 # property.
 
-# TODO(mlourenco): Create locationType rule banning protocol, assign()
+# TODO: Create locationType rule banning protocol, assign()
 # and replace() of Location.
 
-# TODO(mlourenco): Move to "hrefProperty".
+# TODO: Move to "hrefProperty".
 requirement: {
   rule_id: 'closure:locationHref'
   type: BANNED_PROPERTY_NON_CONSTANT_WRITE
@@ -319,7 +316,7 @@ requirement: {
   whitelist_regexp: '.+/closure/goog/history/history.js'
 }
 
-# TODO(mlourenco): Rename to "locationProperty". Add Document.location to it.
+# TODO: Rename to "locationProperty". Add Document.location to it.
 requirement: {
   rule_id: 'closure:location'
   type: BANNED_PROPERTY_NON_CONSTANT_WRITE
@@ -328,7 +325,7 @@ requirement: {
   value: 'Window.prototype.location'
 }
 
-# TODO(user): Rename hrefProperty.
+# TODO: Rename hrefProperty.
 requirement: {
   rule_id: 'closure:href'
   type: BANNED_PROPERTY_NON_CONSTANT_WRITE
@@ -353,7 +350,7 @@ requirement: {
   whitelist_regexp: '.+/closure/goog/editor/link.js'
 }
 
-# TODO(mlourenco): Move src to "srcProperty", others to "otherProperties". Ban
+# TODO: Move src to "srcProperty", others to "otherProperties". Ban
 # "src" and other properties at "Element", so that elements returned by
 # document.createElement() are captured.
 requirement: {
@@ -368,12 +365,12 @@ requirement: {
   value: 'HTMLIFrameElement.prototype.src'
   # For HTMLLinkElement both href and rel have to be assigned at the same time.
   value: 'HTMLLinkElement.prototype.rel'
-  # TODO(mlourenco): We probably want an "objectType" rule instead since
+  # TODO: We probably want an "objectType" rule instead since
   # there are a bunch of dangerous properties.
   value: 'HTMLObjectElement.prototype.data'
   value: 'HTMLScriptElement.prototype.src'
   value: 'HTMLTrackElement.prototype.src'
-  # TODO(mlourenco): Ban other dangerous properties (archive, classid, etc).
+  # TODO: Ban other dangerous properties (archive, classid, etc).
 
   # Closure's debug loader.
   whitelist_regexp: '.+/closure/goog/base.js'
@@ -407,7 +404,7 @@ requirement: {
   value: '*.outerHTML'
 
   whitelist_regexp: '.+/closure/goog/tweak/tweakui.js' # False positive - missing type on containerNodeName.
-  # TODO(jakubvrana): Ban this.
+  # TODO: Ban this.
   whitelist_regexp: '.+/closure/goog/ui/abstractspellchecker.js'
 }
 
@@ -483,8 +480,6 @@ requirement: {
 #
 # These rules allow projects to have compile-time errors for legacyconversions
 # functions and to progressively move away from them by using the whitelist.
-
-
 
 ### Closure library restrictions ###
 

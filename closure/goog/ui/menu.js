@@ -33,8 +33,8 @@
  * menu.decorate(goog.dom.getElement('menu'));
  *
  * TESTED=FireFox 2.0, IE6, Opera 9, Chrome.
- * TODO(user): Key handling is flaky in Opera and Chrome
- * TODO(user): Rename all references of "item" to child since menu is
+ * TODO: Key handling is flaky in Opera and Chrome
+ * TODO: Rename all references of "item" to child since menu is
  * essentially very generic and could, in theory, host a date or color picker.
  *
  * @see ../demos/menu.html
@@ -63,7 +63,7 @@ goog.require('goog.ui.MenuSeparator');
 
 
 
-// TODO(robbyw): Reverse constructor argument order for consistency.
+// TODO: Reverse constructor argument order for consistency.
 /**
  * A basic menu class.
  * @param {goog.dom.DomHelper=} opt_domHelper Optional DOM helper.
@@ -86,7 +86,7 @@ goog.inherits(goog.ui.Menu, goog.ui.Container);
 goog.tagUnsealableClass(goog.ui.Menu);
 
 
-// TODO(robbyw): Remove this and all references to it.
+// TODO: Remove this and all references to it.
 // Please ensure that BEFORE_SHOW behavior is not disrupted as a result.
 /**
  * Event types dispatched by the menu.
@@ -108,7 +108,7 @@ goog.ui.Menu.EventType = {
 };
 
 
-// TODO(robbyw): Remove this and all references to it.
+// TODO: Remove this and all references to it.
 /**
  * CSS class for menus.
  * @type {string}
@@ -262,7 +262,7 @@ goog.ui.Menu.prototype.getItemCount = function() {
  * @deprecated Use getChildAt, forEachChild, and getChildCount.
  */
 goog.ui.Menu.prototype.getItems = function() {
-  // TODO(user): Remove reference to getItems and instead use getChildAt,
+  // TODO: Remove reference to getItems and instead use getChildAt,
   // forEachChild, and getChildCount
   var children = [];
   this.forEachChild(function(child) { children.push(child); });
@@ -276,7 +276,7 @@ goog.ui.Menu.prototype.getItems = function() {
  * @param {number=} opt_y Top position.
  */
 goog.ui.Menu.prototype.setPosition = function(x, opt_y) {
-  // NOTE(user): It is necessary to temporarily set the display from none, so
+  // NOTE: It is necessary to temporarily set the display from none, so
   // that the position gets set correctly.
   var visible = this.isVisible();
   if (!visible) {

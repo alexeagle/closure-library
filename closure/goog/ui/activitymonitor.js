@@ -75,7 +75,7 @@ goog.ui.ActivityMonitor = function(opt_domHelper, opt_useBubble) {
 
   /**
    * Whether the current window is an iframe.
-   * TODO(user): Move to goog.dom.
+   * TODO: Move to goog.dom.
    * @type {boolean}
    * @private
    */

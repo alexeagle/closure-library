@@ -17,7 +17,7 @@
  * References:
  * - W3C: http://dev.w3.org/csswg/cssom/
  * - MSDN: http://msdn.microsoft.com/en-us/library/ms531209(VS.85).aspx.
- * TODO(user): Consider hacking page, media, etc.. to work.
+ * TODO: Consider hacking page, media, etc.. to work.
  *     This would be pretty challenging. IE returns the text for any rule
  *     regardless of whether or not the media is correct or not. Firefox at
  *     least supports CSSRule.type to figure out if it's a media type and then
@@ -305,7 +305,7 @@ goog.cssom.replaceCssRule = function(
  * @param {string} cssText The text for the new CSSRule.
  * @param {number=} opt_index The index of the cssRule in its parentStylesheet.
  * @throws {Error} If the css rule text appears to be ill-formatted.
- * TODO(bowdidge): Inserting at index 0 fails on Firefox 2 and 3 with an
+ * TODO: Inserting at index 0 fails on Firefox 2 and 3 with an
  *     exception warning "Node cannot be inserted at the specified point in
  *     the hierarchy."
  */

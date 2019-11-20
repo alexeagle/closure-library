@@ -146,7 +146,7 @@ goog.color.alpha.normalizeAlphaHex_ = function(hexColor) {
  *     and 255, and a is a value between 0 and 1.
  */
 goog.color.alpha.hexToRgba = function(hexColor) {
-  // TODO(user): Enhance code sharing with goog.color, for example by
+  // TODO: Enhance code sharing with goog.color, for example by
   //     adding a goog.color.genericHexToRgb method.
   hexColor = goog.color.alpha.normalizeAlphaHex_(hexColor);
   var r = parseInt(hexColor.substr(1, 2), 16);
@@ -169,7 +169,7 @@ goog.color.alpha.hexToRgba = function(hexColor) {
 goog.color.alpha.rgbaToHex = function(r, g, b, a) {
   var intAlpha = Math.floor(a * 255);
   if (isNaN(intAlpha) || intAlpha < 0 || intAlpha > 255) {
-    // TODO(user): The CSS spec says the value should be clamped.
+    // TODO: The CSS spec says the value should be clamped.
     throw new Error(
         '"(' + r + ',' + g + ',' + b + ',' + a +
         '") is not a valid RGBA color');
@@ -190,7 +190,7 @@ goog.color.alpha.rgbaToHex = function(r, g, b, a) {
 goog.color.alpha.hslaToHex = function(h, s, l, a) {
   var intAlpha = Math.floor(a * 255);
   if (isNaN(intAlpha) || intAlpha < 0 || intAlpha > 255) {
-    // TODO(user): The CSS spec says the value should be clamped.
+    // TODO: The CSS spec says the value should be clamped.
     throw new Error(
         '"(' + h + ',' + s + ',' + l + ',' + a +
         '") is not a valid HSLA color');
@@ -333,7 +333,7 @@ goog.color.alpha.validAlphaHexColorRe_ = /^#(?:[0-9a-f]{4}){1,2}$/i;
  * @return {boolean} Whether the string is a valid alpha hex color.
  * @private
  */
-// TODO(user): Support percentages when goog.color also supports them.
+// TODO: Support percentages when goog.color also supports them.
 goog.color.alpha.isValidAlphaHexColor_ = function(str) {
   return goog.color.alpha.validAlphaHexColorRe_.test(str);
 };

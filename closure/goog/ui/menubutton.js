@@ -298,7 +298,7 @@ goog.ui.MenuButton.prototype.performActionInternal = function(e) {
 /**
  * Handles mousedown events over the document.  If the mousedown happens over
  * an element unrelated to the component, hides the menu.
- * TODO(attila): Reconcile this with goog.ui.Popup (and handle frames/windows).
+ * TODO: Reconcile this with goog.ui.Popup (and handle frames/windows).
  * @param {goog.events.BrowserEvent} e Mouse event to handle.
  * @protected
  */
@@ -620,7 +620,7 @@ goog.ui.MenuButton.prototype.setEnabled = function(enable) {
 };
 
 
-// TODO(nicksantos): AlignMenuToStart and ScrollOnOverflow and PositionElement
+// TODO: AlignMenuToStart and ScrollOnOverflow and PositionElement
 // should all be deprecated, in favor of people setting their own
 // AnchoredPosition with the parameters they need. Right now, we try
 // to be backwards-compatible as possible, but this is incomplete because
@@ -697,7 +697,7 @@ goog.ui.MenuButton.prototype.isFocusablePopupMenu = function() {
  * @param {boolean} focusable Whether the attached menu is focusable.
  */
 goog.ui.MenuButton.prototype.setFocusablePopupMenu = function(focusable) {
-  // TODO(attila):  The menu itself should advertise whether it is focusable.
+  // TODO:  The menu itself should advertise whether it is focusable.
   this.isFocusablePopupMenu_ = focusable;
 };
 
@@ -810,7 +810,7 @@ goog.ui.MenuButton.prototype.setOpen = function(open, opt_e) {
     this.menu_.setVisible(open, false, opt_e);
     // In Pivot Tables the menu button somehow gets disposed of during the
     // setVisible call, causing attachPopupListeners_ to fail.
-    // TODO(user): Debug what happens.
+    // TODO: Debug what happens.
     if (!this.isDisposed()) {
       this.attachPopupListeners_(open);
     }

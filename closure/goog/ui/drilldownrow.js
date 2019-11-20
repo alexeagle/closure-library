@@ -43,10 +43,10 @@
  * @see ../demos/drilldownrow.html
  */
 
-// TODO(user): Build support for dynamically loading DrilldownRows,
+// TODO: Build support for dynamically loading DrilldownRows,
 // probably using automplete as an example to follow.
 
-// TODO(user): Make DrilldownRows accessible through the keyboard.
+// TODO: Make DrilldownRows accessible through the keyboard.
 
 // The render method is redefined in this class because when addChildAt renders
 // the new child it assumes that the child's DOM node will be a child

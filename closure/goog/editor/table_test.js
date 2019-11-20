@@ -79,7 +79,7 @@ function _testRemoveColumn(index) {
 
 
 /*
-  // TODO(user): write more unit tests for selection stuff.
+  // TODO: write more unit tests for selection stuff.
   // The following code is left in here for reference in implementing
   // this TODO.
 

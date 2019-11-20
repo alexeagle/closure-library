@@ -153,7 +153,7 @@ goog.editor.plugins.LoremIpsum.prototype.updateLorem_ = function() {
  * If using click-to-edit mode (where Trogedit manages whether the field
  * is editable), this works for both editable and uneditable fields.
  *
- * TODO(user): Is this really necessary? See TODO below.
+ * TODO: Is this really necessary? See TODO below.
  * @param {boolean=} opt_placeCursor Whether to place the cursor in the field
  *     after clearing lorem.
  * @private
@@ -178,7 +178,7 @@ goog.editor.plugins.LoremIpsum.prototype.clearLorem_ = function(
     field.style.fontStyle = this.oldFontStyle_;
     fieldObj.setSafeHtml(true, null, true);
 
-    // TODO(nicksantos): I'm pretty sure that this is a hack, but talk to
+    // TODO: I'm pretty sure that this is a hack, but talk to
     // Julie about why this is necessary and what to do with it. Really,
     // we need to figure out where it's necessary and remove it where it's
     // not. Safari never places the cursor on its own willpower.

@@ -433,7 +433,7 @@ goog.i18n.MessageFormat.prototype.formatPluralOrdinalBlock_ = function(
   var argumentOffset = parsedPattern.argumentOffset;
   var pluralValue = +namedParameters[argumentIndex];
   if (isNaN(pluralValue)) {
-    // TODO(user): Distinguish between undefined and invalid parameters.
+    // TODO: Distinguish between undefined and invalid parameters.
     result.push('Undefined or invalid parameter - ' + argumentIndex);
     return;
   }

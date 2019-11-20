@@ -25,7 +25,7 @@ goog.require('goog.functions');
 
 
 
-// TODO(nicksantos): Should we factor out the common code between this and
+// TODO: Should we factor out the common code between this and
 // goog.async.Delay? I'm not sure if there's enough code for this to really
 // make sense. Subclassing seems like the wrong approach for a variety of
 // reasons. Maybe there should be a common interface?

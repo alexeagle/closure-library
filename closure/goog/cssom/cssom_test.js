@@ -169,7 +169,7 @@ testSuite({
     // contains a CSSImport Rule. Since we deal only with CSSStyleRule
     // objects, we find the first CSSStyleRule and return its index.
     //
-    // NOTE(user): We could have unified the code block below for all
+    // NOTE: We could have unified the code block below for all
     // browsers but IE6 horribly mangled up the stylesheet by creating
     // duplicate instances of a rule when removeCssRule was invoked
     // just after addCssRule with the looping construct in. This is

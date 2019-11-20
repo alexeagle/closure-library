@@ -84,7 +84,7 @@ goog.events.EventTarget = function() {
   /**
    * Parent event target, used during event bubbling.
    *
-   * TODO(chrishenry): Change this to goog.events.Listenable. This
+   * TODO: Change this to goog.events.Listenable. This
    * currently breaks people who expect getParentEventTarget to return
    * goog.events.EventTarget.
    *
@@ -247,7 +247,7 @@ goog.events.EventTarget.prototype.unlistenByKey = function(key) {
 
 /** @override */
 goog.events.EventTarget.prototype.removeAllListeners = function(opt_type) {
-  // TODO(chrishenry): Previously, removeAllListeners can be called on
+  // TODO: Previously, removeAllListeners can be called on
   // uninitialized EventTarget, so we preserve that behavior. We
   // should remove this when usages that rely on that fact are purged.
   if (!this.eventTargetListeners_) {
@@ -260,7 +260,7 @@ goog.events.EventTarget.prototype.removeAllListeners = function(opt_type) {
 /** @override */
 goog.events.EventTarget.prototype.fireListeners = function(
     type, capture, eventObject) {
-  // TODO(chrishenry): Original code avoids array creation when there
+  // TODO: Original code avoids array creation when there
   // is no listener, so we do the same. If this optimization turns
   // out to be not required, we can replace this with
   // getListeners(type, capture) instead, which is simpler.

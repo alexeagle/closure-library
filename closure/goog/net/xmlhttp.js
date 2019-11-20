@@ -39,10 +39,10 @@ goog.net.XmlHttp = function() {
 /**
  * @define {boolean} Whether to assume XMLHttpRequest exists. Setting this to
  *     true bypasses the ActiveX probing code.
- * NOTE(ruilopes): Due to the way JSCompiler works, this define *will not* strip
+ * NOTE: Due to the way JSCompiler works, this define *will not* strip
  * out the ActiveX probing code from binaries.  To achieve this, use
  * `goog.net.XmlHttpDefines.ASSUME_NATIVE_XHR` instead.
- * TODO(ruilopes): Collapse both defines.
+ * TODO: Collapse both defines.
  */
 goog.net.XmlHttp.ASSUME_NATIVE_XHR =
     goog.define('goog.net.XmlHttp.ASSUME_NATIVE_XHR', false);
@@ -82,7 +82,7 @@ goog.net.XmlHttp.OptionType = {
   USE_NULL_FUNCTION: 0,
 
   /**
-   * NOTE(user): In IE if send() errors on a *local* request the readystate
+   * NOTE: In IE if send() errors on a *local* request the readystate
    * is still changed to COMPLETE.  We need to ignore it and allow the
    * try/catch around send() to pick up the error.
    */
@@ -227,7 +227,7 @@ goog.net.DefaultXmlHttpFactory.prototype.getProgId_ = function() {
 
       try {
         new ActiveXObject(candidate);
-        // NOTE(user): cannot assign progid and return candidate in one line
+        // NOTE: cannot assign progid and return candidate in one line
         // because JSCompiler complaings: BUG 658126
         this.ieProgId_ = candidate;
         return candidate;

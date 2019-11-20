@@ -627,7 +627,7 @@ goog.ui.ServerChart.UriParam = {
  *     {string} area The area to fill, either 'bg' for background or 'c' for
  *         chart area.  The default is 'bg'.
  *     {string} color (required) The color of the background fill.
- *     // TODO(user): Add support for gradient/stripes, which requires
+ *     // TODO: Add support for gradient/stripes, which requires
  *     // a different object structure.
  */
 goog.ui.ServerChart.prototype.setBackgroundFill = function(fill) {

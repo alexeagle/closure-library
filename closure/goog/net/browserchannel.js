@@ -726,7 +726,7 @@ goog.inherits(
 
 /**
  * Enum that identifies events for statistics that are interesting to track.
- * TODO(user) - Change name not to use Event or use EventTarget
+ * TODO - Change name not to use Event or use EventTarget
  * @enum {number}
  */
 goog.net.BrowserChannel.Stat = {
@@ -846,7 +846,7 @@ goog.net.BrowserChannel.prototype.getChannelDebug = function() {
 
 /**
  * Set the browserchannel logger.
- * TODO(user): Add interface for channel loggers or remove this function.
+ * TODO: Add interface for channel loggers or remove this function.
  *
  * @param {goog.net.ChannelDebug} channelDebug The channel debug object.
  */
@@ -1509,7 +1509,7 @@ goog.net.BrowserChannel.prototype.makeForwardChannelRequest_ = function(
       rid = this.nextRid_ - 1;  // Must use last RID
       requestText = this.dequeueOutgoingMaps_();
     } else {
-      // TODO(user): Remove this code and the opt_retryRequest passing
+      // TODO: Remove this code and the opt_retryRequest passing
       // once server-side support for ver 7 is ubiquitous.
       rid = opt_retryRequest.getRequestId();
       requestText = /** @type {string} */ (opt_retryRequest.getPostData());

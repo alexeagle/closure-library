@@ -22,7 +22,7 @@
 goog.provide('goog.editor.PluginImpl');
 
 goog.forwardDeclare('goog.editor.Field');
-// TODO(user): Remove the dependency on goog.editor.Command asap. Currently only
+// TODO: Remove the dependency on goog.editor.Command asap. Currently only
 // needed for execCommand issues with links.
 goog.require('goog.events.EventTarget');
 goog.require('goog.functions');
@@ -348,7 +348,7 @@ goog.editor.PluginImpl.prototype.handleKeyboardShortcut;
  * @return {*} The result of the execCommand, if any.
  */
 goog.editor.PluginImpl.prototype.execCommand = function(command, var_args) {
-  // TODO(user): Replace all uses of isSilentCommand with plugins that just
+  // TODO: Replace all uses of isSilentCommand with plugins that just
   // override this base execCommand method.
   var silent = this.isSilentCommand(command);
   if (!silent) {
@@ -392,7 +392,7 @@ goog.editor.PluginImpl.prototype.execCommand = function(command, var_args) {
  * If custom event dispatching is needed, execCommand shoul be overriden
  * instead.
  *
- * TODO(b/111035839): This pattern makes accurate typing impossible.
+ * TODO: This pattern makes accurate typing impossible.
  *
  * @param {?} command `extends string` The command to execute.
  * @param {...?} var_args Any additional parameters needed to

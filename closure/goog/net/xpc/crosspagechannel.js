@@ -266,10 +266,10 @@ goog.net.xpc.CrossPageChannel.prototype.getPeerWindowObject = function() {
  * @package
  */
 goog.net.xpc.CrossPageChannel.prototype.isPeerAvailable = function() {
-  // NOTE(user): This check is not reliable in IE, where a document in an
+  // NOTE: This check is not reliable in IE, where a document in an
   // iframe does not get unloaded when removing the iframe element from the DOM.
-  // TODO(user): Find something that works in IE as well.
-  // NOTE(user): "!this.peerWindowObject_.closed" evaluates to 'false' in IE9
+  // TODO: Find something that works in IE as well.
+  // NOTE: "!this.peerWindowObject_.closed" evaluates to 'false' in IE9
   // sometimes even though typeof(this.peerWindowObject_.closed) is boolean and
   // this.peerWindowObject_.closed evaluates to 'false'. Casting it to a Boolean
   // results in sane evaluation. When this happens, it's in the inner iframe
@@ -315,7 +315,7 @@ goog.net.xpc.CrossPageChannel.prototype.createTransport_ = function() {
     return;
   }
 
-  // TODO(user): Use goog.scope.
+  // TODO: Use goog.scope.
   var CfgFields = goog.net.xpc.CfgFields;
 
   if (!this.cfg_[CfgFields.TRANSPORT]) {
@@ -445,7 +445,7 @@ goog.net.xpc.CrossPageChannel.prototype.createPeerIframe = function(
         'xpcpeer' + goog.net.xpc.getRandomString(4);
   }
 
-  // TODO(user) Opera creates a history-entry when creating an iframe
+  // TODO Opera creates a history-entry when creating an iframe
   // programmatically as follows. Find a way which avoids this.
 
   var iframeElm =

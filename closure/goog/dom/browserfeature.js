@@ -33,7 +33,7 @@ goog.dom.BrowserFeature.ASSUME_NO_OFFSCREEN_CANVAS =
  * @define {boolean} Whether we know at compile time that the browser supports
  * all OffscreenCanvas contexts.
  */
-// TODO(user): Eventually this should default to "FEATURESET_YEAR >= 202X".
+// TODO: Eventually this should default to "FEATURESET_YEAR >= 202X".
 goog.dom.BrowserFeature.ASSUME_OFFSCREEN_CANVAS =
     goog.define('goog.dom.ASSUME_OFFSCREEN_CANVAS', false);
 

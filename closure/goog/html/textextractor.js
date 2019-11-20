@@ -35,7 +35,7 @@ goog.require('goog.userAgent');
  * @param {string} html The untrusted HTML string.
  * @return {string}
  */
-// TODO(pelizzi): consider an optional bool parameter to also extract the text
+// TODO: consider an optional bool parameter to also extract the text
 // content of alt attributes and such.
 goog.html.textExtractor.extractTextContent = function(html) {
   if (!goog.html.textExtractor.isSupported()) {

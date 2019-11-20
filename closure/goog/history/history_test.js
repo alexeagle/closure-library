@@ -30,7 +30,7 @@ const userAgent = goog.require('goog.userAgent');
 
 // Mimimal function to exercise construction.
 
-// TODO(nnaze): Test additional behavior.
+// TODO: Test additional behavior.
 testSuite({
   testCreation() {
     const input = dom.getElement('hidden-input');

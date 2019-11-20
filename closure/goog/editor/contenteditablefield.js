@@ -86,7 +86,7 @@ goog.editor.ContentEditableField.prototype.makeEditableInternal = function(
   var field = this.getOriginalElement();
   if (field) {
     this.setupFieldObject(field);
-    // TODO(gboyer): Allow clients/plugins to override with 'plaintext-only'
+    // TODO: Allow clients/plugins to override with 'plaintext-only'
     // for WebKit.
     field.contentEditable = true;
 

@@ -61,7 +61,7 @@ goog.debug.ErrorHandler = function(handler) {
    * @type {boolean}
    * @private
    */
-  this.wrapErrors_ = true;  // TODO(user) Change default.
+  this.wrapErrors_ = true;  // TODO Change default.
 
   /**
    * Whether to add a prefix to all error messages. The prefix is
@@ -239,7 +239,7 @@ goog.debug.ErrorHandler.prototype.handleError_ = function(e) {
 };
 
 
-// TODO(mknichel): Allow these functions to take in the window to protect.
+// TODO: Allow these functions to take in the window to protect.
 /**
  * Installs exception protection for window.setTimeout to handle exceptions.
  */

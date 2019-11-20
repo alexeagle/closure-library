@@ -108,7 +108,7 @@ testSuite({
     clock.dispose();
     undoPlugin.dispose();
 
-    // NOTE(nicksantos): I think IE is blowing up on this call because
+    // NOTE: I think IE is blowing up on this call because
     // it is lame. It manifests its lameness by throwing an exception.
     // Kudos to XT for helping me to figure this out.
     try {
@@ -314,7 +314,7 @@ testSuite({
     undoPlugin.updateCurrentState_(editableField);
     assertEquals(currentState, undoPlugin.currentStates_[fieldHashCode]);
 
-    // NOTE(user): Because there is already a current state, this setSafeHtml
+    // NOTE: Because there is already a current state, this setSafeHtml
     // will add a state to the undo stack.
     editableField.setSafeHtml(false, SafeHtml.create('div', {}, 'a'));
     // Select some text so we have a valid selection that gets saved in the

@@ -157,7 +157,7 @@ goog.html.sanitizer.CssSanitizer.sanitizeStyleSheet_ = function(
  * @return {!Array<!CSSStyleRule>}
  * @private
  */
-// TODO(pelizzi): some of these at-rules are safe, consider adding partial
+// TODO: some of these at-rules are safe, consider adding partial
 // support for them.
 goog.html.sanitizer.CssSanitizer.getOnlyStyleRules_ = function(cssRules) {
   return /** @type {!Array<!CSSStyleRule>} */ (

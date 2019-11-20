@@ -313,7 +313,7 @@ goog.module.Loader.prototype.provide = function(
  * @private
  */
 goog.module.Loader.prototype.load_ = function(module) {
-  // NOTE(user): If the module request happens inside a click handler
+  // NOTE: If the module request happens inside a click handler
   // (presumably inside any user event handler, but the onload event
   // handler is fine), IE will load the script but not execute
   // it. Thus we break out of the current flow of control before we do

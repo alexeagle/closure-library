@@ -205,7 +205,7 @@ goog.a11y.aria.removeState = function(element, stateName) {
  * @return {string} Value of the state attribute.
  */
 goog.a11y.aria.getState = function(element, stateName) {
-  // TODO(user): return properly typed value result --
+  // TODO: return properly typed value result --
   // boolean, number, string, null. We should be able to chain
   // getState(...) and setState(...) methods.
 

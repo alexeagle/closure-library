@@ -16,7 +16,7 @@
 #
 # Compiles pertinent Closure library files.
 
-# TODO(joeltine): Make strictMissingRequire an error when
+# TODO: Make strictMissingRequire an error when
 # @suppress {missingRequire} works for it.
 
 java -Xmx1G -jar ../closure-compiler-1.0-SNAPSHOT.jar \

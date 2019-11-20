@@ -232,7 +232,7 @@ testSuite({
 
     const dialogElem = dialog.dialogInternal_.getElement();
     const html = dialogElem.innerHTML;
-    // TODO(user): This is really insufficient. If the title and
+    // TODO: This is really insufficient. If the title and
     // content were swapped this test would still pass!
     assertContains('Dialog html should contain title', '>The Title<', html);
     assertContains('Dialog html should contain content', '>The Content<', html);

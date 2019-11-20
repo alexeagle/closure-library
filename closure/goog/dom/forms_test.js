@@ -366,12 +366,12 @@ testSuite({
     assertFalse(result);
   },
 
-  // TODO(user): make this a meaningful selenium test
+  // TODO: make this a meaningful selenium test
   testSetDisabledFalse() {},
 
   testSetDisabledTrue() {},
 
-  // TODO(user): make this a meaningful selenium test
+  // TODO: make this a meaningful selenium test
   testFocusAndSelect() {
     const el = dom.getElement('in1');
     forms.focusAndSelect(el);

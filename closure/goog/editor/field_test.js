@@ -267,7 +267,7 @@ testSuite({
   },
 
   tearDown() {
-    // NOTE(nicksantos): I think IE is blowing up on this call because
+    // NOTE: I think IE is blowing up on this call because
     // it is lame. It manifests its lameness by throwing an exception.
     // Kudos to XT for helping me to figure this out.
     try {

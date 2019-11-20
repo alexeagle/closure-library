@@ -14,7 +14,7 @@
 
 /**
  * @fileoverview Methods to verify IE versions.
- * TODO(johnlenz): delete this remove this file on the experiment is complete.
+ * TODO: delete this remove this file on the experiment is complete.
  */
 goog.provide('goog.labs.useragent.verifier');
 

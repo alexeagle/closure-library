@@ -126,7 +126,7 @@ goog.editor.plugins.TagOnEnterHandler.prototype.handleDeleteGecko = function(
       goog.editor.plugins.EnterHandler.isBrElem(container)) {
     // Don't delete if it's the last node in the field and just has a BR.
     e.preventDefault();
-    // TODO(user): I think we probably don't need to stopPropagation here
+    // TODO: I think we probably don't need to stopPropagation here
     e.stopPropagation();
   } else {
     // Go ahead with deletion.
@@ -284,7 +284,7 @@ goog.editor.plugins.TagOnEnterHandler.prototype
   goog.editor.range.selectNodeStart(elementAfterCursor);
 
   e.preventDefault();
-  // TODO(user): I think we probably don't need to stopPropagation here
+  // TODO: I think we probably don't need to stopPropagation here
   e.stopPropagation();
 };
 
@@ -315,7 +315,7 @@ goog.editor.plugins.TagOnEnterHandler.prototype.breakOutOfEmptyListItemGecko_ =
   var inSubList = grandparent.tagName == goog.dom.TagName.OL ||
       grandparent.tagName == goog.dom.TagName.UL;
 
-  // TODO(robbyw): Should we apply the list or list item styles to the new node?
+  // TODO: Should we apply the list or list item styles to the new node?
   var newNode = goog.dom.getDomHelper(li).createElement(
       inSubList ? goog.dom.TagName.LI : this.tag);
 

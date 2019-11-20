@@ -526,7 +526,7 @@ goog.fx.AnimationEvent = function(type, anim) {
    * The animation object.
    * @type {goog.fx.Animation}
    */
-  // TODO(arv): This can be removed as this is the same as the target
+  // TODO: This can be removed as this is the same as the target
   this.anim = anim;
 };
 goog.inherits(goog.fx.AnimationEvent, goog.events.Event);

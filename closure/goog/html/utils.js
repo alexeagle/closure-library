@@ -36,7 +36,7 @@ goog.require('goog.string');
  *     other non-text content.  Does NOT return safe HTML!
  */
 goog.html.utils.stripHtmlTags = function(value) {
-  // TODO(user): Make a version that extracts text attributes such as alt.
+  // TODO: Make a version that extracts text attributes such as alt.
   return goog.string.unescapeEntities(
       goog.string.trim(
           value

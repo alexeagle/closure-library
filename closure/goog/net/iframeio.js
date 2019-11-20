@@ -1268,7 +1268,7 @@ goog.net.IframeIo.prototype.scheduleIframeDisposal_ = function() {
   // There shouldn't be a case where the iframe is null and we get to this
   // stage, but the error reports in http://b/909448 indicate it is possible.
   if (iframe) {
-    // NOTE(user): Stops Internet Explorer leaking the iframe object. This
+    // NOTE: Stops Internet Explorer leaking the iframe object. This
     // shouldn't be needed, since the events have all been removed, which
     // should in theory clean up references.  Oh well...
     iframe.onreadystatechange = null;

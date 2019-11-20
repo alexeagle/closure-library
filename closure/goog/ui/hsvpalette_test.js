@@ -84,7 +84,7 @@ testSuite({
   },
 
   testChangeEventWithDisableDispatchEventOmitted() {
-    // TODO(user): Add functionality to goog.testing.events to assert
+    // TODO: Add functionality to goog.testing.events to assert
     // an event was fired.
     events.listen(samplePalette, Component.EventType.ACTION, () => {
       eventWasFired = true;
@@ -192,7 +192,7 @@ testSuite({
 
     const event = new GoogEvent();
     event.clientY = -50;
-    // TODO(user): Use
+    // TODO: Use
     // goog.testing.events.fireMouseDownEvent(
     //     samplePalette.valueBackgroundImageElement);
     // when google.testing.events support specifying properties of the event
@@ -213,7 +213,7 @@ testSuite({
     const event = new GoogEvent();
     event.clientX = 20;
     event.clientY = 85;
-    // TODO(user): Use goog.testing.events when appropriate (see above).
+    // TODO: Use goog.testing.events when appropriate (see above).
     samplePalette.handleMouseMoveHs_(boundaries, event);
     assertEquals('#ffefc4', googColor.parse(samplePalette.getColor()).hex);
   },

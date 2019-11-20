@@ -57,7 +57,7 @@ goog.i18n.bidi.FORCE_RTL = goog.define('goog.i18n.bidi.FORCE_RTL', false);
  *
  * @type {boolean}
  *
- * TODO(user): write a test that checks that this is a compile-time constant.
+ * TODO: write a test that checks that this is a compile-time constant.
  */
 // LINT.IfChange
 goog.i18n.bidi.IS_RTL =
@@ -100,7 +100,7 @@ goog.i18n.bidi.IS_RTL =
           goog.LOCALE.substring(4, 8).toLowerCase() == 'thaa')));
 //    closure/RtlLocalesTest.java)
 
-// TODO(b/77919903): Add additional scripts and languages that are RTL,
+// TODO: Add additional scripts and languages that are RTL,
 // e.g., mende, samaritan, etc.
 
 

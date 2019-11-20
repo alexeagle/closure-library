@@ -926,7 +926,7 @@ goog.net.xpc.IframePollingTransport.Sender.prototype.send = function(payload) {
   var url =
       this.sanitizedSendUri_ + '#' + this.cycle_ + encodeURIComponent(payload);
 
-  // TODO(user) Find out if try/catch is still needed
+  // TODO Find out if try/catch is still needed
 
   try {
     // safari doesn't allow to call location.replace()

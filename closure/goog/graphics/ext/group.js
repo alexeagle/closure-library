@@ -86,7 +86,7 @@ goog.graphics.ext.Group.prototype.addChild = function(element, opt_chain) {
 goog.graphics.ext.Group.prototype.removeChild = function(element) {
   goog.array.remove(this.children_, element);
 
-  // TODO(robbyw): shape.fireEvent('delete')
+  // TODO: shape.fireEvent('delete')
 
   this.getGraphicsImplementation().removeElement(element.getWrapper());
 };

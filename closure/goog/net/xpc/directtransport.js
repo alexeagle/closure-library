@@ -214,7 +214,7 @@ DirectTransport.activeCount_ = {};
  * @private {string}
  * @const
  */
-// TODO(user): Make this configurable using the CfgFields.
+// TODO: Make this configurable using the CfgFields.
 DirectTransport.GLOBAL_TRANPORT_PATH_ = 'crosswindowmessaging.channel';
 
 

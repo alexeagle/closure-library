@@ -41,7 +41,7 @@ goog.editor.plugins.HeaderFormatter.prototype.getTrogClassId = function() {
   return 'HeaderFormatter';
 };
 
-// TODO(user):  Move execCommand functionality from basictextformatter into
+// TODO:  Move execCommand functionality from basictextformatter into
 // here for headers.  I'm not doing this now because it depends on the
 // switch statements in basictextformatter and we'll need to abstract that out
 // in order to separate out any of the functions from basictextformatter.

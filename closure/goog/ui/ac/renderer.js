@@ -153,7 +153,7 @@ goog.ui.ac.Renderer = function(
    */
   this.rowClassName = goog.getCssName('ac-row');
 
-  // TODO(gboyer): Remove this as soon as we remove references and ensure that
+  // TODO: Remove this as soon as we remove references and ensure that
   // no groups are pushing javascript using this.
   /**
    * The old class name for active row.  This name is deprecated because its
@@ -881,7 +881,7 @@ goog.ui.ac.Renderer.prototype.hiliteMatchingText_ = function(
     // operators in it, so we need to parenthesise it before adding \b to it.
     // or preceded by non-alpha-numeric characters
     //
-    // NOTE(user): When using word matches, this used to have
+    // NOTE: When using word matches, this used to have
     // a (^|\\W+) clause where it now has \\b but it caused various
     // browsers to hang on really long strings. The (^|\\W+) matcher was also
     // unnecessary, because \b already checks that the character before the
@@ -989,7 +989,7 @@ goog.ui.ac.Renderer.prototype.getTokenRegExp_ = function(tokenOrArray) {
     // Not highlighting all matching tokens.  If tokenOrArray is a string, use
     // that as the token.  If it is an array, use the first element in the
     // array.
-    // TODO(user): why is this this way?. We should match against all
+    // TODO: why is this this way?. We should match against all
     // tokens in the array, but only accept the first match.
     if (goog.isArray(tokenOrArray)) {
       token = tokenOrArray.length > 0 ?

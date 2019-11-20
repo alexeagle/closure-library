@@ -21,7 +21,7 @@
  * This parser uses http://tools.ietf.org/html/rfc4180 as the definition of CSV.
  */
 
-// TODO(b/130421259): We're trying to migrate all ES5 subclasses of Closure
+// TODO: We're trying to migrate all ES5 subclasses of Closure
 // Library to ES6. In ES6 this cannot be referenced before super is called. This
 // file has at least one this before a super call (in ES5) and cannot be
 // automatically upgraded to ES6 as a result. Please fix this if you have a
@@ -100,7 +100,7 @@ goog.labs.format.csv.ParseError.prototype.name = 'ParseError';
 
 /**
  * Calculate the line and column for an index in a string.
- * TODO(nnaze): Consider moving to goog.string.newlines.
+ * TODO: Consider moving to goog.string.newlines.
  * @param {string} str A string.
  * @param {number} index An index into the string.
  * @return {?{line: !goog.string.newlines.Line, lineIndex: number}} The line

@@ -109,7 +109,7 @@ testSuite({
     // Webkit used to default to standards mode, but fixed this in
     // Safari 4/Chrome 2, aka, WebKit 530.
     // Also IE10 fails here.
-    // TODO(johnlenz):  IE10+ inherit quirks mode from the owner document
+    // TODO:  IE10+ inherit quirks mode from the owner document
     // according to:
     // http://msdn.microsoft.com/en-us/library/ff955402(v=vs.85).aspx
     // but this test shows different behavior for IE10 and 11. If we discover

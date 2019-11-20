@@ -311,7 +311,7 @@ testSuite({
     logconsole.setCapturing(true);
   },
 
-  // TODO(user): How to unit test all of this?  Creating a MockIframe could
+  // TODO: How to unit test all of this?  Creating a MockIframe could
   // help for the IE code path, but since the other browsers require weird
   // behaviors this becomes very tricky.
 

@@ -43,7 +43,7 @@ goog.require('goog.log');
  * mycb({searchresults:
  *   [{uri: 'http://www.monkey.com', title: 'Site About Monkeys'}]});
  *
- * TODO(user): Evaluate using goog.net.Jsonp here.
+ * TODO: Evaluate using goog.net.Jsonp here.
  *
  * A URI of an empty string will mean that no request is made
  * and the data source will be a data source with no child nodes

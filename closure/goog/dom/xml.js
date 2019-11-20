@@ -179,7 +179,7 @@ goog.dom.xml.selectSingleNode = function(node, path) {
   }
   // This browser does not support xpath for the given node. If IE, ensure XML
   // Document was created using ActiveXObject
-  // TODO(joeltine): This should throw instead of return null.
+  // TODO: This should throw instead of return null.
   return null;
 };
 
@@ -212,7 +212,7 @@ goog.dom.xml.selectNodes = function(node, path) {
   } else {
     // This browser does not support xpath for the given node. If IE, ensure XML
     // Document was created using ActiveXObject.
-    // TODO(joeltine): This should throw instead of return empty array.
+    // TODO: This should throw instead of return empty array.
     return [];
   }
 };

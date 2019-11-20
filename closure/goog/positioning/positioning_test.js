@@ -348,11 +348,11 @@ testSuite({
   testPositionAtAnchorRightToLeft() {
     if (userAgent.IE && userAgent.isVersionOrHigher('6')) {
       // These tests fails with IE6.
-      // TODO(user): Investigate the reason.
+      // TODO: Investigate the reason.
       return;
     }
     if (product.SAFARI) {
-      // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+      // TODO: Disabled so we can get the rest of the Closure test
       // suite running in a continuous build. Will investigate later.
       return;
     }
@@ -391,11 +391,11 @@ testSuite({
   testPositionAtAnchorRightToLeftWithScroll() {
     if (userAgent.IE && userAgent.isVersionOrHigher('6')) {
       // These tests fails with IE6.
-      // TODO(user): Investigate the reason.
+      // TODO: Investigate the reason.
       return;
     }
     if (product.SAFARI) {
-      // TODO(b/20733468): Disabled so we can get the rest of the Closure test
+      // TODO: Disabled so we can get the rest of the Closure test
       // suite running in a continuous build. Will investigate later.
       return;
     }
@@ -409,7 +409,7 @@ testSuite({
     let anchorRect = style.getBounds(anchor);
     let popupRect = style.getBounds(popup);
 
-    // TODO(joeltine): Chrome 47 has issues with RTL scroll positioning. Remove
+    // TODO: Chrome 47 has issues with RTL scroll positioning. Remove
     // chrome check when
     // https://code.google.com/p/chromium/issues/detail?id=568706 is resolved.
     if (!browser.isChrome()) {
@@ -431,7 +431,7 @@ testSuite({
     const visibleAnchorRect = positioning.getVisiblePart_(anchor);
     const visibleAnchorBox = visibleAnchorRect.toBox();
 
-    // TODO(joeltine): Chrome 47 has issues with RTL scroll positioning. Remove
+    // TODO: Chrome 47 has issues with RTL scroll positioning. Remove
     // chrome check when
     // https://code.google.com/p/chromium/issues/detail?id=568706 is resolved.
     if (!browser.isChrome()) {

@@ -336,7 +336,7 @@ testSuite({
   testTypeOfAcrossWindow() {
     if (userAgent.IE && userAgent.isVersionOrHigher('10') &&
         !userAgent.isVersionOrHigher('11')) {
-      // TODO(johnlenz): This test is flaky on IE10 (passing 90+% of the time).
+      // TODO: This test is flaky on IE10 (passing 90+% of the time).
       // When it flakes the values are undefined which appears to indicate the
       // script did not run in the opened window and not a failure of the logic
       // we are trying to test.
@@ -394,7 +394,7 @@ testSuite({
         'undefined should not be array-like', goog.isArrayLike(notDefined));
     assertTrue(
         'NodeList should be array-like', goog.isArrayLike(elem.childNodes));
-    // TODO(attila): Fix isArrayLike to return false for text nodes!
+    // TODO: Fix isArrayLike to return false for text nodes!
     // assertFalse('TextNode should not be array-like', goog.isArrayLike(text));
     assertTrue(
         'Array of nodes should be array-like',
@@ -791,7 +791,7 @@ testSuite({
     const foofoofoo = 128;
     assertEquals('Global should not have changed', 125, goog.global.foofoofoo);
 
-    // NOTE(user): foofoofoo would normally be available in the function
+    // NOTE: foofoofoo would normally be available in the function
     // scope, via the scope chain, but the JsUnit framework seems to do
     // something weird which makes it not work.
   },
@@ -1284,8 +1284,6 @@ testSuite({
         'http://path.js', goog.normalizePath_('http://foo/../path.js'));
     assertEquals('http://x/path.js', goog.normalizePath_('http://./x/path.js'));
   },
-
-
 
 
   testGoogModuleNames() {

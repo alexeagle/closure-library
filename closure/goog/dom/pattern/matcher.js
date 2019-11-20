@@ -24,7 +24,7 @@ goog.require('goog.dom.pattern.MatchType');
 goog.require('goog.iter');
 
 
-// TODO(robbyw): Allow for backtracks of size > 1.
+// TODO: Allow for backtracks of size > 1.
 
 
 

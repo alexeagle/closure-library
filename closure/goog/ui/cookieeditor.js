@@ -82,7 +82,7 @@ goog.ui.CookieEditor.prototype.valueWarningElem_;
 goog.ui.CookieEditor.prototype.updateButtonElem_;
 
 
-// TODO(user): add combobox for user to select different cookies
+// TODO: add combobox for user to select different cookies
 /**
  * Sets the cookie which this component will edit.
  * @param {string} cookieKey Cookie key.

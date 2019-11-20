@@ -104,7 +104,7 @@ function assertAfterInsertionEquals(expected, input) {
   div.parentNode.removeChild(div);
 }
 
-// TODO(pelizzi): name of test does not make sense
+// TODO: name of test does not make sense
 
 // the tests below investigate how <span> behaves when it is unknowingly put
 // as child or parent of other elements due to sanitization. <div> had even more
@@ -143,7 +143,7 @@ testSuite({
     html = '<u>hello world</u>';
     assertSanitizedHtml(html, html);
 
-    // NOTE(user): original did not have tbody
+    // NOTE: original did not have tbody
     html = '<table><tbody><tr><td>hello world</td></tr></tbody></table>';
     assertSanitizedHtml(html, html);
 
@@ -594,7 +594,7 @@ testSuite({
     // TD (just like above, TD's are vulnerable to BACKGROUNDs containing
     // JavaScript XSS vectors):
     // Browser support: [IE6.0|NS8.1-IE] [O9.02]
-    // NOTE(user): original lacked tbody tags
+    // NOTE: original lacked tbody tags
     safeHtml = '<table><tbody><tr><td></td></tr></tbody></table>';
     xssHtml = '<TABLE><TD BACKGROUND="javascript:alert(window)">';
     assertSanitizedHtml(xssHtml, safeHtml);
@@ -802,7 +802,7 @@ testSuite({
     // the double quote and causing the Cross Site Scripting vector to fire.
     // The XSS locator uses this method.:
     // Browser support: [IE7.0|IE6.0|NS8.1-IE] [NS8.1-G|FF2.0]
-    // NOTE(danesh): We expect this to fail. More of a JS sanitizer check or a
+    // NOTE: We expect this to fail. More of a JS sanitizer check or a
     // server-side template vulnerability test.
     // safeHtml = '';
     // xssHtml = '\";alert(window);//';
@@ -1032,7 +1032,7 @@ testSuite({
             })
             .build();
 
-    // TODO(user): update this test to include a stylesheet once they're
+    // TODO: update this test to include a stylesheet once they're
     //   supported (in order to view both branches of the NRUrlPolicy).
     const result = '<img src="https://imageproxy/?http://image" /> ' +
         '<input type="image" src="https://imageproxy/?http://another" />' +
@@ -1406,7 +1406,7 @@ testSuite({
       if (googArray.contains(['COL', 'COLGROUP'], tag)) {
         return;  // potential problems
       }
-      // TODO(pelizzi): Skip testing for FORM tags on Chrome until b/32550695
+      // TODO: Skip testing for FORM tags on Chrome until b/32550695
       // is fixed.
       if (tag == 'FORM' && userAgent.WEBKIT) {
         return;

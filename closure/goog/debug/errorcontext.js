@@ -43,7 +43,7 @@ goog.debug.errorcontext.getErrorContext = function(err) {
 };
 
 
-// TODO(user): convert this to a Symbol once goog.debug.ErrorReporter is
+// TODO: convert this to a Symbol once goog.debug.ErrorReporter is
 // able to use ES6.
 /** @private @const {string} */
 goog.debug.errorcontext.CONTEXT_KEY_ = '__closure__error__context__984382';

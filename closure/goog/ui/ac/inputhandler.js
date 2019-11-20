@@ -29,8 +29,8 @@
  * - Mac     x {FF3, Safari3}     x Kotoeri (Japanese)
  * - Linux   x {FF3}              x UIM + Anthy (Japanese)
  *
- * TODO(user): We cannot handle {Mac, Linux} x FF3 correctly.
- * TODO(user): We need to support Windows x Google IME.
+ * TODO: We cannot handle {Mac, Linux} x FF3 correctly.
+ * TODO: We need to support Windows x Google IME.
  *
  * This class was tested with hiragana input. The event sequence when inputting
  * 'ai<enter>' with IME on (which commits two characters) is as follows:
@@ -66,8 +66,8 @@
  *   - ENTER key up following either ENTER or SPACE ends preedit.
  *   - SPACE key up following even number of LEFT, RIGHT, or SPACE (any
  *     combination) ends preedit.
- *   TODO(user): We only support SPACE-then-ENTER sequence.
- *   TODO(mpd): With the change to autocomplete during IME, this might not be an
+ *   TODO: We only support SPACE-then-ENTER sequence.
+ *   TODO: With the change to autocomplete during IME, this might not be an
  *   issue. Remove this comment once tested.
  *
  * With Microsoft Korean IME 2002,
@@ -164,7 +164,7 @@ goog.ui.ac.InputHandler = function(
   /**
    * A timer object used to monitor for changes when an element is active.
    *
-   * TODO(user): Consider tuning the throttle time, so that it takes into
+   * TODO: Consider tuning the throttle time, so that it takes into
    * account the length of the token.  When the token is short it is likely to
    * match lots of rows, therefore we want to check less frequently.  Even
    * something as simple as <3-chars = 150ms, then 100ms otherwise.

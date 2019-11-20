@@ -15,8 +15,8 @@
 /**
  * @fileoverview Single-selection model implemenation.
  *
- * TODO(attila): Add keyboard & mouse event hooks?
- * TODO(attila): Add multiple selection?
+ * TODO: Add keyboard & mouse event hooks?
+ * TODO: Add multiple selection?
  */
 
 

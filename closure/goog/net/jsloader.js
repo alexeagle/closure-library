@@ -182,7 +182,7 @@ goog.net.jsloader.safeLoad = function(trustedUri, opt_options) {
   }
 
   // Hang the user callback to be called when the script completes to load.
-  // NOTE(user): This callback will be called in IE even upon error. In any
+  // NOTE: This callback will be called in IE even upon error. In any
   // case it is the client's responsibility to verify that the script ran
   // successfully.
   script.onload = script.onreadystatechange = function() {
@@ -195,7 +195,7 @@ goog.net.jsloader.safeLoad = function(trustedUri, opt_options) {
   };
 
   // Add an error callback.
-  // NOTE(user): Not supported in IE.
+  // NOTE: Not supported in IE.
   script.onerror = function() {
     goog.net.jsloader.cleanup_(script, true, timeout);
     deferred.errback(
@@ -208,7 +208,7 @@ goog.net.jsloader.safeLoad = function(trustedUri, opt_options) {
   goog.object.extend(
       properties, {'type': 'text/javascript', 'charset': 'UTF-8'});
   goog.dom.setProperties(script, properties);
-  // NOTE(user): Safari never loads the script if we don't set the src
+  // NOTE: Safari never loads the script if we don't set the src
   // attribute before appending.
   goog.dom.safe.setScriptSrc(script, trustedUri);
   var scriptParent = goog.net.jsloader.getScriptParentElement_(doc);
@@ -249,7 +249,7 @@ goog.net.jsloader.safeLoadAndVerify = function(
 
   // Verify that the expected object does not exist yet.
   if (verifyObjs[verificationObjName] !== undefined) {
-    // TODO(user): Error or reset variable?
+    // TODO: Error or reset variable?
     return goog.async.Deferred.fail(
         new goog.net.jsloader.Error(
             goog.net.jsloader.ErrorCode.VERIFY_OBJECT_ALREADY_EXISTS,

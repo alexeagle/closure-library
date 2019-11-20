@@ -126,7 +126,7 @@
  */
 .goog-tab-bar-start .goog-rounded-tab-table,
 .goog-tab-bar-end .goog-rounded-tab-table {
-  width: 12ex; /* TODO(attila): Make this work for variable width. */
+  width: 12ex; /* TODO: Make this work for variable width. */
 }
 
 .goog-tab-bar-start .goog-rounded-tab-caption,

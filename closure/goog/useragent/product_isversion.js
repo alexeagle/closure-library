@@ -18,7 +18,7 @@
  * this functionality actually get it, without having to rely on the compiler
  * to strip out unneeded pieces.
  *
- * TODO(nnaze): Move to more appropriate filename/namespace.
+ * TODO: Move to more appropriate filename/namespace.
  */
 
 

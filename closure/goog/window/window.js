@@ -222,7 +222,7 @@ goog.window.open = function(linkRef, opt_options, opt_parentWin) {
       }
       newWin.opener = null;
 
-      // TODO(rjamet): Building proper SafeHtml with SafeHtml.createMetaRefresh
+      // TODO: Building proper SafeHtml with SafeHtml.createMetaRefresh
       // pulls in a lot of compiled code, which is composed of various unneeded
       // goog.html parts such as SafeStyle.create among others. So, for now,
       // keep the unchecked conversion until we figure out how to make the

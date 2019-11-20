@@ -50,7 +50,7 @@ goog.graphics.Element = function(element, graphics) {
   this.element_ = element;
   this.graphics_ = graphics;
   // Overloading EventTarget field to state that this is not a custom event.
-  // TODO(user) Should be handled in EventTarget.js (see bug 846824).
+  // TODO Should be handled in EventTarget.js (see bug 846824).
   this[goog.events.Listenable.IMPLEMENTED_BY_PROP] = false;
 };
 goog.inherits(goog.graphics.Element, goog.events.EventTarget);

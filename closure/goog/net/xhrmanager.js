@@ -41,7 +41,7 @@ goog.require('goog.net.XhrIo');
 goog.require('goog.net.XhrIoPool');
 goog.require('goog.structs.Map');
 
-// TODO(user): Add some time in between retries.
+// TODO: Add some time in between retries.
 
 
 

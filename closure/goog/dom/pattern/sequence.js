@@ -110,7 +110,7 @@ goog.dom.pattern.Sequence.prototype.matchToken = function(token, type) {
 
     case goog.dom.pattern.MatchType.BACKTRACK_MATCH:
       // This means a repetitive match succeeded 1 token ago.
-      // TODO(robbyw): Backtrack further if necessary.
+      // TODO: Backtrack further if necessary.
       this.currentPosition_++;
 
       if (this.currentPosition_ == this.patterns.length) {

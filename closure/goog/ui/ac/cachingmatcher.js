@@ -91,7 +91,7 @@ goog.ui.ac.CachingMatcher = function(baseMatcher) {
   /**
    * The set of rows which we last displayed.
    *
-   * NOTE(reinerp): The need for this is subtle. When a server result comes
+   * NOTE: The need for this is subtle. When a server result comes
    * back, we don't want to suddenly change the list of results without the user
    * doing anything. So we make sure to add the new server results to the end of
    * the currently displayed list.
@@ -239,13 +239,13 @@ goog.ui.ac.CachingMatcher.prototype.triggerBaseMatch_ = function() {
  * @private
  */
 goog.ui.ac.CachingMatcher.prototype.onBaseMatch_ = function(token, matches) {
-  // NOTE(reinerp): The user might have typed some more characters since the
+  // NOTE: The user might have typed some more characters since the
   // base matcher request was sent out, which manifests in that token might be
   // older than this.mostRecentToken_. We make sure to do our local matches
   // using this.mostRecentToken_ rather than token so that we display results
   // relevant to what the user is seeing right now.
 
-  // NOTE(reinerp): We compute a diff between the currently displayed results
+  // NOTE: We compute a diff between the currently displayed results
   // and the new results we would get now that the server results have come
   // back. Using this diff, we make sure the new results are only added to the
   // end of the list of results. See the documentation on

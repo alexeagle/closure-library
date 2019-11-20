@@ -125,7 +125,7 @@ goog.editor.plugins.EnterHandler.prototype.handleBackspaceInternal = function(
 
   if (field.firstChild == container && goog.editor.node.isEmpty(container)) {
     e.preventDefault();
-    // TODO(user): I think we probably don't need to stopPropagation here
+    // TODO: I think we probably don't need to stopPropagation here
     e.stopPropagation();
   }
 };
@@ -310,7 +310,7 @@ goog.editor.plugins.EnterHandler.prototype.handleKeyPress = function(e) {
       var split = !!this.getFieldObject().execCommand(
           goog.editor.plugins.Blockquote.SPLIT_COMMAND, cursorPosition);
       if (split) {
-        // TODO(user): I think we probably don't need to stopPropagation here
+        // TODO: I think we probably don't need to stopPropagation here
         e.preventDefault();
         e.stopPropagation();
       }
@@ -370,7 +370,7 @@ goog.editor.plugins.EnterHandler.prototype.handleEnterGecko_ = function(e) {
   var handled = this.getFieldObject().execCommand(
       goog.editor.plugins.Blockquote.SPLIT_COMMAND, cursorPosition);
   if (handled) {
-    // TODO(user): I think we probably don't need to stopPropagation here
+    // TODO: I think we probably don't need to stopPropagation here
     e.preventDefault();
     e.stopPropagation();
   }
@@ -605,7 +605,7 @@ goog.editor.plugins.EnterHandler.prototype.deleteCursorSelectionW3C_ =
     // preceding it. To preserve inline formatting when pressing [enter] inside
     // an empty block, don't delete the selection if it only selects a <br> at
     // the end of the block.
-    // TODO(user): Move this into goog.dom.Range. It should detect this state
+    // TODO: Move this into goog.dom.Range. It should detect this state
     // when creating a range from the window selection and fix it in the created
     // range.
     if (goog.userAgent.OPERA) {

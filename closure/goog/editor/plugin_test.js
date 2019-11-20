@@ -103,7 +103,7 @@ testSuite({
       mockField.stopChangeEvents(true, true);
     }
     mockField.dispatchBeforeChange();
-    // Note(user): dispatch change turns back on (delayed) change events.
+    // Note: dispatch change turns back on (delayed) change events.
     mockField.dispatchChange();
     mockField.dispatchSelectionChangeEvent();
     mockField.$replay();
@@ -146,7 +146,7 @@ testSuite({
       mockField.stopChangeEvents(true, true);
     }
     mockField.dispatchBeforeChange();
-    // Note(user): dispatch change turns back on (delayed) change events.
+    // Note: dispatch change turns back on (delayed) change events.
     mockField.dispatchChange();
     mockField.dispatchSelectionChangeEvent();
     mockField.$replay();

@@ -314,7 +314,7 @@ goog.ui.ProgressBar.prototype.updateUi_ = function() {
     var ratio = (val - min) / (max - min);
     var size = Math.round(ratio * 100);
     if (this.orientation_ == goog.ui.ProgressBar.Orientation.VERTICAL) {
-      // Note(arv): IE up to version 6 has some serious computation bugs when
+      // Note: IE up to version 6 has some serious computation bugs when
       // using percentages or bottom. We therefore first set the height to
       // 100% and measure that and base the top and height on that size instead.
       if (goog.userAgent.IE && goog.userAgent.VERSION < 7) {

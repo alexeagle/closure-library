@@ -46,7 +46,7 @@ goog.require('goog.string');
 goog.require('goog.string.Const');
 goog.require('goog.userAgent');
 
-// TODO(nnaze): This file depends on goog.net.BrowserChannel and vice versa (a
+// TODO: This file depends on goog.net.BrowserChannel and vice versa (a
 // circular dependency).  Usages of BrowserChannel are marked as
 // "missingRequire" below for now.  This should be fixed through refactoring.
 

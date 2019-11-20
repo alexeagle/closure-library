@@ -26,7 +26,7 @@
  * @see ../demos/onlinehandler.html
  */
 
-// TODO(arv): We should probably implement some kind of polling service and/or
+// TODO: We should probably implement some kind of polling service and/or
 // a poll for changes event handler that can be used to fire events when a state
 // changes.
 

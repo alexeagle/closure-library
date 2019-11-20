@@ -21,7 +21,7 @@
  * it is arbitrary which value will come to the front of the queue first.
  */
 
-// TODO(user): Should this rely on natural ordering via some Comparable
+// TODO: Should this rely on natural ordering via some Comparable
 //     interface?
 
 

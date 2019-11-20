@@ -43,7 +43,7 @@ goog.editor.BrowserFeature = {
 
   // Has the contentEditable attribute, which makes nodes editable.
   //
-  // NOTE(nicksantos): FF3 has contentEditable, but there are 3 major reasons
+  // NOTE: FF3 has contentEditable, but there are 3 major reasons
   // why we don't use it:
   // 1) In FF3, we listen for key events on the document, and we'd have to
   //    filter them properly. See TR_Browser.USE_DOCUMENT_FOR_KEY_EVENTS.
@@ -65,7 +65,7 @@ goog.editor.BrowserFeature = {
   USE_MUTATION_EVENTS: goog.userAgent.GECKO,
 
   // Whether the browser has a functional DOMSubtreeModified event.
-  // TODO(user): Enable for all FF3 once we're confident this event fires
+  // TODO: Enable for all FF3 once we're confident this event fires
   // reliably. Currently it's only enabled if using contentEditable in FF as
   // we have no other choice in that case but to use this event.
   HAS_DOM_SUBTREE_MODIFIED_EVENT: goog.userAgent.WEBKIT ||
@@ -107,12 +107,12 @@ goog.editor.BrowserFeature = {
 
   // Whether hitting the tab key will fire a keypress event.
   // see http://www.quirksmode.org/js/keys.html
-  // TODO(sdh): This is fixed in IE8 and higher.
+  // TODO: This is fixed in IE8 and higher.
   TAB_FIRES_KEYPRESS: !goog.userAgent.IE,
 
   // Has a standards mode quirk where width=100% doesn't do the right thing,
   // but width=99% does.
-  // TODO(user|user): This should be fixable by less hacky means
+  // TODO: This should be fixable by less hacky means
   NEEDS_99_WIDTH_IN_STANDARDS_MODE: goog.userAgent.IE,
 
   // Whether keyboard events only reliably fire on the document.
@@ -169,7 +169,7 @@ goog.editor.BrowserFeature = {
 
   // Whether this browser supports the "focusin" or "DOMFocusIn" event
   // consistently.
-  // NOTE(nicksantos): FF supports DOMFocusIn, but doesn't seem to do so
+  // NOTE: FF supports DOMFocusIn, but doesn't seem to do so
   // consistently.
   SUPPORTS_FOCUSIN: goog.userAgent.IE || goog.userAgent.OPERA,
 
@@ -259,7 +259,7 @@ goog.editor.BrowserFeature = {
        goog.userAgent.isVersionOrHigher('533')) ||
       (goog.userAgent.GECKO && goog.userAgent.isVersionOrHigher('2.0')) ||
       (goog.userAgent.IE && goog.userAgent.isVersionOrHigher('10')) ||
-      // TODO(user): Remove when b/27923889 is fixed.
+      // TODO: Remove when b/27923889 is fixed.
       (goog.userAgent.OPERA &&
        goog.labs.userAgent.browser.isVersionOrHigher('15')) ||
       goog.userAgent.EDGE,
@@ -267,7 +267,7 @@ goog.editor.BrowserFeature = {
   // Version of Opera that supports the opera-defaultBlock execCommand to change
   // the default block inserted when [return] is pressed. Note that this only is
   // used if the caret is not already in a block that can be repeated.
-  // TODO(user): Link to public documentation of this feature if Opera puts
+  // TODO: Link to public documentation of this feature if Opera puts
   // something up about it.
   SUPPORTS_OPERA_DEFAULTBLOCK_COMMAND:
       goog.userAgent.OPERA && goog.userAgent.isVersionOrHigher('11.10'),

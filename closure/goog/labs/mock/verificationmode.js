@@ -65,7 +65,7 @@ goog.labs.mock.verification.VerificationMode = function() {};
  * Returns true if the recorded number of invocations,
  * `actualNumberOfInvocations`, meets the expectations of this mode.
  *
- * TODO(user): Have this take in an object which contains the complete
+ * TODO: Have this take in an object which contains the complete
  * call record in order to allow more interesting verifications.
  *
  * @param {number} actualNumberOfInvocations

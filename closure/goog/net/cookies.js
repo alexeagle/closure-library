@@ -432,7 +432,7 @@ goog.net.Cookies.SameSite = {
 };
 
 
-// TODO(closure-team): This should be a singleton getter instead of a static
+// TODO: This should be a singleton getter instead of a static
 // instance.
 /**
  * A static default instance.

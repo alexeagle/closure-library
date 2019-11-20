@@ -131,7 +131,7 @@ goog.ui.Textarea.prototype.minHeight_ = 0;
  *    If the padding and border box is included in scrollHeight.
  *    @see {goog.ui.Textarea.prototype.scrollHeightIncludesPadding_} and
  *    @see {goog.ui.Textarea.prototype.scrollHeightIncludesBorder_}
- * TODO(user): See if we can determine goog.ui.Textarea.NEEDS_HELP_SHRINKING_.
+ * TODO: See if we can determine goog.ui.Textarea.NEEDS_HELP_SHRINKING_.
  * @type {boolean}
  * @private
  */

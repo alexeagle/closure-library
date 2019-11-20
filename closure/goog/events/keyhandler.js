@@ -445,7 +445,7 @@ goog.events.KeyHandler.prototype.handleEvent = function(e) {
   // Correct the key value for certain browser-specific quirks.
   if (keyCode) {
     if (keyCode >= 63232 && keyCode in goog.events.KeyHandler.safariKey_) {
-      // NOTE(nicksantos): Safari 3 has fixed this problem,
+      // NOTE: Safari 3 has fixed this problem,
       // this is only needed for Safari 2.
       key = goog.events.KeyHandler.safariKey_[keyCode];
     } else {

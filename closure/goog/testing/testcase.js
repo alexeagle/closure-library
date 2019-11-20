@@ -1349,7 +1349,7 @@ goog.testing.TestCase.prototype.autoDiscoverLifecycle = function() {
 };
 
 
-// TODO(johnlenz): make this package private
+// TODO: make this package private
 /**
  * Extracts any functions defined on 'obj' that correspond to page lifecycle
  * events (setUpPage, tearDownPage, runTests, shouldRunTests) and add them to
@@ -1378,7 +1378,7 @@ goog.testing.TestCase.prototype.setLifecycleObj = function(obj) {
 };
 
 
-// TODO(johnlenz): make this package private
+// TODO: make this package private
 /**
  * @param {!Object} obj  An object from which to extract test and lifecycle
  * methods.
@@ -1428,7 +1428,7 @@ goog.testing.TestCase.prototype.addTestObj_ = function(obj, name, objChain) {
       try {
         testProperty = obj[testName];
       } catch (ex) {
-        // NOTE(brenneman): When running tests from a file:// URL on Firefox
+        // NOTE: When running tests from a file:// URL on Firefox
         // 3.5 for Windows, any reference to goog.global.sessionStorage raises
         // an "Operation is not supported" exception. Ignore any exceptions
         // raised by simply accessing global properties.
@@ -1820,7 +1820,7 @@ goog.testing.TestCase.Test = function(name, ref, scope, objChain) {
   this.name = name;
 
   /**
-   * TODO(user): Rename this to something more clear.
+   * TODO: Rename this to something more clear.
    * Reference to the test function.
    * @type {function()}
    */

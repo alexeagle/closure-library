@@ -25,7 +25,7 @@ const functions = goog.require('goog.functions');
 const recordFunction = goog.require('goog.testing.recordFunction');
 const testSuite = goog.require('goog.testing.testSuite');
 
-// TODO(brenneman):
+// TODO:
 // - Add tests for interoperability with native Promises where available.
 // - Add tests for long stack traces.
 
@@ -2201,7 +2201,7 @@ testSuite({
       // Expected
     }
 
-    // TODO(b/136116638): Expect 0 unhandled rejections in all environemnts.
+    // TODO: Expect 0 unhandled rejections in all environemnts.
     assertEquals(MICROTASKS_EXIST ? 1 : 0, unhandledRejections.getCallCount());
   },
 

@@ -183,7 +183,7 @@ goog.ui.style.app.ButtonRenderer.prototype.getCssClass = function() {
 
 /** @override */
 goog.ui.style.app.ButtonRenderer.prototype.getStructuralCssClass = function() {
-  // TODO(user): extract to a constant.
+  // TODO: extract to a constant.
   return goog.getCssName('goog-button-base');
 };
 

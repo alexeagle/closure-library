@@ -34,7 +34,7 @@ let fieldElem;
 let fieldElemClone;
 
 function createSeamlessIframe() {
-  // NOTE(nicksantos): This is a reimplementation of
+  // NOTE: This is a reimplementation of
   // TR_EditableUtil.getIframeAttributes, but untangled for tests, and
   // specifically with what we need for blended mode.
   return dom.createDom(

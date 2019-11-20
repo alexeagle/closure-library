@@ -25,7 +25,7 @@
  *
  * For IE, only IE-10 and above are supported.
  *
- * TODO(user): xhr polling, stream timeout, CORS and preflight optimization.
+ * TODO: xhr polling, stream timeout, CORS and preflight optimization.
  */
 
 goog.provide('goog.net.streams.XhrStreamReader');
@@ -197,7 +197,7 @@ goog.net.streams.XhrStreamReader.isStreamingSupported = function() {
 
   if (goog.userAgent.OPERA && !goog.userAgent.WEBKIT) {
     // Old Opera fires readyState == INTERACTIVE once.
-    // TODO(user): polling the buffer and check the exact Opera version
+    // TODO: polling the buffer and check the exact Opera version
     return false;
   }
 
@@ -295,7 +295,7 @@ goog.net.streams.XhrStreamReader.prototype.setDataHandler = function(handler) {
 /**
  * Handles XHR readystatechange events.
  *
- * TODO(user): throttling may be needed.
+ * TODO: throttling may be needed.
  *
  * @param {!goog.events.Event} event The event.
  * @private
@@ -342,7 +342,7 @@ goog.net.streams.XhrStreamReader.prototype.onReadyStateChanged_ = function() {
     return;
   }
 
-  // TODO(user): white-list other 2xx responses with application payload
+  // TODO: white-list other 2xx responses with application payload
   var successful =
       (statusCode == goog.net.HttpStatus.OK ||
        statusCode == goog.net.HttpStatus.PARTIAL_CONTENT);

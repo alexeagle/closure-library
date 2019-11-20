@@ -664,7 +664,7 @@ testSuite({
    */
   testWebTestButton() {
     if (userAgent.GECKO) {
-      // TODO(robbyw): Figure out why this is flaky and fix it.
+      // TODO: Figure out why this is flaky and fix it.
       return;
     }
 

@@ -29,7 +29,7 @@
  * - contains       O(n)
  * </pre>
  */
-// TODO(user): Should this rely on natural ordering via some Comparable
+// TODO: Should this rely on natural ordering via some Comparable
 //     interface?
 
 

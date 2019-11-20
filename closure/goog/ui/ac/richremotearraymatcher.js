@@ -141,7 +141,7 @@ goog.ui.ac.RichRemoteArrayMatcher.prototype.requestMatchingRows = function(
       }
       matchHandler(token, rows);
     } catch (exception) {
-      // TODO(user): Is this what we want?
+      // TODO: Is this what we want?
       matchHandler(token, []);
     }
   }, this);

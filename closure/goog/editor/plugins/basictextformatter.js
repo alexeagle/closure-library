@@ -121,7 +121,7 @@ goog.editor.plugins.BasicTextFormatter.SUPPORTED_COMMANDS_ =
  */
 goog.editor.plugins.BasicTextFormatter.prototype.isSupportedCommand = function(
     command) {
-  // TODO(user): restore this to simple check once table editing
+  // TODO: restore this to simple check once table editing
   // is moved out into its own plugin
   return command in goog.editor.plugins.BasicTextFormatter.SUPPORTED_COMMANDS_;
 };
@@ -290,7 +290,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.execCommandInternal = function(
 
         case goog.editor.plugins.BasicTextFormatter.COMMAND.FORMAT_BLOCK:
           // Both FF & IE may lose directionality info. Save/restore it.
-          // TODO(user): Does Safari also need this?
+          // TODO: Does Safari also need this?
           // TODO (gmark, jparent): This isn't ideal because it uses a string
           // literal, so if the plugin name changes, it would break. We need a
           // better solution. See also other places in code that use
@@ -315,7 +315,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.execCommandInternal = function(
           // styleWithCSS false so that we generate html tags (like <b>).  If we
           // are unformatting something, we want to have styleWithCSS true so
           // that we can unformat both html tags and inline styling.
-          // TODO(user): What about WebKit and Opera?
+          // TODO: What about WebKit and Opera?
           styleWithCss = goog.userAgent.GECKO &&
               goog.editor.BrowserFeature.HAS_STYLE_WITH_CSS &&
               this.queryCommandValue(command);
@@ -397,7 +397,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.queryCommandValue = function(
       return this.isJustification_(command);
 
     case goog.editor.plugins.BasicTextFormatter.COMMAND.FORMAT_BLOCK:
-      // TODO(nicksantos): See if we can use queryCommandValue here.
+      // TODO: See if we can use queryCommandValue here.
       return goog.editor.plugins.BasicTextFormatter.getSelectionBlockState_(
           this.getFieldObject().getRange());
 
@@ -545,7 +545,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.handleKeyboardShortcut =
       command = goog.editor.plugins.BasicTextFormatter.COMMAND.UNDERLINE;
       break;
     case 's':  // Ctrl+S
-      // TODO(user): This doesn't belong in here.  Clients should handle
+      // TODO: This doesn't belong in here.  Clients should handle
       // this themselves.
       // Catching control + s prevents the annoying browser save dialog
       // from appearing.
@@ -611,7 +611,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.convertBreaksToDivs_ =
       // Opera: <div>foo<br>bar</div> --> <div>foo<p class="temp_br">bar</div>
       // To fix bug 1939883, now does for both:
       // <div>foo<br>bar</div> --> <div>foo<p trtempbr="temp_br">bar</div>
-      // TODO(user): Confirm if there's any way to skip this
+      // TODO: Confirm if there's any way to skip this
       // intermediate step of converting br's to p's before converting those to
       // div's. The reason may be hidden in CLs 5332866 and 8530601.
       var attribute = 'trtempbr';
@@ -688,7 +688,7 @@ goog.editor.plugins.BasicTextFormatter.convertParagraphToDiv_ = function(
  * convert it to something that we can pass into execCommand,
  * queryCommandState, etc.
  *
- * TODO(user): Consider doing away with the + and converter completely.
+ * TODO: Consider doing away with the + and converter completely.
  *
  * @param {goog.editor.plugins.BasicTextFormatter.COMMAND|string}
  *     command A command key.
@@ -725,7 +725,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.justify_ = function(command) {
   //
   // Only for browsers that can't handle this by the styleWithCSS execCommand,
   // which allows us to specify if we should insert align or text-align.
-  // TODO(user): What about WebKit or Opera?
+  // TODO: What about WebKit or Opera?
   if (!(goog.editor.BrowserFeature.HAS_STYLE_WITH_CSS &&
         goog.userAgent.GECKO)) {
     goog.iter.forEach(
@@ -745,7 +745,7 @@ goog.editor.plugins.BasicTextFormatter.convertContainerToTextAlign_ = function(
     node) {
   var container = goog.editor.style.getContainer(node);
 
-  // TODO(user): Fix this so that it doesn't screw up tables.
+  // TODO: Fix this so that it doesn't screw up tables.
   if (container.align) {
     container.style.textAlign = container.align;
     container.removeAttribute('align');
@@ -829,7 +829,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.execCommandHelper_ = function(
   }
 
   if (/insert(un)?orderedlist/i.test(command)) {
-    // NOTE(user): This doesn't check queryCommandState because it seems to
+    // NOTE: This doesn't check queryCommandState because it seems to
     // lie. Also, this runs for insertunorderedlist so that the the list
     // isn't made up of an <ul> for each <li> - even though it looks the same,
     // the markup is disgusting.
@@ -865,7 +865,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.execCommandHelper_ = function(
 /**
  * Applies a background color to a selection when the browser can't do the job.
  *
- * NOTE(nicksantos): If you think this is hacky, you should try applying
+ * NOTE: If you think this is hacky, you should try applying
  * background color in Opera. It made me cry.
  *
  * @param {string} bgColor backgroundColor from .formatText to .execCommand.
@@ -995,7 +995,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.createLink_ = function(
   var parent = range && range.getContainerElement();
   // We do not yet support creating links around images.  Instead of throwing
   // lots of js errors, just fail silently.
-  // TODO(user): Add support for linking images.
+  // TODO: Add support for linking images.
   if (parent && parent.tagName == goog.dom.TagName.IMG) {
     return null;
   }
@@ -1199,7 +1199,7 @@ goog.editor.plugins.BasicTextFormatter.prototype.applyExecCommandIEFixes_ =
       // For now, we're just going to punt on this and try to
       // adjust the selection so that IE does something reasonable.
       //
-      // TODO(nicksantos): Find a better fix for this.
+      // TODO: Find a better fix for this.
       var bq;
       for (var i = 0; i < blockquotes.length; i++) {
         if (range.containsNode(blockquotes[i])) {

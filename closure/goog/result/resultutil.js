@@ -497,7 +497,7 @@ goog.result.combineOnSuccess = function(var_args) {
  *     goog.result.combine, goog.result.chain, or goog.result.transform call).
  * @return {boolean} True if any results were successfully canceled; otherwise
  *     false.
- * TODO(user): Implement a recursive version of this that cancels all
+ * TODO: Implement a recursive version of this that cancels all
  * ancestor results.
  */
 goog.result.cancelParentResults = function(dependentResult) {

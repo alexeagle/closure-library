@@ -131,9 +131,9 @@ testSuite({
         fieldObj.getRange().getText());
     plugin.execCommand(Command.HELLO_WORLD_DIALOG);
 
-    // TODO(user): IE returns some bogus range when field doesn't have
+    // TODO: IE returns some bogus range when field doesn't have
     // selection. Remove the expectedFailure when robbyw fixes the issue.
-    // NOTE(user): You can't remove the selection from a field in Opera without
+    // NOTE: You can't remove the selection from a field in Opera without
     // blurring it.
     elem.parentNode.blur();
     expectedFailures.expectFailureFor(googUserAgent.IE || googUserAgent.OPERA);

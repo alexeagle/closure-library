@@ -148,7 +148,7 @@ goog.labs.userAgent.engine.isVersionOrHigher = function(version) {
  * @private
  */
 goog.labs.userAgent.engine.getVersionForKey_ = function(tuples, key) {
-  // TODO(nnaze): Move to util if useful elsewhere.
+  // TODO: Move to util if useful elsewhere.
 
   var pair = goog.array.find(tuples, function(pair) { return key == pair[0]; });
 

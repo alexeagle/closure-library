@@ -81,7 +81,7 @@ goog.style.transform.setTranslation = function(element, x, y) {
   if (!goog.style.transform.isSupported()) {
     return false;
   }
-  // TODO(user): After http://crbug.com/324107 is fixed, it will be faster to
+  // TODO: After http://crbug.com/324107 is fixed, it will be faster to
   // use something like: translation = new CSSMatrix().translate(x, y, 0);
   var translation = goog.style.transform.is3dSupported() ?
       'translate3d(' + x + 'px,' + y + 'px,' +

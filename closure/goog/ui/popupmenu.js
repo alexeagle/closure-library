@@ -32,7 +32,7 @@
  * </div>
  *
  * TESTED=FireFox 2.0, IE6, Opera 9, Chrome.
- * TODO(user): Key handling is flakey in Opera and Chrome
+ * TODO: Key handling is flakey in Opera and Chrome
  *
  * @see ../demos/popupmenu.html
  */

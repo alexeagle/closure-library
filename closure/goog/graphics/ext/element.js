@@ -646,7 +646,7 @@ goog.graphics.ext.Element.prototype.transform = function() {
         this.getLeft(), this.getTop(), this.rotation_,
         (this.getWidth() || 1) / 2, (this.getHeight() || 1) / 2);
 
-    // TODO(robbyw): this._fireEvent('transform', [ this ]);
+    // TODO: this._fireEvent('transform', [ this ]);
   }
 };
 
@@ -870,8 +870,8 @@ goog.graphics.ext.Element.Position_.prototype.setPosition = function(
  *     have in a parent of no width/height.
  */
 goog.graphics.ext.Element.Position_.prototype.getMaxPosition = function() {
-  // TODO(robbyw): Handle transformed or rotated coordinates
-  // TODO(robbyw): Handle pixel based sizes?
+  // TODO: Handle transformed or rotated coordinates
+  // TODO: Handle pixel based sizes?
 
   return this.getValue_(this.distance_ || 0) +
       (goog.graphics.ext.coordinates.isSpecial(this.size_) ? 0 :

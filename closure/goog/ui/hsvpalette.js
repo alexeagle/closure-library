@@ -68,7 +68,7 @@ goog.ui.HsvPalette = function(opt_domHelper, opt_color, opt_class) {
   this.document_ = this.getDomHelper().getDocument();
 };
 goog.inherits(goog.ui.HsvPalette, goog.ui.Component);
-// TODO(user): Make this inherit from goog.ui.Control and split this into
+// TODO: Make this inherit from goog.ui.Control and split this into
 // a control and a renderer.
 goog.tagUnsealableClass(goog.ui.HsvPalette);
 
@@ -231,7 +231,7 @@ goog.ui.HsvPalette.prototype.setColorInternal = function(color) {
   this.hsv_ = goog.color.rgbArrayToHsv(rgbArray);
   // Hue is divided by 360 because the documentation for goog.color is currently
   // incorrect.
-  // TODO(user): Fix this, see http://1324469 .
+  // TODO: Fix this, see http://1324469 .
   this.hsv_[0] = this.hsv_[0] / 360;
   this.color = rgbHex;
 };
@@ -268,7 +268,7 @@ goog.ui.HsvPalette.prototype.setHsv_ = function(
   this.hsv_[2] = (opt_value != null) ? opt_value : this.hsv_[2];
   // Hue is multiplied by 360 because the documentation for goog.color is
   // currently incorrect.
-  // TODO(user): Fix this, see http://1324469 .
+  // TODO: Fix this, see http://1324469 .
   this.color = goog.color.hsvArrayToHex(
       [this.hsv_[0] * 360, this.hsv_[1], this.hsv_[2]]);
 };
@@ -335,7 +335,7 @@ goog.ui.HsvPalette.prototype.createDom = function() {
 
   this.setElementInternal(element);
 
-  // TODO(arv): Set tabIndex
+  // TODO: Set tabIndex
 };
 
 
@@ -347,7 +347,7 @@ goog.ui.HsvPalette.prototype.createDom = function() {
 goog.ui.HsvPalette.prototype.enterDocument = function() {
   goog.ui.HsvPalette.superClass_.enterDocument.call(this);
 
-  // TODO(user): Accessibility.
+  // TODO: Accessibility.
 
   this.updateUi();
 

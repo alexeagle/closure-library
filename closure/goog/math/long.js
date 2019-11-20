@@ -844,7 +844,7 @@ const MIN_VALUE_FOR_RADIX_ = [
 ];
 
 /**
- * TODO(goktug): Replace with Number.MAX_SAFE_INTEGER when polyfil is guaranteed
+ * TODO: Replace with Number.MAX_SAFE_INTEGER when polyfil is guaranteed
  * to be removed.
  * @type {number}
  * @private @const

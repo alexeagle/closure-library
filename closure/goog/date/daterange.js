@@ -274,7 +274,7 @@ goog.date.DateRange.lastWeek = function(opt_today) {
  *     Monday on or before today and ends the Friday before today.
  */
 goog.date.DateRange.lastBusinessWeek = function(opt_today) {
-  // TODO(user): should be i18nized.
+  // TODO: should be i18nized.
   var today = goog.date.DateRange.cloneOrCreate_(opt_today);
   var start =
       goog.date.DateRange.offsetInDays_(today, -7 - today.getIsoWeekday());

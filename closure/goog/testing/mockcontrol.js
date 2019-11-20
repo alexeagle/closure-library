@@ -114,7 +114,7 @@ goog.testing.MockControl.prototype.$tearDown = function() {
     if (m.$tearDown) {
       m.$tearDown();
     }
-    // TODO(user): Somehow determine if verifyAll should have been called
+    // TODO: Somehow determine if verifyAll should have been called
     // but was not.
   });
 };

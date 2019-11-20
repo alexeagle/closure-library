@@ -28,7 +28,7 @@ goog.require('goog.object');
 goog.require('goog.string.internal');
 
 
-// TODO(nnaze): Refactor to remove excessive exclusion logic in matching
+// TODO: Refactor to remove excessive exclusion logic in matching
 // functions.
 
 

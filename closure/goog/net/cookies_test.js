@@ -37,7 +37,7 @@ function checkForCookies() {
   }
 }
 
-// TODO(chrisn): Testing max age > 0 requires a mock clock.
+// TODO: Testing max age > 0 requires a mock clock.
 
 function mockSetCookie(var_args) {
   const setCookie = cookies.setCookie_;

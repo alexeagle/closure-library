@@ -285,10 +285,10 @@ goog.events.BrowserEvent.prototype.init = function(e, opt_currentTarget) {
   var relevantTouch =
       e.changedTouches && e.changedTouches.length ? e.changedTouches[0] : null;
 
-  // TODO(nicksantos): Change this.target to type EventTarget.
+  // TODO: Change this.target to type EventTarget.
   this.target = /** @type {Node} */ (e.target) || e.srcElement;
 
-  // TODO(nicksantos): Change this.currentTarget to type EventTarget.
+  // TODO: Change this.currentTarget to type EventTarget.
   this.currentTarget = /** @type {Node} */ (opt_currentTarget);
 
   var relatedTarget = /** @type {Node} */ (e.relatedTarget);

@@ -74,7 +74,7 @@ goog.require('goog.object');
  */
 goog.events.EventHandler = function(opt_scope) {
   goog.Disposable.call(this);
-  // TODO(mknichel): Rename this to this.scope_ and fix the classes in google3
+  // TODO: Rename this to this.scope_ and fix the classes in google3
   // that access this private variable. :(
   this.handler_ = opt_scope;
 
@@ -140,7 +140,7 @@ goog.events.EventHandler.prototype.listen = function(
 goog.events.EventHandler.prototype.listenWithScope = function(
     src, type, fn, options, scope) {
   var self = /** @type {!goog.events.EventHandler} */ (this);
-  // TODO(mknichel): Deprecate this function.
+  // TODO: Deprecate this function.
   return self.listen_(src, type, fn, options, scope);
 };
 
@@ -237,7 +237,7 @@ goog.events.EventHandler.prototype.listenOnce = function(
 goog.events.EventHandler.prototype.listenOnceWithScope = function(
     src, type, fn, capture, scope) {
   var self = /** @type {!goog.events.EventHandler} */ (this);
-  // TODO(mknichel): Deprecate this function.
+  // TODO: Deprecate this function.
   return self.listenOnce_(src, type, fn, capture, scope);
 };
 
@@ -306,7 +306,7 @@ goog.events.EventHandler.prototype.listenOnce_ = function(
 goog.events.EventHandler.prototype.listenWithWrapper = function(
     src, wrapper, listener, opt_capt) {
   var self = /** @type {!goog.events.EventHandler} */ (this);
-  // TODO(mknichel): Remove the opt_scope from this function and then
+  // TODO: Remove the opt_scope from this function and then
   // templatize it.
   return self.listenWithWrapper_(src, wrapper, listener, opt_capt);
 };
@@ -332,7 +332,7 @@ goog.events.EventHandler.prototype.listenWithWrapper = function(
 goog.events.EventHandler.prototype.listenWithWrapperAndScope = function(
     src, wrapper, listener, capture, scope) {
   var self = /** @type {!goog.events.EventHandler} */ (this);
-  // TODO(mknichel): Deprecate this function.
+  // TODO: Deprecate this function.
   return self.listenWithWrapper_(src, wrapper, listener, capture, scope);
 };
 

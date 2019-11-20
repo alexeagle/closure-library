@@ -17,7 +17,7 @@
  */
 
 
-// TODO(b/130421259): We're trying to migrate all ES5 subclasses of Closure
+// TODO: We're trying to migrate all ES5 subclasses of Closure
 // Library to ES6. In ES6 this cannot be referenced before super is called. This
 // file has at least one this before a super call (in ES5) and cannot be
 // automatically upgraded to ES6 as a result. Please fix this if you have a
@@ -68,7 +68,7 @@ goog.fs.Error = function(error, action) {
 
   if (error.name !== undefined) {
     this.name = error.name;
-    // TODO(user): Remove warning suppression after JSCompiler stops
+    // TODO: Remove warning suppression after JSCompiler stops
     // firing a spurious warning here.
     /** @suppress {deprecated} */
     this.code = goog.fs.Error.getCodeFromName_(error.name);

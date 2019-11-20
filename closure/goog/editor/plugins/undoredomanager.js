@@ -40,7 +40,7 @@ goog.editor.plugins.UndoRedoManager = function() {
   /**
    * The maximum number of states on the undo stack at any time. Used to limit
    * the memory footprint of the undo-redo stack.
-   * TODO(user) have a separate memory size based limit.
+   * TODO have a separate memory size based limit.
    * @type {number}
    * @private
    */

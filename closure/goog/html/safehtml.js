@@ -16,7 +16,7 @@
 /**
  * @fileoverview The SafeHtml type and its builders.
  *
- * TODO(xtof): Link to document stating type contract.
+ * TODO: Link to document stating type contract.
  */
 
 goog.provide('goog.html.SafeHtml');
@@ -582,7 +582,7 @@ goog.html.SafeHtml.canUseSandboxIframe = function() {
  *     opt_attributes contains the src attribute.
  */
 goog.html.SafeHtml.createScriptSrc = function(src, opt_attributes) {
-  // TODO(mlourenco): The charset attribute should probably be blocked. If
+  // TODO: The charset attribute should probably be blocked. If
   // its value is attacker controlled, the script contains attacker controlled
   // sub-strings (even if properly escaped) and the server does not set charset
   // then XSS is likely possible.
@@ -743,7 +743,7 @@ goog.html.SafeHtml.getAttrNameAndValue_ = function(tagName, name, value) {
               '');
     }
   } else if (/^on/i.test(name)) {
-    // TODO(jakubvrana): Disallow more attributes with a special meaning.
+    // TODO: Disallow more attributes with a special meaning.
     throw new Error(
         goog.html.SafeHtml.ENABLE_ERROR_MESSAGES ? 'Attribute "' + name +
                 '" requires goog.string.Const value, "' + value + '" given.' :

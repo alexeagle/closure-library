@@ -40,7 +40,7 @@ function normalizeBody(range) {
 
 /** Break a text node up into lots of little fragments. */
 function fragmentText(text) {
-  // NOTE(nicksantos): For some reason, splitText makes IE deeply
+  // NOTE: For some reason, splitText makes IE deeply
   // unhappy to the point where normalize and other normal DOM operations
   // start failing. It's a useful test for Firefox though, because different
   // versions of FireFox handle empty text nodes differently.

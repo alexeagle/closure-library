@@ -266,7 +266,7 @@ goog.ds.BaseDataNode.prototype.getParent = goog.abstractMethod;
  * @constructor
  * @extends {goog.ds.DataNode}
  */
-// TODO(arv): Use interfaces when available.
+// TODO: Use interfaces when available.
 goog.ds.DataNodeList = function() {};
 
 
@@ -336,7 +336,7 @@ goog.ds.DataNodeList.prototype.removeNode = goog.abstractMethod;
  * @constructor
  * @extends {goog.ds.DataNodeList}
  */
-// TODO(arv): Use interfaces when available.
+// TODO: Use interfaces when available.
 goog.ds.BasicNodeList = function(opt_nodes) {
   this.map_ = {};
   this.list_ = [];
@@ -352,7 +352,7 @@ goog.ds.BasicNodeList = function(opt_nodes) {
 /**
  * Add a node to the node list.
  * If the node has a dataName, uses this for the key in the map.
- * TODO(user) Remove function as well
+ * TODO Remove function as well
  *
  * @param {goog.ds.DataNode} node The node to add.
  * @override

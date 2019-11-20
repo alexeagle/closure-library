@@ -111,7 +111,7 @@ goog.dom.browserrange.IeRange.getBrowserRangeForNode_ = function(node) {
   if (node.nodeType == goog.dom.NodeType.ELEMENT) {
     // Elements are easy.
     nodeRange.moveToElementText(node);
-    // Note(user) : If there are no child nodes of the element, the
+    // Note : If there are no child nodes of the element, the
     // range.htmlText includes the element's outerHTML. The range created above
     // is not collapsed, and should be collapsed explicitly.
     // Example : node = <div></div>
@@ -242,7 +242,7 @@ goog.dom.browserrange.IeRange.createFromNodeContents = function(node) {
     range.startOffset_ = goog.array.indexOf(range.parentNode_.childNodes, node);
     range.endOffset_ = range.startOffset_ + 1;
   } else {
-    // Note(user) : Emulate the behavior of W3CRange - Go to deepest possible
+    // Note : Emulate the behavior of W3CRange - Go to deepest possible
     // range containers on both edges. It seems W3CRange did this to match the
     // IE behavior, and now it is a circle. Changing W3CRange may break clients
     // in all sorts of ways.
@@ -515,7 +515,7 @@ goog.dom.browserrange.IeRange.prototype.getEndpointNode_ = function(
   var isStartEndpoint = endpoint == start;
 
   // Find the first/last child that overlaps the selection.
-  // NOTE(user) : One of the children can be the magic &nbsp; node. This
+  // NOTE : One of the children can be the magic &nbsp; node. This
   // node will have only nodeType property as valid and accessible. All other
   // dom related properties like ownerDocument, parentNode, nextSibling etc
   // cause error when accessed. Therefore use the for-loop on childNodes to
@@ -702,7 +702,7 @@ goog.dom.browserrange.IeRange.prototype.isRangeInDocument = function() {
 
 /** @override */
 goog.dom.browserrange.IeRange.prototype.isCollapsed = function() {
-  // Note(user) : The earlier implementation used (range.text == ''), but this
+  // Note : The earlier implementation used (range.text == ''), but this
   // fails when (range.htmlText == '<br>')
   // Alternative: this.range_.htmlText == '';
   return this.range_.compareEndPoints('StartToEnd', this.range_) == 0;
@@ -734,7 +734,7 @@ goog.dom.browserrange.IeRange.prototype.select = function(opt_reverse) {
 /** @override */
 goog.dom.browserrange.IeRange.prototype.removeContents = function() {
   // NOTE: Sometimes htmlText is non-empty, but the range is actually empty.
-  // TODO(gboyer): The htmlText check is probably unnecessary, but I left it in
+  // TODO: The htmlText check is probably unnecessary, but I left it in
   // for paranoia.
   if (!this.isCollapsed() && this.range_.htmlText) {
     // Store some before-removal state.
@@ -752,7 +752,7 @@ goog.dom.browserrange.IeRange.prototype.removeContents = function() {
 
     // However, sometimes moving the start back and forth ends up changing the
     // range.
-    // TODO(gboyer): This condition used to happen for empty ranges, but (1)
+    // TODO: This condition used to happen for empty ranges, but (1)
     // never worked, and (2) the isCollapsed call should protect against empty
     // ranges better than before.  However, this is left for paranoia.
     if (clone.text == oldText) {

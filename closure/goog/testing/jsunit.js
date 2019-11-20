@@ -104,7 +104,7 @@ goog.testing.jsunit.AUTO_RUN_DELAY_IN_MS =
   // initialization of the page.
   var onerror = window.onerror;
   window.onerror = function(messageOrEvent, url, line) {
-    // TODO(johnlenz): fix this function parameters once the "onerror"
+    // TODO: fix this function parameters once the "onerror"
     // definition has been corrected.
     // colno and errObj were added later.
     var colno = arguments[3];

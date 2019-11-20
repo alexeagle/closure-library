@@ -255,7 +255,7 @@ goog.ui.DimensionPickerRenderer.prototype.getMouseMoveElement = function(
  */
 goog.ui.DimensionPickerRenderer.prototype.getGridOffsetX = function(
     palette, x) {
-  // TODO(robbyw): Don't rely on magic 18 - measure each palette's em size.
+  // TODO: Don't rely on magic 18 - measure each palette's em size.
   return Math.min(palette.maxColumns, Math.ceil(x / 18));
 };
 

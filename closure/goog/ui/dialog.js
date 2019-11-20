@@ -15,7 +15,7 @@
 /**
  * @fileoverview Class for showing simple modal dialog boxes.
  *
- * TODO(user):
+ * TODO:
  *   * Standardize CSS class names with other components
  *   * Add functionality to "host" other components in content area
  *   * Abstract out ButtonSet and make it more general
@@ -339,7 +339,7 @@ goog.ui.Dialog.prototype.setPreferredAriaRole = function(role) {
  */
 goog.ui.Dialog.prototype.renderIfNoDom_ = function() {
   if (!this.getElement()) {
-    // TODO(gboyer): Ideally we'd only create the DOM, but many applications
+    // TODO: Ideally we'd only create the DOM, but many applications
     // are requiring this behavior.  Eventually, it would be best if the
     // element getters could return null if the elements have not been
     // created.
@@ -1134,7 +1134,7 @@ goog.inherits(goog.ui.Dialog.Event, goog.events.Event);
 
 /**
  * Event type constant for dialog events.
- * TODO(attila): Change this to goog.ui.Dialog.EventType.SELECT.
+ * TODO: Change this to goog.ui.Dialog.EventType.SELECT.
  * @type {string}
  * @deprecated Use goog.ui.Dialog.EventType.SELECT.
  */
@@ -1178,7 +1178,7 @@ goog.ui.Dialog.EventType = {
  */
 goog.ui.Dialog.ButtonSet = function(opt_domHelper) {
   goog.ui.Map.call(this);
-  // TODO(attila):  Refactor ButtonSet to extend goog.ui.Component?
+  // TODO:  Refactor ButtonSet to extend goog.ui.Component?
   this.dom_ = opt_domHelper || goog.dom.getDomHelper();
 
 
@@ -1304,7 +1304,7 @@ goog.ui.Dialog.ButtonSet.prototype.render = function() {
  * to be the default and will receive focus when the button set is rendered.
  * If a button with a name of {@link goog.ui.Dialog.DefaultButtonKeys.CANCEL}
  * is found, it is assumed to have "Cancel" semantics.
- * TODO(attila):  ButtonSet should be a goog.ui.Component.  Really.
+ * TODO:  ButtonSet should be a goog.ui.Component.  Really.
  * @param {Element} element The element to decorate; should contain buttons.
  */
 goog.ui.Dialog.ButtonSet.prototype.decorate = function(element) {
@@ -1335,7 +1335,7 @@ goog.ui.Dialog.ButtonSet.prototype.decorate = function(element) {
 /**
  * Gets the component's element.
  * @return {Element} The element for the component.
- * TODO(user): Remove after refactoring to goog.ui.Component.
+ * TODO: Remove after refactoring to goog.ui.Component.
  */
 goog.ui.Dialog.ButtonSet.prototype.getElement = function() {
   return this.element_;
@@ -1345,7 +1345,7 @@ goog.ui.Dialog.ButtonSet.prototype.getElement = function() {
 /**
  * Returns the dom helper that is being used on this component.
  * @return {!goog.dom.DomHelper} The dom helper used on this component.
- * TODO(user): Remove after refactoring to goog.ui.Component.
+ * TODO: Remove after refactoring to goog.ui.Component.
  */
 goog.ui.Dialog.ButtonSet.prototype.getDomHelper = function() {
   return this.dom_;
@@ -1609,7 +1609,7 @@ goog.ui.Dialog.ButtonSet.createContinueSaveCancel = function() {
 };
 
 
-// TODO(user): These shared instances should be phased out.
+// TODO: These shared instances should be phased out.
 (function() {
   if (typeof document != 'undefined') {
     /** @deprecated Use goog.ui.Dialog.ButtonSet#createOk. */

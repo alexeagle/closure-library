@@ -20,7 +20,7 @@
 
 
 
-// TODO(b/130421259): We're trying to migrate all ES5 subclasses of Closure
+// TODO: We're trying to migrate all ES5 subclasses of Closure
 // Library to ES6. In ES6 this cannot be referenced before super is called. This
 // file has at least one this before a super call (in ES5) and cannot be
 // automatically upgraded to ES6 as a result. Please fix this if you have a
@@ -190,7 +190,7 @@ goog.dom.ControlRange.prototype.getEndOffset = function() {
 };
 
 
-// TODO(robbyw): Figure out how to unify getElements with TextRange API.
+// TODO: Figure out how to unify getElements with TextRange API.
 /**
  * @return {!Array<Element>} Array of elements in the control range.
  */
@@ -253,7 +253,7 @@ goog.dom.ControlRange.prototype.isCollapsed = function() {
 
 /** @override */
 goog.dom.ControlRange.prototype.getText = function() {
-  // TODO(robbyw): What about for table selections?  Should those have text?
+  // TODO: What about for table selections?  Should those have text?
   return '';
 };
 
@@ -295,7 +295,7 @@ goog.dom.ControlRange.prototype.select = function() {
 
 /** @override */
 goog.dom.ControlRange.prototype.removeContents = function() {
-  // TODO(robbyw): Test implementing with execCommand('Delete')
+  // TODO: Test implementing with execCommand('Delete')
   if (this.range_) {
     var nodes = [];
     for (var i = 0, len = this.range_.length; i < len; i++) {
@@ -337,7 +337,7 @@ goog.dom.ControlRange.prototype.saveUsingDom = function() {
 
 /** @override */
 goog.dom.ControlRange.prototype.collapse = function(toAnchor) {
-  // TODO(robbyw): Should this return a text range?  If so, API needs to change.
+  // TODO: Should this return a text range?  If so, API needs to change.
   this.range_ = null;
   this.clearCachedValues_();
 };

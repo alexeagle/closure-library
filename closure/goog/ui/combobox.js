@@ -64,7 +64,7 @@ goog.ui.ComboBox = function(opt_domHelper, opt_menu, opt_labelInput) {
   this.labelInput_ = opt_labelInput || new goog.ui.LabelInput();
   this.enabled_ = true;
 
-  // TODO(user): Allow lazy creation of menus/menu items
+  // TODO: Allow lazy creation of menus/menu items
   this.menu_ = opt_menu || new goog.ui.Menu(this.getDomHelper());
   this.setupMenu_();
 };
@@ -540,7 +540,7 @@ goog.ui.ComboBox.prototype.getValue = function() {
  * @return {string} HTML escaped token.
  */
 goog.ui.ComboBox.prototype.getToken = function() {
-  // TODO(user): Remove HTML escaping and fix the existing calls.
+  // TODO: Remove HTML escaping and fix the existing calls.
   return goog.string.htmlEscape(this.getTokenText_());
 };
 
@@ -551,7 +551,7 @@ goog.ui.ComboBox.prototype.getToken = function() {
  * @private
  */
 goog.ui.ComboBox.prototype.getTokenText_ = function() {
-  // TODO(user): Implement multi-input such that getToken returns a substring
+  // TODO: Implement multi-input such that getToken returns a substring
   // of the whole input delimited by commas.
   return goog.string.trim(this.labelInput_.getValue().toLowerCase());
 };

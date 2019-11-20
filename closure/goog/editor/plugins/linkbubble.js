@@ -204,7 +204,7 @@ goog.editor.plugins.LinkBubble.prototype.blockOpeningUnsafeSchemes_ = true;
  * if the user had opened a blank window and typed the url in themselves.
  */
 goog.editor.plugins.LinkBubble.prototype.stopReferrerLeaks = function() {
-  // TODO(user): Right now only 2 plugins have this API to stop
+  // TODO: Right now only 2 plugins have this API to stop
   // referrer leaks. If more plugins need to do this, come up with a way to
   // enable the functionality in all plugins at once. Same thing for
   // setBlockOpeningUnsafeSchemes and associated functionality.
@@ -285,10 +285,10 @@ goog.editor.plugins.LinkBubble.prototype.getBubbleTargetFromSelection =
     // show a bubble for that link.  The check for "touching" is very brittle,
     // and currently only guarantees that it will pop up a bubble at the
     // position the cursor is placed at after the link dialog is closed.
-    // NOTE(robbyw): This assumes this method is always called with
+    // NOTE: This assumes this method is always called with
     // selected element = range.getContainerElement().  Right now this is true,
     // but attempts to re-use this method for other purposes could cause issues.
-    // TODO(robbyw): Refactor this method to also take a range, and use that.
+    // TODO: Refactor this method to also take a range, and use that.
     var range = this.getFieldObject().getRange();
     if (range && range.isCollapsed() && range.getStartOffset() == 0) {
       var startNode = range.getStartNode();
@@ -371,7 +371,7 @@ goog.editor.plugins.LinkBubble.prototype.createBubbleContents = function(
   // Create linkTextSpan, show plain text for e-mail address or truncate the
   // text to <= 48 characters so that property bubbles don't grow too wide and
   // create a link if URL.  Only linkify valid links.
-  // TODO(robbyw): Repalce this color with a CSS class.
+  // TODO: Repalce this color with a CSS class.
   var color = linkObj.valid ? 'black' : 'red';
   var shouldOpenUrl = this.shouldOpenUrl(linkObj.linkText);
   var linkTextSpan;

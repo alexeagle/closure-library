@@ -107,7 +107,7 @@ if (typeof Float64Array == 'undefined') {
   } catch (float64ArrayError) {
     // Do nothing.  This code is in place to fix b/7225850, in which an error
     // is incorrectly thrown for Google TV on an old Chrome.
-    // TODO(user): remove after that version is retired.
+    // TODO: remove after that version is retired.
   }
 
   goog.exportProperty(

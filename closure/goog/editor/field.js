@@ -212,7 +212,7 @@ goog.inherits(goog.editor.Field, goog.events.EventTarget);
 /**
  * The editable dom node.
  * @type {?Element}
- * TODO(user): Make this private!
+ * TODO: Make this private!
  */
 goog.editor.Field.prototype.field = null;
 
@@ -312,7 +312,7 @@ goog.editor.Field.LoadState_ = {
 
 /**
  * The amount of time that a debounce blocks an event.
- * TODO(nicksantos): As of 9/30/07, this is only used for blocking
+ * TODO: As of 9/30/07, this is only used for blocking
  * a keyup event after a keydown. We might need to tweak this for other
  * types of events. Maybe have a per-event debounce time?
  * @type {number}
@@ -432,7 +432,7 @@ goog.editor.Field.prototype.setModalMode = function(inModalMode) {
 /**
  * Returns a string usable as a hash code for this field. For field's
  * that were created with an id, the hash code is guaranteed to be the id.
- * TODO(user): I think we can get rid of this.  Seems only used from editor.
+ * TODO: I think we can get rid of this.  Seems only used from editor.
  * @return {string} The hash code for this editable field.
  */
 goog.editor.Field.prototype.getHashCode = function() {
@@ -446,7 +446,7 @@ goog.editor.Field.prototype.getHashCode = function() {
  * <p>On IE or Safari this is the element with contentEditable=true
  * (in whitebox mode, the iFrame body).
  * <p>On Gecko this is the iFrame body
- * TODO(user): How do we word this for subclass version?
+ * TODO: How do we word this for subclass version?
  * @return {Element} The editable DOM element, defined as above.
  */
 goog.editor.Field.prototype.getElement = function() {
@@ -666,7 +666,7 @@ goog.editor.Field.KEYS_CAUSING_CHANGES_ = {
 
 if (!goog.userAgent.IE) {
   // Only IE doesn't change the field by default upon tab.
-  // TODO(user): This really isn't right now that we have tab plugins.
+  // TODO: This really isn't right now that we have tab plugins.
   goog.editor.Field.KEYS_CAUSING_CHANGES_[9] = true;  // TAB
 }
 
@@ -752,7 +752,7 @@ goog.editor.Field.prototype.getAppWindow = function() {
 
 /**
  * Sets the zIndex that the field should be based off of.
- * TODO(user): Get rid of this completely.  Here for Sites.
+ * TODO: Get rid of this completely.  Here for Sites.
  *     Should this be set directly on UI plugins?
  *
  * @param {number} zindex The base zIndex of the editor.
@@ -890,7 +890,7 @@ goog.editor.Field.prototype.setupChangeListeners_ = function() {
     //               delete at the end should not cause beforechange
     //               backspace at the beginning should not cause beforechange
     //               see above in ondragleave
-    // TODO(user): Why don't we dispatchBeforeChange from the
+    // TODO: Why don't we dispatchBeforeChange from the
     // handleDrop event for all browsers?
     this.addListener(
         ['beforecut', 'beforepaste', 'drop', 'dragend'],
@@ -900,7 +900,7 @@ goog.editor.Field.prototype.setupChangeListeners_ = function() {
     this.addListener('drop', this.handleDrop_);
   }
 
-  // TODO(user): Figure out why we use dragend vs dragdrop and
+  // TODO: Figure out why we use dragend vs dragdrop and
   // document this better.
   var dropEventName = goog.userAgent.WEBKIT ? 'dragend' : 'dragdrop';
   this.addListener(dropEventName, this.handleDrop_);
@@ -1130,13 +1130,13 @@ goog.editor.Field.prototype.handleBeforeChangeKeyEvent_ = function(e) {
     // readable characters like a, b and c. However pressing ctrl+c and so on
     // also causes charCode to be set.
 
-    // TODO(arv): Del at end of field or backspace at beginning should be
+    // TODO: Del at end of field or backspace at beginning should be
     // ignored.
     this.gotGeneratingKey_ = e.charCode ||
         goog.editor.Field.isGeneratingKey_(e, goog.userAgent.GECKO);
     if (this.gotGeneratingKey_) {
       this.dispatchBeforeChange();
-      // TODO(robbyw): Should we return the value of the above?
+      // TODO: Should we return the value of the above?
     }
   }
 
@@ -1410,7 +1410,7 @@ goog.editor.Field.prototype.handleKeyboardShortcut_ = function(e) {
   if (e.altKey && !e.shiftKey) {
     return;
   }
-  // TODO(user): goog.events.KeyHandler uses much more complicated logic
+  // TODO: goog.events.KeyHandler uses much more complicated logic
   // to determine key.  Consider changing to what they do.
   var key = e.charCode || e.keyCode;
   var stringKey = String.fromCharCode(key).toLowerCase();
@@ -1587,11 +1587,11 @@ goog.editor.Field.prototype.handleMutationEventGecko_ = function(e) {
  */
 goog.editor.Field.prototype.handleDrop_ = function(e) {
   if (goog.userAgent.IE) {
-    // TODO(user): This should really be done in the loremipsum plugin.
+    // TODO: This should really be done in the loremipsum plugin.
     this.execCommand(goog.editor.Command.CLEAR_LOREM, true);
   }
 
-  // TODO(user): I just moved this code to this location, but I wonder why
+  // TODO: I just moved this code to this location, but I wonder why
   // it is only done for this case.  Investigate.
   if (goog.editor.BrowserFeature.USE_MUTATION_EVENTS) {
     this.dispatchFocusAndBeforeFocus_();
@@ -2212,7 +2212,7 @@ goog.editor.Field.prototype.setSafeHtml = function(
     this.execCommand(goog.editor.Command.UPDATE_LOREM);
   }
 
-  // TODO(user): This check should probably be moved to isEventStopped and
+  // TODO: This check should probably be moved to isEventStopped and
   // startEvent.
   if (this.isLoaded()) {
     if (opt_dontFireDelayedChange) {  // Turn back on change events
@@ -2275,7 +2275,7 @@ goog.editor.Field.prototype.setInnerHtml_ = function(html) {
 goog.editor.Field.prototype.turnOnDesignModeGecko = function() {
   var doc = this.getEditableDomHelper().getDocument();
 
-  // NOTE(nicksantos): This will fail under certain conditions, like
+  // NOTE: This will fail under certain conditions, like
   // when the node has display: none. It's up to clients to ensure that
   // their fields are valid when they try to make them editable.
   doc.designMode = 'on';
@@ -2366,11 +2366,11 @@ goog.editor.Field.prototype.focus = function() {
  * Gives the field focus and places the cursor at the start of the field.
  */
 goog.editor.Field.prototype.focusAndPlaceCursorAtStart = function() {
-  // NOTE(user): Excluding Gecko to maintain existing behavior post refactoring
+  // NOTE: Excluding Gecko to maintain existing behavior post refactoring
   // placeCursorAtStart into its own method. In Gecko browsers that currently
   // have a selection the existing selection will be restored, otherwise it
   // will go to the start.
-  // TODO(user): Refactor the code using this and related methods. We should
+  // TODO: Refactor the code using this and related methods. We should
   // only mess with the selection in the case where there is not an existing
   // selection in the field.
   if (goog.editor.BrowserFeature.HAS_IE_RANGES || !goog.userAgent.GECKO) {
@@ -2474,7 +2474,7 @@ goog.editor.Field.prototype.makeEditableInternal = function(opt_iframeSrc) {
 
 /**
  * Handle the loading of the field (e.g. once the field is ready to setup).
- * TODO(user): this should probably just be moved into dispatchLoadEvent_.
+ * TODO: this should probably just be moved into dispatchLoadEvent_.
  * @protected
  */
 goog.editor.Field.prototype.handleFieldLoad = function() {
@@ -2572,10 +2572,10 @@ goog.editor.Field.prototype.makeUneditable = function(opt_skipRestore) {
  * @protected
  */
 goog.editor.Field.prototype.restoreDom = function() {
-  // TODO(user): Consider only removing the iframe if we are
+  // TODO: Consider only removing the iframe if we are
   // restoring the original node, aka, if opt_html.
   var field = this.getOriginalElement();
-  // TODO(robbyw): Consider throwing an error if !field.
+  // TODO: Consider throwing an error if !field.
   if (field) {
     // If the field is in the process of loading when it starts getting torn
     // up, the iframe will not exist.
@@ -2632,7 +2632,7 @@ goog.editor.Field.prototype.shouldLoadAsynchronously = function() {
  */
 goog.editor.Field.prototype.makeIframeField_ = function(opt_iframeSrc) {
   var field = this.getOriginalElement();
-  // TODO(robbyw): Consider throwing an error if !field.
+  // TODO: Consider throwing an error if !field.
   if (field) {
     var html = field.innerHTML;
 
@@ -2647,11 +2647,11 @@ goog.editor.Field.prototype.makeIframeField_ = function(opt_iframeSrc) {
     var iframe = this.originalDomHelper.createDom(
         goog.dom.TagName.IFRAME, this.getIframeAttributes());
 
-    // TODO(nicksantos): Figure out if this is ever needed in SAFARI?
+    // TODO: Figure out if this is ever needed in SAFARI?
     // In IE over HTTPS we need to wait for a load event before we set up the
     // iframe, this is to prevent a security prompt or access is denied
     // errors.
-    // NOTE(user): This hasn't been confirmed.  isHttps_ allows a query
+    // NOTE: This hasn't been confirmed.  isHttps_ allows a query
     // param, nocheckhttps, which we can use to ascertain if this is actually
     // needed.  It was originally thought to be needed for IE6 SP1, but
     // errors have been seen in IE7 as well.
@@ -2689,7 +2689,7 @@ goog.editor.Field.prototype.makeIframeField_ = function(opt_iframeSrc) {
  */
 goog.editor.Field.prototype.attachIframe = function(iframe) {
   var field = this.getOriginalElement();
-  // TODO(user): Why do we do these two lines .. and why whitebox only?
+  // TODO: Why do we do these two lines .. and why whitebox only?
   iframe.className = field.className;
   iframe.id = field.id;
   goog.dom.replaceNode(iframe, field);

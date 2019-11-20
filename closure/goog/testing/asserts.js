@@ -17,7 +17,7 @@ goog.setTestOnly();
 
 goog.require('goog.testing.JsUnitException');
 
-// TODO(user): Copied from JsUnit with some small modifications, we should
+// TODO: Copied from JsUnit with some small modifications, we should
 // reimplement the asserters.
 
 var DOUBLE_EQUALITY_PREDICATE = function(var1, var2) {
@@ -1170,7 +1170,7 @@ goog.testing.asserts.assertSameElements = function(a, b, opt_c) {
   // Clones expected and actual and converts them to real arrays.
   expected = goog.testing.asserts.toArray_(expected);
   actual = goog.testing.asserts.toArray_(actual);
-  // TODO(user): It would be great to show only the difference
+  // TODO: It would be great to show only the difference
   // between the expected and actual elements.
   _assert(
       message, expected.length == actual.length, 'Expected ' + expected.length +
@@ -1444,7 +1444,7 @@ goog.testing.asserts.toArray_ = function(obj) {
   return ret;
 };
 
-// TODO(nnaze): Consider moving isIterable_ and getIterator_ functionality
+// TODO: Consider moving isIterable_ and getIterator_ functionality
 // into goog.iter.es6. See discussion in cl/217356297.
 
 /**
@@ -1504,7 +1504,7 @@ goog.testing.asserts.indexOf_ = function(container, contained) {
  * @private
  */
 goog.testing.asserts.contains_ = function(container, contained) {
-  // TODO(user): Can we check for container.contains as well?
+  // TODO: Can we check for container.contains as well?
   // That would give us support for most goog.structs (though weird results
   // with anything else with a contains method, like goog.math.Range). Falling
   // back with container.some would catch all iterables, too.

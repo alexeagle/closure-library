@@ -158,7 +158,7 @@ goog.ui.emoji.PopupEmojiPicker.prototype.setDelayedLoad = function(
 goog.ui.emoji.PopupEmojiPicker.prototype.setFocusable = function(focusable) {
   this.focusable_ = focusable;
   if (this.emojiPicker_) {
-    // TODO(user): In next revision sort the behavior of passing state to
+    // TODO: In next revision sort the behavior of passing state to
     // children correctly
     this.emojiPicker_.setFocusable(focusable);
   }
@@ -275,7 +275,7 @@ goog.ui.emoji.PopupEmojiPicker.prototype.disposeInternal = function() {
  * @param {Element} element The element to attach to.
  */
 goog.ui.emoji.PopupEmojiPicker.prototype.attach = function(element) {
-  // TODO(user): standardize event type, popups should use MOUSEDOWN, but
+  // TODO: standardize event type, popups should use MOUSEDOWN, but
   // currently apps are using click.
   this.getHandler().listen(element, goog.events.EventType.CLICK, this.show_);
 };

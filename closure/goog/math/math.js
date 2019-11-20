@@ -105,7 +105,7 @@ goog.math.nearlyEquals = function(a, b, opt_tolerance) {
 };
 
 
-// TODO(user): Rename to normalizeAngle, retaining old name as deprecated
+// TODO: Rename to normalizeAngle, retaining old name as deprecated
 // alias.
 /**
  * Normalizes an angle to be in range [0-360). Angles outside this range will

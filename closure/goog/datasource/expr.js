@@ -184,7 +184,7 @@ goog.ds.Expr.prototype.getNext = function() {
 /**
  * Evaluate an expression on a data node, and return a value
  * Recursively walks through child nodes to evaluate
- * TODO(user) Support other expression functions
+ * TODO Support other expression functions
  *
  * @param {goog.ds.DataNode=} opt_ds Optional datasource to evaluate against.
  *     If not provided, evaluates against DataManager global root.

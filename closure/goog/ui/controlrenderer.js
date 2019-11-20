@@ -14,7 +14,7 @@
 
 /**
  * @fileoverview Base class for control renderers.
- * TODO(attila):  If the renderer framework works well, pull it into Component.
+ * TODO:  If the renderer framework works well, pull it into Component.
  */
 
 goog.provide('goog.ui.ControlRenderer');
@@ -235,7 +235,7 @@ goog.ui.ControlRenderer.prototype.enableClassName = function(
 
     // For IE6, we need to enable any combined classes involving this class
     // as well.
-    // TODO(user): Remove this as IE6 is no longer in use.
+    // TODO: Remove this as IE6 is no longer in use.
     if (goog.userAgent.IE && !goog.userAgent.isVersionOrHigher('7')) {
       classNames = this.getAppliedCombinedClassNames_(
           goog.dom.classlist.get(element), className);
@@ -525,7 +525,7 @@ goog.ui.ControlRenderer.prototype.setFocusable = function(control, focusable) {
       try {
         keyTarget.blur();
       } catch (e) {
-        // TODO(user|user):  Find out why this fails on IE.
+        // TODO:  Find out why this fails on IE.
       }
       // The blur event dispatched by the key event target element when blur()
       // was called on it should have been handled by the control's handleBlur()

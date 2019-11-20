@@ -139,7 +139,7 @@ testSuite({
     // NOTE: 'auto' must go above the 'scroll' assertion. Chrome 47 has a bug
     // with non-deterministic scroll positioning. Maybe it recalculates the
     // layout on accessing those properties?
-    // TODO(joeltine): Remove this comment when
+    // TODO: Remove this comment when
     // https://code.google.com/p/chromium/issues/detail?id=568706 is resolved.
     scrollLeftDiv.style.overflow = 'auto';
     assertEquals(0, bidi.getScrollLeft(scrollLeftDiv));

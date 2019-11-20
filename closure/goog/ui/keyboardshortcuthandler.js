@@ -1224,7 +1224,7 @@ goog.ui.KeyboardShortcutHandler.prototype.isValidShortcut_ = function(data) {
   // Checkboxes, radiobuttons and buttons. Allow all but SPACE as shortcut.
   if (el.tagName == goog.dom.TagName.INPUT ||
       el.tagName == goog.dom.TagName.BUTTON) {
-    // TODO(gboyer): If more flexibility is needed, create protected helper
+    // TODO: If more flexibility is needed, create protected helper
     // methods for each case (e.g. button, input, etc).
     if (this.allowSpaceKeyOnButtons_) {
       return true;

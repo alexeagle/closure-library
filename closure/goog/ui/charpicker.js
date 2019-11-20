@@ -588,7 +588,7 @@ goog.ui.CharPicker.prototype.handleFocus_ = function(e) {
     // and because it is always synchronous when using the LocalNameFetcher.
     // Also, the special character itself is not used as the label because some
     // screen readers, notably ChromeVox, are not able to speak them.
-    // TODO(user): Consider changing the NameFetcher API to provide a
+    // TODO: Consider changing the NameFetcher API to provide a
     // method that lets the caller retrieve multiple character names at once
     // so that this asynchronous gymnastic can be avoided.
     this.charNameFetcher_.getName(ch, function(charName) {

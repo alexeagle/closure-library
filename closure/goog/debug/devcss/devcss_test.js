@@ -28,7 +28,7 @@ function spaceless(foo) {
 }
 
 /*
- * TODO(user): Re-enable if we ever come up with a way to make imports
+ * TODO: Re-enable if we ever come up with a way to make imports
  * work.
 function testDisableDuplicateStyleSheetImports() {
   var el1 = document.getElementById('devcss-test-importfixer-1');

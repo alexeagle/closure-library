@@ -30,7 +30,7 @@ const TagWalkType = goog.require('goog.dom.TagWalkType');
 const dom = goog.require('goog.dom');
 const testSuite = goog.require('goog.testing.testSuite');
 
-// TODO(robbyw): write a test that checks if backtracking works in Sequence
+// TODO: write a test that checks if backtracking works in Sequence
 
 testSuite({
   testStartTag() {

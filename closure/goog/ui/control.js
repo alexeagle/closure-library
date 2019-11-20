@@ -16,7 +16,7 @@
  * @fileoverview Base class for UI controls such as buttons, menus, menu items,
  * toolbar buttons, etc.  The implementation is based on a generalized version
  * of {@link goog.ui.MenuItem}.
- * TODO(attila):  If the renderer framework works well, pull it into Component.
+ * TODO:  If the renderer framework works well, pull it into Component.
  *
  * @see ../demos/control.html
  * @see http://code.google.com/p/closure-library/wiki/IntroToControls
@@ -91,7 +91,7 @@ goog.tagUnsealableClass(goog.ui.Control);
 
 
 // Renderer registry.
-// TODO(attila): Refactor existing usages inside Google in a follow-up CL.
+// TODO: Refactor existing usages inside Google in a follow-up CL.
 
 
 /**

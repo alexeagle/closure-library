@@ -153,7 +153,7 @@ testSuite({
       assertEquals(
           'label rendered for pre-focused element', '',
           labelInput.getElement().value);
-      // NOTE(user): element.blur() doesn't seem to trigger the BLUR event
+      // NOTE: element.blur() doesn't seem to trigger the BLUR event
       // in IE in the test environment. This could be related to the IE issues
       // with testClassName() below.
       events.fireBrowserEvent(
@@ -186,7 +186,7 @@ testSuite({
     // wait for all initial setup to settle
     mockClock.tick(delay);
 
-    // NOTE(user): element.blur() doesn't seem to trigger the BLUR event in
+    // NOTE: element.blur() doesn't seem to trigger the BLUR event in
     // IE in the test environment. This could be related to the IE issues with
     // testClassName() below.
     events.fireBrowserEvent(

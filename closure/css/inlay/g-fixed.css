@@ -31,7 +31,7 @@
  */
 
 /* Document container designed for 1024x768 */
-/* TODO(ux-webdev): convert this to a straight px value - em assumes reset. */
+/* TODO: convert this to a straight px value - em assumes reset. */
 .g-doc-1024 {
   width: 73.074em;
   min-width: 950px; /* min-width doesn't work in IE6 */
@@ -48,7 +48,7 @@
 }
 
 /* Document container designed for 800x600 */
-/* TODO(ux-webdev): convert this to a straight px value - em assumes reset. */
+/* TODO: convert this to a straight px value - em assumes reset. */
 .g-doc-800 {
   width: 57.69em;
   min-width: 750px; /* min-width doesn't work in IE6 */

@@ -211,7 +211,7 @@ goog.cssom.iframe.style.CssRuleSet_.prototype.clone = function() {
 goog.cssom.iframe.style.CssRuleSet_.prototype.setDeclarationTextFromObject =
     function(sourceObject, opt_important) {
   var stringParts = [];
-  // TODO(user): for ... in is costly in IE6 (extra garbage collection).
+  // TODO: for ... in is costly in IE6 (extra garbage collection).
   for (var prop in sourceObject) {
     var value = sourceObject[prop];
     if (value) {
@@ -948,7 +948,7 @@ goog.cssom.iframe.style.getBackgroundContext = function(element) {
           var units = positionValueParts[3];
           // This only attempts to handle pixel values for now (plus
           // '0anything', which is equivalent to 0px).
-          // TODO(user) Convert non-pixel values to pixels when possible.
+          // TODO Convert non-pixel values to pixels when possible.
           if (value == 0 || units == 'px') {
             value -=
                 (coordinate == 'X' ? relativePosition.x : relativePosition.y);

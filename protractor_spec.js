@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// TODO(joeltine): Remove promise module when stable node version supports it
+// TODO: Remove promise module when stable node version supports it
 // natively.
 var Promise = require('promise');
 var allTests = require('./alltests');
@@ -23,7 +23,7 @@ var TEST_SERVER = 'http://localhost:8080';
 var IGNORED_TESTS = [
   // Test hangs in IE8.
   'closure/goog/ui/plaintextspellchecker_test.html',
-  // TODO(joeltine): Re-enable once fixed for external testing.
+  // TODO: Re-enable once fixed for external testing.
   'closure/goog/testing/multitestrunner_test.html',
   // These Promise-based tests all timeout for unknown reasons.
   // Disable for now.

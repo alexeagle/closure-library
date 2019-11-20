@@ -256,7 +256,7 @@ goog.ui.editor.ToolbarController.prototype.updateToolbar = function(e) {
     state = /** @type {Object} */ (
         this.field_.queryCommandValue(e.commands || this.queryCommands_));
   } catch (ex) {
-    // TODO(attila): Find out when/why this happens.
+    // TODO: Find out when/why this happens.
     state = {};
   }
 

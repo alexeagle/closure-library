@@ -27,7 +27,7 @@ goog.provide('goog.string.format');
 goog.require('goog.string');
 
 
-// TODO(johnlenz): goog.string.format should not accept undefined as a parameter
+// TODO: goog.string.format should not accept undefined as a parameter
 /**
  * Performs sprintf-like conversion, i.e. puts the values in a template.
  * DO NOT use it instead of built-in conversions in simple cases such as

@@ -65,7 +65,7 @@ function skipTests(line) {
 
 /**
  * Sorts the lines of a string, since the specific order of the addDependency
- * lines is not strictly important. TODO(sdh): ideally we would not need to
+ * lines is not strictly important. TODO: ideally we would not need to
  * do this, but due to some internal work moving these files, we end up with
  * a different order.  A better fix would be to simply use the same tool and
  * then the golden tests would be unnecessary.

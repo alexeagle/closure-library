@@ -1147,7 +1147,7 @@ goog.date.Date.prototype.setYear = function(year) {
 /**
  * Sets the month part of the date.
  *
- * TODO(nnaze): Update type to goog.date.month.
+ * TODO: Update type to goog.date.month.
  *
  * @param {number} month The month, where 0 = Jan, 11 = Dec.
  */
@@ -1758,7 +1758,7 @@ goog.date.DateTime.prototype.toString = function() {
  * Generates time label for the datetime, e.g., '5:30 AM'.
  * By default this does not pad hours (e.g., to '05:30') and it does add
  * an am/pm suffix.
- * TODO(user): i18n -- hardcoding time format like this is bad.  E.g., in CJK
+ * TODO: i18n -- hardcoding time format like this is bad.  E.g., in CJK
  *               locales, need Chinese characters for hour and minute units.
  * @param {boolean=} opt_padHours Whether to pad hours, e.g., '05:30' vs '5:30'.
  * @param {boolean=} opt_showAmPm Whether to show the 'am' and 'pm' suffix.

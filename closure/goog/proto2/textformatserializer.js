@@ -155,7 +155,7 @@ goog.proto2.TextFormatSerializer.prototype.serializeUnknown_ = function(
     printer.appendLine();
     printer.indent();
     if (value instanceof goog.proto2.Message) {
-      // Note(user): This conditional is here to make the
+      // Note: This conditional is here to make the
       // testSerializationOfUnknown unit test pass, but in practice we should
       // never have a Message for an "unknown" field.
       this.serializeMessage_(value, printer);

@@ -112,7 +112,7 @@ goog.ui.FlatMenuButtonRenderer.prototype.getContentElement = function(element) {
  * @override
  */
 goog.ui.FlatMenuButtonRenderer.prototype.decorate = function(button, element) {
-  // TODO(user): MenuButtonRenderer uses the exact same code.
+  // TODO: MenuButtonRenderer uses the exact same code.
   // Refactor this block to its own module where both can use it.
   var menuElem = goog.dom.getElementsByTagNameAndClass(
       '*', goog.ui.MenuRenderer.CSS_CLASS, element)[0];

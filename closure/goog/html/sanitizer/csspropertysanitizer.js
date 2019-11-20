@@ -128,11 +128,11 @@ exports.sanitizeProperty = function(propName, propValue, opt_uriRewriter) {
       // SafeHtml-compliant url(...) value).
       return null;
     }
-    // TODO(pelizzi): use HtmlSanitizerUrlPolicy for opt_uriRewriter.
+    // TODO: use HtmlSanitizerUrlPolicy for opt_uriRewriter.
     if (!opt_uriRewriter) {
       return null;
     }
-    // TODO(danesh): Check if we need to resolve this URI.
+    // TODO: Check if we need to resolve this URI.
     var uri = googString.stripQuotes(
         propValue.substring(4, propValue.length - 1), '"\'');
 
@@ -155,7 +155,7 @@ exports.sanitizeProperty = function(propName, propValue, opt_uriRewriter) {
     return propValue;
   } else {
     // Everything else is allowed.
-    // TODO(pelizzi): This was kept as-is during refactoring to maintain the
+    // TODO: This was kept as-is during refactoring to maintain the
     // existing behavior. In particular we allow 'quotes: "xx" "yy"'. But
     // ideally we should only allow values without quotes and parentheses here.
     return propValue;

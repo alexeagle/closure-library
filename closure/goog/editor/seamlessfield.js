@@ -384,7 +384,7 @@ goog.editor.SeamlessField.prototype.getIframeableCss = function(
  * Sets the css rules that should be used inside the editable iframe.
  * Note: to clear the css cache between makeNotEditable/makeEditable,
  * call this with "" as iframeableCss.
- * TODO(user): Unify all these css setting methods + Nick's open
+ * TODO: Unify all these css setting methods + Nick's open
  * CL.  This is getting ridiculous.
  * @param {string} iframeableCss String containing the css rules to use.
  */
@@ -396,7 +396,7 @@ goog.editor.SeamlessField.prototype.setIframeableCss = function(iframeableCss) {
 /**
  * Used to ensure that CSS stylings are only installed once for none
  * iframe seamless mode.
- * TODO(user): Make it a formal part of the API that you can only
+ * TODO: Make it a formal part of the API that you can only
  * set one set of styles globally.
  * In seamless, non-iframe mode, all the stylings would go in the
  * same document and conflict.
@@ -411,7 +411,7 @@ goog.editor.SeamlessField.haveInstalledCss_ = false;
 
 /** @override */
 goog.editor.SeamlessField.prototype.usesIframe = function() {
-  // TODO(user): Switch Firefox to using contentEditable
+  // TODO: Switch Firefox to using contentEditable
   // rather than designMode iframe once contentEditable support
   // is less buggy.
   return !goog.editor.BrowserFeature.HAS_CONTENT_EDITABLE;
@@ -533,7 +533,7 @@ goog.editor.SeamlessField.prototype.installStyles = function() {
         goog.style.installSafeStyleSheet(this.cssStyles, this.getElement());
       }
 
-      // TODO(user): this should be reset to false when the editor is quit.
+      // TODO: this should be reset to false when the editor is quit.
       // In non-iframe mode, CSS styles should only be instaled once.
       goog.editor.SeamlessField.haveInstalledCss_ = true;
     }
@@ -687,7 +687,7 @@ goog.editor.SeamlessField.prototype.writeIframeContent = function(
 
 /** @override */
 goog.editor.SeamlessField.prototype.restoreDom = function() {
-  // TODO(user): Consider only removing the iframe if we are
+  // TODO: Consider only removing the iframe if we are
   // restoring the original node.
   if (this.usesIframe()) {
     goog.dom.removeNode(this.getEditableIframe());

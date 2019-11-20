@@ -533,7 +533,7 @@ goog.ui.editor.DefaultToolbar.fontSizeFactory_ = function(
   button.updateFromValue = function(value) {
     // Webkit pre-534.7 returns a string like '32px' instead of the equivalent
     // integer, so normalize that first.
-    // NOTE(user): Gecko returns "6" so can't just normalize all
+    // NOTE: Gecko returns "6" so can't just normalize all
     // strings, only ones ending in "px".
     if (typeof value === 'string' && goog.style.getLengthUnits(value) == 'px') {
       value = goog.ui.editor.ToolbarFactory.getLegacySizeFromPx(
@@ -574,7 +574,7 @@ goog.ui.editor.DefaultToolbar.colorUpdateFromValue_ = function(button, color) {
       button.setValue(/** @type {string} */ (value));
     }
   } catch (ex) {
-    // TODO(attila): Find out when/why this happens.
+    // TODO: Find out when/why this happens.
   }
 };
 
