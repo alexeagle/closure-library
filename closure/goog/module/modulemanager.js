@@ -54,7 +54,7 @@ goog.module.ModuleManager = function() {
    */
   this.moduleInfoMap = {};
 
-  // TODO (malteubl): Switch this to a reentrant design.
+  // TODO (user): Switch this to a reentrant design.
   /**
    * The ids of the currently loading modules. If batch mode is disabled, then
    * this array will never contain more than one element at a time.

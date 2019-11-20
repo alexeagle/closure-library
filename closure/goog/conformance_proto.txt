@@ -5,7 +5,6 @@
 # your project and extend the rules to disable them or to add their whitelists.
 
 
-
 ### Platform restrictions ###
 
 requirement: {
@@ -43,7 +42,6 @@ requirement: {
   type: CUSTOM
   java_class: 'com.google.javascript.jscomp.ConformanceRules$BanGlobalVars'
   error_message: 'Global declarations are not allowed. See https://google.github.io/closure-library/develop/conformance_rules.html#globalVars'
-
   whitelist_regexp: '.+/closure/goog/base.js' # global 'goog'
   whitelist_regexp: '.+/closure/goog/labs/testing/' # global matchers, etc
   whitelist_regexp: '.+/closure/goog/locale/locale.js' # dumb api
@@ -100,7 +98,7 @@ requirement: {
 
 requirement: {
   rule_id: 'closure:eval'
-  # TODO(jakubvrana): Change to BANNED_NAME_CALL after cl/154708486 lands.
+  # TODO(user): Change to BANNED_NAME_CALL after cl/154708486 lands.
   type: BANNED_NAME
   error_message: 'eval is not allowed. See https://google.github.io/closure-library/develop/conformance_rules.html#eval'
 
@@ -114,7 +112,6 @@ requirement: {
   whitelist_regexp: '.+/closure/goog/json/json.js' # used in goog.json.parse
   whitelist_regexp: '.+/closure/goog/module/loader.js'
   whitelist_regexp: '.+/closure/goog/module/moduleloader.js'
-
 }
 
 requirement: {
@@ -126,7 +123,7 @@ requirement: {
   value: 'Window.prototype.execScript'
 
   whitelist_regexp: '.+/closure/goog/base.js'
-  # TODO(jakubvrana): To be investigated.
+  # TODO(user): To be investigated.
   whitelist_regexp: '.+/closure/goog/net/xpc/nixtransport.js'
 }
 
@@ -201,7 +198,7 @@ requirement: {
   whitelist_regexp: '.+/closure/goog/async/nexttick.js'
   whitelist_regexp: '.+/closure/goog/base.js'
   whitelist_regexp: '.+/closure/goog/dom/safe.js'
-  # TODO(jakubvrana): These need to be refactored.
+  # TODO(user): These need to be refactored.
   whitelist_regexp: '.+/closure/goog/editor/icontent.js'
   whitelist_regexp: '.+/closure/goog/testing/'
 }
@@ -407,7 +404,7 @@ requirement: {
   value: '*.outerHTML'
 
   whitelist_regexp: '.+/closure/goog/tweak/tweakui.js' # False positive - missing type on containerNodeName.
-  # TODO(jakubvrana): Ban this.
+  # TODO(user): Ban this.
   whitelist_regexp: '.+/closure/goog/ui/abstractspellchecker.js'
 }
 
@@ -483,8 +480,6 @@ requirement: {
 #
 # These rules allow projects to have compile-time errors for legacyconversions
 # functions and to progressively move away from them by using the whitelist.
-
-
 
 ### Closure library restrictions ###
 

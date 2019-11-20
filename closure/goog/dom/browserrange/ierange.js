@@ -111,7 +111,7 @@ goog.dom.browserrange.IeRange.getBrowserRangeForNode_ = function(node) {
   if (node.nodeType == goog.dom.NodeType.ELEMENT) {
     // Elements are easy.
     nodeRange.moveToElementText(node);
-    // Note(user) : If there are no child nodes of the element, the
+    // Note(skanuj) : If there are no child nodes of the element, the
     // range.htmlText includes the element's outerHTML. The range created above
     // is not collapsed, and should be collapsed explicitly.
     // Example : node = <div></div>
@@ -242,7 +242,7 @@ goog.dom.browserrange.IeRange.createFromNodeContents = function(node) {
     range.startOffset_ = goog.array.indexOf(range.parentNode_.childNodes, node);
     range.endOffset_ = range.startOffset_ + 1;
   } else {
-    // Note(user) : Emulate the behavior of W3CRange - Go to deepest possible
+    // Note(skanuj) : Emulate the behavior of W3CRange - Go to deepest possible
     // range containers on both edges. It seems W3CRange did this to match the
     // IE behavior, and now it is a circle. Changing W3CRange may break clients
     // in all sorts of ways.
@@ -702,7 +702,7 @@ goog.dom.browserrange.IeRange.prototype.isRangeInDocument = function() {
 
 /** @override */
 goog.dom.browserrange.IeRange.prototype.isCollapsed = function() {
-  // Note(user) : The earlier implementation used (range.text == ''), but this
+  // Note(skanuj) : The earlier implementation used (range.text == ''), but this
   // fails when (range.htmlText == '<br>')
   // Alternative: this.range_.htmlText == '';
   return this.range_.compareEndPoints('StartToEnd', this.range_) == 0;

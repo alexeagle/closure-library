@@ -747,7 +747,7 @@ goog.fx.AbstractDragDrop.prototype.removeAllScrollableContainers = function() {
 /**
  * Event handler for containers scrolling.
  * @param {goog.events.BrowserEvent} e The event.
- * @suppress {visibility} TODO(martone): update dependent projects.
+ * @suppress {visibility} TODO(user): update dependent projects.
  * @private
  */
 goog.fx.AbstractDragDrop.prototype.containerScrollHandler_ = function(e) {

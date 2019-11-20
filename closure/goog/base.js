@@ -828,8 +828,6 @@ goog.addDependency = function(relPath, provides, requires, opt_loadFlags) {
 };
 
 
-
-
 // NOTE(nnaze): The debug DOM loader was included in base.js as an original way
 // to do "debug-mode" development.  The dependency system can sometimes be
 // confusing, as can the debug DOM loader's asynchronous nature.
@@ -1556,7 +1554,7 @@ goog.getUid = function(obj) {
   // In Opera window.hasOwnProperty exists but always returns false so we avoid
   // using it. As a consequence the unique ID generated for BaseClass.prototype
   // and SubClass.prototype will be the same.
-  // TODO(b/141512323): UUIDs are broken for ctors with class-side inheritance.
+  // TODO(user): UUIDs are broken for ctors with class-side inheritance.
   return obj[goog.UID_PROPERTY_] ||
       (obj[goog.UID_PROPERTY_] = ++goog.uidCounter_);
 };
@@ -1861,7 +1859,7 @@ goog.globalEval = function(script) {
           /** @type {!HTMLScriptElement} */ (doc.createElement('script'));
       scriptElt.type = 'text/javascript';
       scriptElt.defer = false;
-      // Note(user): can't use .innerHTML since "t('<test>')" will fail and
+      // Note(pupius): can't use .innerHTML since "t('<test>')" will fail and
       // .text doesn't work in Safari 2.  Therefore we append a text node.
       scriptElt.appendChild(doc.createTextNode(script));
       doc.head.appendChild(scriptElt);
@@ -2599,8 +2597,6 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
     /** @private {string} */
     this.transpilationTarget_ = goog.TRANSPILE_TO_LANGUAGE;
   };
-
-
   /**
    * Returns a newly created map from language mode string to a boolean
    * indicating whether transpilation should be done for that mode as well as
@@ -2748,7 +2744,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
    * @return {string} The transpiled code.
    */
   goog.Transpiler.prototype.transpile = function(code, path) {
-    // TODO(johnplaisted): We should delete goog.transpile_ and just have this
+    // TODO(user): We should delete goog.transpile_ and just have this
     // function. But there's some compile error atm where goog.global is being
     // stripped incorrectly without this.
     return goog.transpile_(code, path, this.transpilationTarget_);
@@ -3517,7 +3513,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
    * @param {string} path Absolute path of this script.
    * @param {string} relativePath Path of this script relative to goog.basePath.
    * @param {!Array<string>} provides Should be an empty array.
-   *     TODO(johnplaisted) add support for adding closure namespaces to ES6
+   *     TODO(user) add support for adding closure namespaces to ES6
    *     modules for interop purposes.
    * @param {!Array<string>} requires goog symbols or relative paths to Closure
    *     this depends on.
@@ -3556,7 +3552,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
 
     var dep = this;
 
-    // TODO(johnplaisted): Does document.writing really speed up anything? Any
+    // TODO(user): Does document.writing really speed up anything? Any
     // difference between this and just waiting for interactive mode and then
     // appending?
     function write(src, contents) {
@@ -3631,7 +3627,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
     });
     create(undefined, 'goog.Dependency.callback_("' + beforeKey + '")');
 
-    // TODO(johnplaisted): Does this really speed up anything?
+    // TODO(user): Does this really speed up anything?
     create(this.path, undefined);
 
     var registerKey = goog.Dependency.registerCallback_(function(exports) {
@@ -3823,7 +3819,7 @@ if (!COMPILED && goog.DEPENDENCIES_ENABLED) {
       });
       return;
     }
-    // TODO(johnplaisted): Externs are missing onreadystatechange for
+    // TODO(user): Externs are missing onreadystatechange for
     // HTMLDocument.
     /** @type {?} */
     var doc = goog.global.document;
@@ -4164,7 +4160,7 @@ goog.identity_ = function(s) {
  */
 goog.createTrustedTypesPolicy = function(name) {
   var policy = null;
-  // TODO(koto): Remove window.TrustedTypes variant when the newer API ships.
+  // TODO(user): Remove window.TrustedTypes variant when the newer API ships.
   var policyFactory = goog.global.trustedTypes || goog.global.TrustedTypes;
   if (!policyFactory || !policyFactory.createPolicy) {
     return policy;
@@ -4173,7 +4169,7 @@ goog.createTrustedTypesPolicy = function(name) {
   // registered, even in report-only mode. Until the API changes, catch the
   // error not to break the applications functionally. In such case, the code
   // will fall back to using regular Safe Types.
-  // TODO(koto): Remove catching once createPolicy API stops throwing.
+  // TODO(user): Remove catching once createPolicy API stops throwing.
   try {
     policy = policyFactory.createPolicy(name, {
       createHTML: goog.identity_,

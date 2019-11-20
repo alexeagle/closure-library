@@ -15,9 +15,9 @@
 /**
  * @fileoverview An adaptor from a Result to a Deferred.
  *
- * TODO (vbhasin): cancel() support.
- * TODO (vbhasin): See if we can make this a static.
- * TODO (gboyer, vbhasin): Rename to "Adapter" once this graduates; this is the
+ * TODO (user): cancel() support.
+ * TODO (user): See if we can make this a static.
+ * TODO (gboyer, user): Rename to "Adapter" once this graduates; this is the
  * proper programmer spelling.
  */
 

@@ -748,7 +748,7 @@ goog.tweak.EntriesPanel.prototype.createTextBoxDom_ = function(
   ret.appendChild(dh.createTextNode(label + ': '));
   var textBox = dh.createDom(goog.dom.TagName.INPUT, {
     value: String(tweak.getNewValue()),
-    // TODO(agrieve): Make size configurable or autogrow.
+    // TODO(user): Make size configurable or autogrow.
     size: 5,
     onblur: onchangeFunc
   });

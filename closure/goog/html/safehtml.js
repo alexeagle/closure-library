@@ -16,7 +16,7 @@
 /**
  * @fileoverview The SafeHtml type and its builders.
  *
- * TODO(xtof): Link to document stating type contract.
+ * TODO(user): Link to document stating type contract.
  */
 
 goog.provide('goog.html.SafeHtml');
@@ -743,7 +743,7 @@ goog.html.SafeHtml.getAttrNameAndValue_ = function(tagName, name, value) {
               '');
     }
   } else if (/^on/i.test(name)) {
-    // TODO(jakubvrana): Disallow more attributes with a special meaning.
+    // TODO(user): Disallow more attributes with a special meaning.
     throw new Error(
         goog.html.SafeHtml.ENABLE_ERROR_MESSAGES ? 'Attribute "' + name +
                 '" requires goog.string.Const value, "' + value + '" given.' :

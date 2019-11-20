@@ -55,7 +55,7 @@ function assertCSSTextEquals(expectedCssText, actualCssText) {
   if (isIE8) {
     // We get a bunch of default values set in IE8 because of the way we iterate
     // over the CSSStyleDecleration keys.
-    // TODO(danesh): Fix IE8 or remove this hack. It will be problematic for
+    // TODO(user): Fix IE8 or remove this hack. It will be problematic for
     // tests which have an extra semi-colon in the value (even if quoted).
     const actualCssArray = actualCssText.split(/\s*;\s*/);
     const ie8StyleString = 'WIDTH: 0px; BOTTOM: 0px; HEIGHT: 0px; TOP: 0px; ' +

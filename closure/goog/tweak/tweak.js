@@ -75,7 +75,7 @@ goog.tweak.getRegistry = function() {
 
 /**
  * Type for configParams.
- * TODO(agrieve): Remove |Object when optional fields in struct types are
+ * TODO(user): Remove |Object when optional fields in struct types are
  *     implemented.
  * @typedef {{
  *     label:(string|undefined),
@@ -209,7 +209,7 @@ goog.tweak.endBooleanGroup = function() {
  */
 goog.tweak.registerBoolean = function(
     id, description, opt_defaultValue, opt_configParams) {
-  // TODO(agrieve): There is a bug in the compiler that causes these calls not
+  // TODO(user): There is a bug in the compiler that causes these calls not
   //     to be stripped without this outer if. Might be Issue #90.
   if (goog.tweak.activeBooleanGroup_) {
     var entry = new goog.tweak.BooleanInGroupSetting(

@@ -300,7 +300,7 @@ goog.testing.JsTdAsyncWrapper.Pool_.prototype.noop = function() {
  */
 goog.testing.JsTdAsyncWrapper.Pool_.prototype.addCallback = function(
     fn, opt_n, opt_timeout, opt_description) {
-  // TODO(mtragut): This could be fixed if required by test cases.
+  // TODO(user): This could be fixed if required by test cases.
   if (opt_timeout || opt_description) {
     throw new Error(
         'Setting timeout or description in a pool callback is not supported.');

@@ -720,7 +720,7 @@ goog.testing.net.XhrIo.prototype.getLastError = function() {
 goog.testing.net.XhrIo.prototype.getLastUri = function() {
   // A few tests depend on this returning a goog.Uri object, even though
   // goog.net.XhrIo only ever returns a string from getLastUri.
-  // TODO(closure-team): Update the tests that are using getLastUri for
+  // TODO(user): Update the tests that are using getLastUri for
   // null or goog.Uri return values.
   return /** @type {string} */ (this.lastUri_);
 };

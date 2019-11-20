@@ -44,7 +44,7 @@ testSuite({
   },
 
   testSafeHtml() {
-    // TODO(xtof): Consider using SafeHtmlBuilder instead of newSafeHtmlForTest,
+    // TODO(user): Consider using SafeHtmlBuilder instead of newSafeHtmlForTest,
     // when available.
     let safeHtml = testing.newSafeHtmlForTest('Hello <em>World</em>');
     assertSameHtml('Hello <em>World</em>', safeHtml);

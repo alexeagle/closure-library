@@ -67,7 +67,7 @@
  *   - SPACE key up following even number of LEFT, RIGHT, or SPACE (any
  *     combination) ends preedit.
  *   TODO(user): We only support SPACE-then-ENTER sequence.
- *   TODO(mpd): With the change to autocomplete during IME, this might not be an
+ *   TODO(user): With the change to autocomplete during IME, this might not be an
  *   issue. Remove this comment once tested.
  *
  * With Microsoft Korean IME 2002,
