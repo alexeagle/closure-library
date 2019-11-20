@@ -169,7 +169,7 @@ goog.net.tmpnetwork.testLoadImage = function(url, timeout, callback) {
  * @suppress {strictMissingProperties} Part of the go/strict_warnings_migration
  */
 goog.net.tmpnetwork.clearImageCallbacks_ = function(img) {
-  // NOTE(user): Nullified individually to avoid compiler warnings
+  // NOTE(pupius): Nullified individually to avoid compiler warnings
   // (BUG 658126)
   img.onload = null;
   img.onerror = null;

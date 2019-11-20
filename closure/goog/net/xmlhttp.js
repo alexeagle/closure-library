@@ -82,7 +82,7 @@ goog.net.XmlHttp.OptionType = {
   USE_NULL_FUNCTION: 0,
 
   /**
-   * NOTE(user): In IE if send() errors on a *local* request the readystate
+   * NOTE(pupius): In IE if send() errors on a *local* request the readystate
    * is still changed to COMPLETE.  We need to ignore it and allow the
    * try/catch around send() to pick up the error.
    */
@@ -227,7 +227,7 @@ goog.net.DefaultXmlHttpFactory.prototype.getProgId_ = function() {
 
       try {
         new ActiveXObject(candidate);
-        // NOTE(user): cannot assign progid and return candidate in one line
+        // NOTE(pupius): cannot assign progid and return candidate in one line
         // because JSCompiler complaings: BUG 658126
         this.ieProgId_ = candidate;
         return candidate;

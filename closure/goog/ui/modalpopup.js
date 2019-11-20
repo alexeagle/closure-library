@@ -612,7 +612,7 @@ goog.ui.ModalPopup.prototype.focus = function() {
 /**
  * Make the background element the size of the document.
  *
- * NOTE(user): We must hide the background element before measuring the
+ * NOTE(pupius): We must hide the background element before measuring the
  * document, otherwise the size of the background will stop the document from
  * shrinking to fit a smaller window.  This does cause a slight flicker in Linux
  * browsers, but should not be a common scenario.

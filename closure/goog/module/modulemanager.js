@@ -71,7 +71,7 @@ goog.module.ModuleManager = function() {
    */
   this.requestedLoadingModuleIds_ = [];
 
-  // TODO(user): Make these and other arrays that are used as sets be
+  // TODO(malteubl): Make these and other arrays that are used as sets be
   // actual sets.
   /**
    * All module ids that have ever been requested. In concurrent loading these
@@ -528,7 +528,7 @@ goog.module.ModuleManager.prototype.loadModulesOrEnqueue_ = function(ids) {
     // For now we wait for initial modules to have downloaded as this puts the
     // loader in a good state for calculating the needed deps of additional
     // loads.
-    // TODO(user): Make this wait unnecessary.
+    // TODO(malteubl): Make this wait unnecessary.
     this.initialModulesLoaded_.addCallback(
         goog.bind(this.loadModules_, this, ids));
   } else {
@@ -685,7 +685,7 @@ goog.module.ModuleManager.prototype.processModulesForLoad_ = function(ids) {
 goog.module.ModuleManager.prototype.getNotYetLoadedTransitiveDepIds_ = function(
     id) {
   var requestedModuleSet = goog.object.createSet(this.requestedModuleIds_);
-  // NOTE(user): We want the earliest occurrence of a module, not the first
+  // NOTE(pupius): We want the earliest occurrence of a module, not the first
   // dependency we find. Therefore we strip duplicates at the end rather than
   // during.  See the tests for concrete examples.
   var ids = [];

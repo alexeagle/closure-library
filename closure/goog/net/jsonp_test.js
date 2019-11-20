@@ -37,7 +37,7 @@ let originalTimeout;
 // ensure the test case doesn't fail because of it.
 const originalOnError = window.onerror;
 window.onerror = (msg, url, line) => {
-  // TODO(user): Safari 3 on the farm returns an object instead of the typical
+  // TODO(pupius): Safari 3 on the farm returns an object instead of the typical
   // params.  Pass through errors for safari for now.
   if (userAgent.WEBKIT ||
       msg == 'Error loading script' && url.indexOf('fake-site') != -1) {

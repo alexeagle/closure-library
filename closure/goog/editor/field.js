@@ -2651,7 +2651,7 @@ goog.editor.Field.prototype.makeIframeField_ = function(opt_iframeSrc) {
     // In IE over HTTPS we need to wait for a load event before we set up the
     // iframe, this is to prevent a security prompt or access is denied
     // errors.
-    // NOTE(user): This hasn't been confirmed.  isHttps_ allows a query
+    // NOTE(pupius): This hasn't been confirmed.  isHttps_ allows a query
     // param, nocheckhttps, which we can use to ascertain if this is actually
     // needed.  It was originally thought to be needed for IE6 SP1, but
     // errors have been seen in IE7 as well.

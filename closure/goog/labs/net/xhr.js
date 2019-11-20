@@ -379,7 +379,7 @@ xhr.send = function(method, url, data, opt_options) {
  */
 xhr.isEffectiveSchemeHttp_ = function(url) {
   var scheme = goog.uri.utils.getEffectiveScheme(url);
-  // NOTE(user): Empty-string is for the case under FF3.5 when the location
+  // NOTE(pupius): Empty-string is for the case under FF3.5 when the location
   // is not defined inside a web worker.
   return scheme == 'http' || scheme == 'https' || scheme == '';
 };

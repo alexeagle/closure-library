@@ -15,7 +15,7 @@
 /**
  * @fileoverview Class for showing simple modal dialog boxes.
  *
- * TODO(user):
+ * TODO(pupius):
  *   * Standardize CSS class names with other components
  *   * Add functionality to "host" other components in content area
  *   * Abstract out ButtonSet and make it more general

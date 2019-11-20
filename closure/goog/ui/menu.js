@@ -33,8 +33,8 @@
  * menu.decorate(goog.dom.getElement('menu'));
  *
  * TESTED=FireFox 2.0, IE6, Opera 9, Chrome.
- * TODO(user): Key handling is flaky in Opera and Chrome
- * TODO(user): Rename all references of "item" to child since menu is
+ * TODO(pupius): Key handling is flaky in Opera and Chrome
+ * TODO(pupius): Rename all references of "item" to child since menu is
  * essentially very generic and could, in theory, host a date or color picker.
  *
  * @see ../demos/menu.html
@@ -262,7 +262,7 @@ goog.ui.Menu.prototype.getItemCount = function() {
  * @deprecated Use getChildAt, forEachChild, and getChildCount.
  */
 goog.ui.Menu.prototype.getItems = function() {
-  // TODO(user): Remove reference to getItems and instead use getChildAt,
+  // TODO(pupius): Remove reference to getItems and instead use getChildAt,
   // forEachChild, and getChildCount
   var children = [];
   this.forEachChild(function(child) { children.push(child); });
@@ -276,7 +276,7 @@ goog.ui.Menu.prototype.getItems = function() {
  * @param {number=} opt_y Top position.
  */
 goog.ui.Menu.prototype.setPosition = function(x, opt_y) {
-  // NOTE(user): It is necessary to temporarily set the display from none, so
+  // NOTE(pupius): It is necessary to temporarily set the display from none, so
   // that the position gets set correctly.
   var visible = this.isVisible();
   if (!visible) {

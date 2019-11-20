@@ -390,7 +390,7 @@ testSuite({
 
     // ignores stupid units
     googStyle.setPosition(el, 0, 0);
-    // TODO(user): IE errors if you set these values.  Should we make setStyle
+    // TODO(pupius): IE errors if you set these values.  Should we make setStyle
     // catch these?  Or leave it up to the app.  Fixing the tests for now.
     // goog.style.setPosition(el, '10rainbows', '25rainbows');
     assertEquals('0px', el.style.left);
@@ -729,7 +729,7 @@ testSuite({
 
     // ignores stupid units
     googStyle.setSize(el, 0, 0);
-    // TODO(user): IE errors if you set these values.  Should we make setStyle
+    // TODO(pupius): IE errors if you set these values.  Should we make setStyle
     // catch these?  Or leave it up to the app.  Fixing the tests for now.
     // goog.style.setSize(el, '10rainbows', '25rainbows');
     assertEquals('0px', el.style.width);

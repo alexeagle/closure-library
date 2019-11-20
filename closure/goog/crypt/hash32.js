@@ -67,7 +67,7 @@ goog.crypt.hash32.encodeStringUtf8 = function(str) {
  * @return {number} 32-bit hash.
  */
 goog.crypt.hash32.encodeInteger = function(value) {
-  // TODO(user): Does this make sense in JavaScript with doubles?  Should we
+  // TODO(pupius): Does this make sense in JavaScript with doubles?  Should we
   // force the value to be in the correct range?
   return goog.crypt.hash32.mix32_(
       {a: value, b: goog.crypt.hash32.CONSTANT32, c: goog.crypt.hash32.SEED32});

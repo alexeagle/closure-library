@@ -514,7 +514,7 @@ goog.string.newLineToBr = goog.string.internal.newLineToBr;
  * With goog.string.DETECT_DOUBLE_ESCAPING, this function escapes also the
  * lowercase letter "e".
  *
- * NOTE(user):
+ * NOTE(pupius):
  * HtmlEscape is often called during the generation of large blocks of HTML.
  * Using statics for the regular expressions and strings is an optimization
  * that can more than half the amount of time IE spends in this function for

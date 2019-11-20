@@ -45,7 +45,7 @@ goog.require('goog.userAgent');
 /**
  * Construct a test runner.
  *
- * NOTE(user): This is currently pretty weird, I'm essentially trying to
+ * NOTE(pupius): This is currently pretty weird, I'm essentially trying to
  * create a wrapper that the Selenium test can hook into to query the state of
  * the running test case, while making goog.testing.TestCase general.
  *

@@ -791,7 +791,7 @@ testSuite({
     const foofoofoo = 128;
     assertEquals('Global should not have changed', 125, goog.global.foofoofoo);
 
-    // NOTE(user): foofoofoo would normally be available in the function
+    // NOTE(pupius): foofoofoo would normally be available in the function
     // scope, via the scope chain, but the JsUnit framework seems to do
     // something weird which makes it not work.
   },
@@ -1284,8 +1284,6 @@ testSuite({
         'http://path.js', goog.normalizePath_('http://foo/../path.js'));
     assertEquals('http://x/path.js', goog.normalizePath_('http://./x/path.js'));
   },
-
-
 
 
   testGoogModuleNames() {

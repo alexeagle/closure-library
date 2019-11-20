@@ -380,7 +380,7 @@ goog.net.NetworkTester.prototype.onPauseFinished_ = function() {
  */
 goog.net.NetworkTester.prototype.cleanupCallbacks_ = function() {
   // clear handlers to avoid memory leaks
-  // NOTE(user): Nullified individually to avoid compiler warnings
+  // NOTE(pupius): Nullified individually to avoid compiler warnings
   // (BUG 658126)
   if (this.image_) {
     this.image_.onload = null;

@@ -17,7 +17,7 @@ goog.setTestOnly();
 
 goog.require('goog.testing.JsUnitException');
 
-// TODO(user): Copied from JsUnit with some small modifications, we should
+// TODO(pupius): Copied from JsUnit with some small modifications, we should
 // reimplement the asserters.
 
 var DOUBLE_EQUALITY_PREDICATE = function(var1, var2) {

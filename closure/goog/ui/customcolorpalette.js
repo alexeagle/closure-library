@@ -130,7 +130,7 @@ goog.ui.CustomColorPalette.prototype.promptForCustomColor = function() {
     return;
   }
 
-  // TODO(user): This is relatively inefficient.  Consider adding
+  // TODO(pupius): This is relatively inefficient.  Consider adding
   // functionality to palette to add individual items after render time.
   var colors = this.getColors();
   colors.push(color);

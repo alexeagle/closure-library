@@ -64,7 +64,7 @@ goog.ui.ComboBox = function(opt_domHelper, opt_menu, opt_labelInput) {
   this.labelInput_ = opt_labelInput || new goog.ui.LabelInput();
   this.enabled_ = true;
 
-  // TODO(user): Allow lazy creation of menus/menu items
+  // TODO(pupius): Allow lazy creation of menus/menu items
   this.menu_ = opt_menu || new goog.ui.Menu(this.getDomHelper());
   this.setupMenu_();
 };
@@ -551,7 +551,7 @@ goog.ui.ComboBox.prototype.getToken = function() {
  * @private
  */
 goog.ui.ComboBox.prototype.getTokenText_ = function() {
-  // TODO(user): Implement multi-input such that getToken returns a substring
+  // TODO(pupius): Implement multi-input such that getToken returns a substring
   // of the whole input delimited by commas.
   return goog.string.trim(this.labelInput_.getValue().toLowerCase());
 };

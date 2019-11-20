@@ -304,7 +304,7 @@ goog.ui.Ratings.prototype.getHighlightedValue = function() {
  */
 goog.ui.Ratings.prototype.setRatings = function(ratings) {
   this.ratings_ = ratings;
-  // TODO(user): If rendered update stars
+  // TODO(pupius): If rendered update stars
 };
 
 

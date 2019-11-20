@@ -880,7 +880,7 @@ goog.dom.createDom_ = function(doc, args) {
  */
 goog.dom.append_ = function(doc, parent, args, startIndex) {
   function childHandler(child) {
-    // TODO(user): More coercion, ala MochiKit?
+    // TODO(pupius): More coercion, ala MochiKit?
     if (child) {
       parent.appendChild(
           typeof child === 'string' ? doc.createTextNode(child) : child);
@@ -1131,7 +1131,7 @@ goog.dom.isCss1CompatMode_ = function(doc) {
  * For more information, see:
  * http://dev.w3.org/html5/markup/syntax.html#syntax-elements
  *
- * TODO(user): Rename shouldAllowChildren() ?
+ * TODO(pupius): Rename shouldAllowChildren() ?
  *
  * @param {Node} node The node to check.
  * @return {boolean} Whether the node can contain children.

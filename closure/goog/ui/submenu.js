@@ -348,7 +348,7 @@ goog.ui.SubMenu.prototype.onChildEnter_ = function(e) {
 goog.ui.SubMenu.prototype.onParentHidden_ = function(e) {
   // Ignore propagated events
   if (e.target == this.getParentEventTarget()) {
-    // TODO(user): Using an event for this is expensive.  Consider having a
+    // TODO(pupius): Using an event for this is expensive.  Consider having a
     // generalized interface that the parent menu calls on its children when
     // it is hidden.
     this.dismissSubMenu();
@@ -505,7 +505,7 @@ goog.ui.SubMenu.prototype.positionSubMenu = function() {
                               goog.positioning.Corner.TOP_START,
       this.isPositionAdjustable_);
 
-  // TODO(user): Clean up popup code and have this be a one line call
+  // TODO(pupius): Clean up popup code and have this be a one line call
   var subMenu = this.getMenu();
   var el = subMenu.getElement();
   if (!subMenu.isVisible()) {

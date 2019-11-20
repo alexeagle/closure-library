@@ -20,7 +20,7 @@ const testSuite = goog.require('goog.testing.testSuite');
 
 // For now, just test that the flash variables exist, the test runner will
 // pick up any runtime errors.
-// TODO(user): Mock out each browser implementation and test the code path
+// TODO(pupius): Mock out each browser implementation and test the code path
 // correctly detects the flash version for each case.
 
 testSuite({

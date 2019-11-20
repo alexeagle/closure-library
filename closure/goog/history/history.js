@@ -72,14 +72,14 @@
  * updates to the address bar. The page continues to work as normal, but the
  * address shown will be incorrect until the page is reloaded.
  *
- * NOTE(user): It should be noted that Firefox will URL encode any non-regular
+ * NOTE(pupius): It should be noted that Firefox will URL encode any non-regular
  * ascii character, along with |space|, ", <, and >, when added to the fragment.
  * If you expect these characters in your tokens you should consider that
  * setToken('<b>') would result in the history fragment "%3Cb%3E", and
  * "esp&eacute;re" would show "esp%E8re".  (IE allows unicode characters in the
  * fragment)
  *
- * TODO(user): Should we encapsulate this escaping into the API for visible
+ * TODO(pupius): Should we encapsulate this escaping into the API for visible
  * history and encode all characters that aren't supported by Firefox?  It also
  * needs to be optional so apps can elect to handle the escaping themselves.
  *
@@ -502,7 +502,7 @@ goog.History.prototype.setEnabled = function(enable) {
       this.eventHandler_.listen(this.window_, 'pageshow', this.onShow_);
     }
 
-    // TODO(user): make HTML5 and invisible history work by listening to the
+    // TODO(goto): make HTML5 and invisible history work by listening to the
     // iframe # changes instead of the window.
     if (goog.History.isOnHashChangeSupported() && this.userVisible_) {
       this.eventHandler_.listen(
@@ -568,7 +568,7 @@ goog.History.prototype.onDocumentLoaded = function() {
  * @private
  */
 goog.History.prototype.onShow_ = function(e) {
-  // NOTE(user): persisted is a property passed in the pageshow event that
+  // NOTE(pupius): persisted is a property passed in the pageshow event that
   // indicates whether the page is being persisted from the cache or is being
   // loaded for the first time.
   if (e.getBrowserEvent()['persisted']) {

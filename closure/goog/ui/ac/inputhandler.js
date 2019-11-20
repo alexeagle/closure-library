@@ -164,7 +164,7 @@ goog.ui.ac.InputHandler = function(
   /**
    * A timer object used to monitor for changes when an element is active.
    *
-   * TODO(user): Consider tuning the throttle time, so that it takes into
+   * TODO(pupius): Consider tuning the throttle time, so that it takes into
    * account the length of the token.  When the token is short it is likely to
    * match lots of rows, therefore we want to check less frequently.  Even
    * something as simple as <3-chars = 150ms, then 100ms otherwise.
