@@ -1,0 +1,15 @@
+package(default_visibility = ["//visibility:public"])
+
+licenses(["notice"])
+
+load("@io_bazel_rules_closure//closure:defs.bzl", "closure_js_library")
+
+exports_files(["base.js"])
+
+closure_js_library(
+    name = "base",
+    srcs = [
+        "base.js",
+        "transitionalforwarddeclarations.js",
+    ],
+)
